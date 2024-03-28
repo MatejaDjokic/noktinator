@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FingerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FingerMenu.Designer.cs">
+      <DependentUpon>FingerMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FingerView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FingerView.Designer.cs">
+      <DependentUpon>FingerView.cs</DependentUpon>
+    </Compile>
     <Compile Include="StartMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FingerMenu.resx">
+      <DependentUpon>FingerMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StartMenu.resx">
       <DependentUpon>StartMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,6 +106,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\NailLogo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
