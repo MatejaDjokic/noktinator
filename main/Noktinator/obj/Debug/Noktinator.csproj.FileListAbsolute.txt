@@ -1,0 +1,10 @@
+C:\Users\Strahinja\source\repos\Noktinator\Noktinator\bin\Debug\Noktinator.exe.config
+C:\Users\Strahinja\source\repos\Noktinator\Noktinator\bin\Debug\Noktinator.exe
+C:\Users\Strahinja\source\repos\Noktinator\Noktinator\bin\Debug\Noktinator.pdb
+C:\Users\Strahinja\source\repos\Noktinator\Noktinator\obj\Debug\Noktinator.csproj.AssemblyReference.cache
+C:\Users\Strahinja\source\repos\Noktinator\Noktinator\obj\Debug\Noktinator.Form1.resources
+C:\Users\Strahinja\source\repos\Noktinator\Noktinator\obj\Debug\Noktinator.Properties.Resources.resources
+C:\Users\Strahinja\source\repos\Noktinator\Noktinator\obj\Debug\Noktinator.csproj.GenerateResource.cache
+C:\Users\Strahinja\source\repos\Noktinator\Noktinator\obj\Debug\Noktinator.csproj.CoreCompileInputs.cache
+C:\Users\Strahinja\source\repos\Noktinator\Noktinator\obj\Debug\Noktinator.exe
+C:\Users\Strahinja\source\repos\Noktinator\Noktinator\obj\Debug\Noktinator.pdb
