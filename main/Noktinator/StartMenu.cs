@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Noktinator
 {
-    public partial class MainMenu : Form
+    public partial class StartMenu : Form
     {
-        public MainMenu()
+        public StartMenu()
         {
             InitializeComponent();
         }

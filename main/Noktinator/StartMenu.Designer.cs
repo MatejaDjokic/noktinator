@@ -1,7 +1,7 @@
 ﻿
 namespace Noktinator
 {
-    partial class MainMenu
+    partial class StartMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Noktinator
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartMenu));
             this.Dizajniraj = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
