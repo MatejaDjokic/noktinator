@@ -58,7 +58,7 @@
     <Compile Include="FingerView.Designer.cs">
       <DependentUpon>FingerView.cs</DependentUpon>
     </Compile>
-    <Compile Include="NailCopy.cs" />
+    <Compile Include="Nail.cs" />
     <Compile Include="StartMenu.cs">
       <SubType>Form</SubType>
     </Compile>
