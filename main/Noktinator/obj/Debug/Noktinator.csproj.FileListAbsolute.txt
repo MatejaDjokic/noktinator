@@ -19,3 +19,14 @@ C:\Users\Strahinja\Documents\GitHub\nail-maker-2024\main\Noktinator\obj\Debug\No
 C:\Users\Strahinja\Documents\GitHub\nail-maker-2024\main\Noktinator\obj\Debug\Noktinator.csproj.CoreCompileInputs.cache
 C:\Users\Strahinja\Documents\GitHub\nail-maker-2024\main\Noktinator\obj\Debug\Noktinator.exe
 C:\Users\Strahinja\Documents\GitHub\nail-maker-2024\main\Noktinator\obj\Debug\Noktinator.pdb
+D:\Programiranje\projects\noktinar\main\Noktinator\bin\Debug\Noktinator.exe.config
+D:\Programiranje\projects\noktinar\main\Noktinator\bin\Debug\Noktinator.exe
+D:\Programiranje\projects\noktinar\main\Noktinator\bin\Debug\Noktinator.pdb
+D:\Programiranje\projects\noktinar\main\Noktinator\obj\Debug\Noktinator.csproj.AssemblyReference.cache
+D:\Programiranje\projects\noktinar\main\Noktinator\obj\Debug\Noktinator.FingerMenu.resources
+D:\Programiranje\projects\noktinar\main\Noktinator\obj\Debug\Noktinator.StartMenu.resources
+D:\Programiranje\projects\noktinar\main\Noktinator\obj\Debug\Noktinator.Properties.Resources.resources
+D:\Programiranje\projects\noktinar\main\Noktinator\obj\Debug\Noktinator.csproj.GenerateResource.cache
+D:\Programiranje\projects\noktinar\main\Noktinator\obj\Debug\Noktinator.csproj.CoreCompileInputs.cache
+D:\Programiranje\projects\noktinar\main\Noktinator\obj\Debug\Noktinator.exe
+D:\Programiranje\projects\noktinar\main\Noktinator\obj\Debug\Noktinator.pdb
