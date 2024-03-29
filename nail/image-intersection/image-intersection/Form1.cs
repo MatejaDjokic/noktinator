@@ -10,13 +10,18 @@ namespace image_intersection
         private void Form1_Load(object sender, EventArgs e)
         {
             Image nail = (Image)ColorBitmap(Properties.Resources.almond_tip, Color.White);
-            int nailWidth = nail.Width;
-            int nailHeight = nail.Height;
-            Image fireStyle = (Image)ColorBitmap(new Bitmap(Properties.Resources.LeafStyle, nailWidth / 3 * 2, nailHeight / 3 * 2), Color.White);
+            Image fireStyle = (Image)ColorBitmap(new Bitmap(Properties.Resources.LeafStyle, nail.Width / 3 * 2, nail.Height / 3 * 2), Color.White);
             this.pictureBox1.Image = OverlayBitmaps(new Bitmap(nail), new Bitmap(fireStyle));
         }
 
-        public static Bitmap OverlayBitmaps(Bitmap baseBitmap, Bitmap overlayBitmap)
+        public Bitmap ResizeBitmap(Bitmap bmp, double scaleX, double scaleY)
+        {
+            int w = (int)Math.Floor(bmp.Width * scaleX);
+            int h = (int)Math.Floor(bmp.Height * scaleY);
+            return new Bitmap(bmp, w, h);
+        }
+
+        public Bitmap OverlayBitmaps(Bitmap baseBitmap, Bitmap overlayBitmap)
         {
             Bitmap resultBitmap = new Bitmap(baseBitmap.Width, baseBitmap.Height);
 
@@ -34,7 +39,7 @@ namespace image_intersection
         }
 
 
-        Bitmap ColorBitmap(Bitmap bmp, Color color)
+        public Bitmap ColorBitmap(Bitmap bmp, Color color)
         {
             int tolerance = 50;
 
