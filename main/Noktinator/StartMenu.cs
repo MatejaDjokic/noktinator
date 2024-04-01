@@ -21,7 +21,9 @@ namespace Noktinator
         //dizajniraj
         private void DizajnirajClick(object sender, EventArgs e)
         {
-
+            FingerPreview fingerPreview = new FingerPreview();
+            fingerPreview.Show();
+            this.Hide();
         }
 
 
@@ -29,6 +31,6 @@ namespace Noktinator
         private void IzadjiClick(object sender, EventArgs e)
         {
             Application.Exit();
-        }
+        }        
     }
 }

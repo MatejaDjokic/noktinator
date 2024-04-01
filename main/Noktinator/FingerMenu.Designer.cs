@@ -30,30 +30,26 @@ namespace Noktinator
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FingerMenu));
-            this.fingerView1 = new Noktinator.FingerView();
             this.OblikNokta = new System.Windows.Forms.Button();
             this.Patern = new System.Windows.Forms.Button();
             this.BojaNokta = new System.Windows.Forms.Button();
             this.BojaPaterna = new System.Windows.Forms.Button();
             this.Buttons = new System.Windows.Forms.GroupBox();
+            this.Rasa = new System.Windows.Forms.Button();
             this.NokatColorDialog = new System.Windows.Forms.ColorDialog();
             this.PaternColorDialog = new System.Windows.Forms.ColorDialog();
-            ((System.ComponentModel.ISupportInitialize)(this.fingerView1)).BeginInit();
+            this.fingerView = new System.Windows.Forms.PictureBox();
+            this.RasaColorDialog = new System.Windows.Forms.ColorDialog();
+            this.Nazad = new System.Windows.Forms.Button();
+            this.Galerija = new System.Windows.Forms.Button();
             this.Buttons.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fingerView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // fingerView1
-            // 
-            this.fingerView1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fingerView1.BackgroundImage")));
-            this.fingerView1.Location = new System.Drawing.Point(48, 50);
-            this.fingerView1.Name = "fingerView1";
-            this.fingerView1.Size = new System.Drawing.Size(600, 600);
-            this.fingerView1.TabIndex = 0;
-            this.fingerView1.TabStop = false;
             // 
             // OblikNokta
             // 
             this.OblikNokta.BackColor = System.Drawing.Color.Plum;
+            this.OblikNokta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OblikNokta.Font = new System.Drawing.Font("Segoe Print", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.OblikNokta.Location = new System.Drawing.Point(0, 19);
             this.OblikNokta.Name = "OblikNokta";
@@ -61,10 +57,12 @@ namespace Noktinator
             this.OblikNokta.TabIndex = 1;
             this.OblikNokta.Text = "oblik nokta";
             this.OblikNokta.UseVisualStyleBackColor = false;
+            this.OblikNokta.Click += new System.EventHandler(this.OblikNokta_Click);
             // 
             // Patern
             // 
             this.Patern.BackColor = System.Drawing.Color.Plum;
+            this.Patern.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Patern.Font = new System.Drawing.Font("Segoe Print", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.Patern.Location = new System.Drawing.Point(0, 181);
             this.Patern.Name = "Patern";
@@ -72,10 +70,12 @@ namespace Noktinator
             this.Patern.TabIndex = 2;
             this.Patern.Text = "patern";
             this.Patern.UseVisualStyleBackColor = false;
+            this.Patern.Click += new System.EventHandler(this.Patern_Click);
             // 
             // BojaNokta
             // 
             this.BojaNokta.BackColor = System.Drawing.Color.Plum;
+            this.BojaNokta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BojaNokta.Font = new System.Drawing.Font("Segoe Print", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.BojaNokta.Location = new System.Drawing.Point(0, 100);
             this.BojaNokta.Name = "BojaNokta";
@@ -88,6 +88,7 @@ namespace Noktinator
             // BojaPaterna
             // 
             this.BojaPaterna.BackColor = System.Drawing.Color.Plum;
+            this.BojaPaterna.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BojaPaterna.Font = new System.Drawing.Font("Segoe Print", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.BojaPaterna.Location = new System.Drawing.Point(0, 262);
             this.BojaPaterna.Name = "BojaPaterna";
@@ -99,16 +100,64 @@ namespace Noktinator
             // 
             // Buttons
             // 
+            this.Buttons.Controls.Add(this.Galerija);
+            this.Buttons.Controls.Add(this.Rasa);
             this.Buttons.Controls.Add(this.OblikNokta);
             this.Buttons.Controls.Add(this.BojaPaterna);
             this.Buttons.Controls.Add(this.Patern);
             this.Buttons.Controls.Add(this.BojaNokta);
-            this.Buttons.Location = new System.Drawing.Point(705, 180);
+            this.Buttons.Location = new System.Drawing.Point(702, 78);
             this.Buttons.Name = "Buttons";
-            this.Buttons.Size = new System.Drawing.Size(300, 340);
+            this.Buttons.Size = new System.Drawing.Size(300, 505);
             this.Buttons.TabIndex = 5;
             this.Buttons.TabStop = false;
-            this.Buttons.Text = "Buttons";
+            // 
+            // Rasa
+            // 
+            this.Rasa.BackColor = System.Drawing.Color.Plum;
+            this.Rasa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Rasa.Font = new System.Drawing.Font("Segoe Print", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.Rasa.Location = new System.Drawing.Point(0, 343);
+            this.Rasa.Name = "Rasa";
+            this.Rasa.Size = new System.Drawing.Size(300, 75);
+            this.Rasa.TabIndex = 7;
+            this.Rasa.Text = "Izaberite svoju boju koze";
+            this.Rasa.UseVisualStyleBackColor = false;
+            this.Rasa.Click += new System.EventHandler(this.Rasa_Click);
+            // 
+            // fingerView
+            // 
+            this.fingerView.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.fingerView.Location = new System.Drawing.Point(268, 177);
+            this.fingerView.Name = "fingerView";
+            this.fingerView.Size = new System.Drawing.Size(95, 275);
+            this.fingerView.TabIndex = 6;
+            this.fingerView.TabStop = false;
+            // 
+            // Nazad
+            // 
+            this.Nazad.BackColor = System.Drawing.Color.Plum;
+            this.Nazad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Nazad.Font = new System.Drawing.Font("Segoe Print", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.Nazad.Location = new System.Drawing.Point(12, 609);
+            this.Nazad.Name = "Nazad";
+            this.Nazad.Size = new System.Drawing.Size(121, 40);
+            this.Nazad.TabIndex = 7;
+            this.Nazad.Text = "Nazad";
+            this.Nazad.UseVisualStyleBackColor = false;
+            this.Nazad.Click += new System.EventHandler(this.Nazad_Click);
+            // 
+            // Galerija
+            // 
+            this.Galerija.BackColor = System.Drawing.Color.Plum;
+            this.Galerija.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Galerija.Font = new System.Drawing.Font("Segoe Print", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.Galerija.Location = new System.Drawing.Point(0, 424);
+            this.Galerija.Name = "Galerija";
+            this.Galerija.Size = new System.Drawing.Size(300, 75);
+            this.Galerija.TabIndex = 8;
+            this.Galerija.Text = "Dodaj u galeriju";
+            this.Galerija.UseVisualStyleBackColor = false;
             // 
             // FingerMenu
             // 
@@ -116,21 +165,24 @@ namespace Noktinator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1184, 661);
+            this.Controls.Add(this.Nazad);
+            this.Controls.Add(this.fingerView);
             this.Controls.Add(this.Buttons);
-            this.Controls.Add(this.fingerView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1200, 700);
             this.MinimumSize = new System.Drawing.Size(1200, 700);
             this.Name = "FingerMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FingerMenu";
-            ((System.ComponentModel.ISupportInitialize)(this.fingerView1)).EndInit();
+            this.Load += new System.EventHandler(this.FingerMenu_Load_1);
+            this.VisibleChanged += new System.EventHandler(this.FingerMenu_VisibleChanged);
             this.Buttons.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.fingerView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private FingerView fingerView1;
         private System.Windows.Forms.Button OblikNokta;
         private System.Windows.Forms.Button Patern;
         private System.Windows.Forms.Button BojaNokta;
@@ -138,5 +190,10 @@ namespace Noktinator
         private System.Windows.Forms.GroupBox Buttons;
         private System.Windows.Forms.ColorDialog NokatColorDialog;
         private System.Windows.Forms.ColorDialog PaternColorDialog;
+        private System.Windows.Forms.PictureBox fingerView;
+        private System.Windows.Forms.Button Rasa;
+        private System.Windows.Forms.ColorDialog RasaColorDialog;
+        private System.Windows.Forms.Button Nazad;
+        private System.Windows.Forms.Button Galerija;
     }
 }

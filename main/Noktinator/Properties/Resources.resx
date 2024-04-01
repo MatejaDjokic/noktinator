@@ -118,13 +118,118 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="almond" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\almond.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="almond_finger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\almond_finger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="almond_tip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\almond_tip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ballerina" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ballerina.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ballerina_finger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ballerina_finger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ballerina_tip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ballerina_tip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FireStyle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FireStyle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HeartsStyle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HeartsStyle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LeafStyle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LeafStyle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LeavesStyle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LeavesStyle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lipstick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lipstick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lipstick_finger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lipstick_finger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lipstick_tip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lipstick_tip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mountain_peak" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mountain_peak.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mountain_peak_finger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mountain_peak_finger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mountain_peak_tip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mountain_peak_tip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="NailLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NailLogo.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="NoktinatorLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NoktinatorLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="oval" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\oval.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="oval_finger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\oval_finger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="oval_tip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\oval_tip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rounded" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rounded.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rounded_finger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rounded_finger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rounded_tip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rounded_tip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="short_finger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\short_finger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="short_tip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\short_tip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="squoval" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\squoval.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="squoval_finger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\squoval_finger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="squoval_tip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\squoval_tip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="StarsStyle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StarsStyle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stiletto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stiletto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stiletto_finger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stiletto_finger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stiletto_tip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stiletto_tip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="White" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wide" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wide_finger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wide_finger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wide_tip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wide_tip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_short" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\short.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

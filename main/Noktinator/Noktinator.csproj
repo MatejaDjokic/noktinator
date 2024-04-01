@@ -46,11 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChoosePattern.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChoosePattern.Designer.cs">
+      <DependentUpon>ChoosePattern.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChooseShape.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseShape.Designer.cs">
+      <DependentUpon>ChooseShape.cs</DependentUpon>
+    </Compile>
     <Compile Include="FingerMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FingerMenu.Designer.cs">
       <DependentUpon>FingerMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FingerPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FingerPreview.Designer.cs">
+      <DependentUpon>FingerPreview.cs</DependentUpon>
     </Compile>
     <Compile Include="FingerView.cs">
       <SubType>Component</SubType>
@@ -58,7 +76,19 @@
     <Compile Include="FingerView.Designer.cs">
       <DependentUpon>FingerView.cs</DependentUpon>
     </Compile>
+    <Compile Include="KorisnickaGalerija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KorisnickaGalerija.Designer.cs">
+      <DependentUpon>KorisnickaGalerija.cs</DependentUpon>
+    </Compile>
     <Compile Include="Nail.cs" />
+    <Compile Include="SkinChoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkinChoice.Designer.cs">
+      <DependentUpon>SkinChoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="StartMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,8 +97,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ChoosePattern.resx">
+      <DependentUpon>ChoosePattern.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChooseShape.resx">
+      <DependentUpon>ChooseShape.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FingerMenu.resx">
       <DependentUpon>FingerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FingerPreview.resx">
+      <DependentUpon>FingerPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KorisnickaGalerija.resx">
+      <DependentUpon>KorisnickaGalerija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinChoice.resx">
+      <DependentUpon>SkinChoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StartMenu.resx">
       <DependentUpon>StartMenu.cs</DependentUpon>
@@ -110,6 +155,114 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\almond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ballerina.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lipstick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mountain_peak.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oval.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rounded.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\short.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\squoval.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stiletto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TrianglesStyle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FireStyle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HeartsStyle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LeafStyle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LeavesStyle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StarsStyle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\almond_finger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ballerina_finger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lipstick_finger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mountain_peak_finger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oval_finger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rounded_finger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\short_finger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\squoval_finger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stiletto_finger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wide_finger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\almond_tip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ballerina_tip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lipstick_tip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mountain_peak_tip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oval_tip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rounded_tip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\short_tip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\squoval_tip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stiletto_tip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wide_tip.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

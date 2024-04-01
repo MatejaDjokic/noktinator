@@ -17,6 +17,7 @@ namespace Noktinator
         public FingerView()
         {
             InitializeComponent();
+            
         }
 
         protected override void OnPaint(PaintEventArgs pe)
