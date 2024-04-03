@@ -7,7 +7,7 @@ namespace nail_gallery
     {
         private List<Nail> items;
         private int currentIndex = 0;
-        private int totalItemCount = 100;
+        private int totalItemCount = 10000;
         private int rows = 3;
         private int cols = 4;
         private int rc;
@@ -21,7 +21,6 @@ namespace nail_gallery
             this.rc = this.rows * this.cols;
             this.modifier = items.Count % this.rc == 0 ? 0 : -1;
 
-            // Register keydown event
             this.KeyDown += MyKeyDown!;
             this.KeyPreview = true;
         }
@@ -35,6 +34,8 @@ namespace nail_gallery
         {
             InitializeNails();
             DisplayItems();
+
+            this.searchBar.TabIndex = 0;
         }
         private void InitializeNails()
         {
