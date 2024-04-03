@@ -7,7 +7,7 @@ namespace nail_gallery
     {
         private List<Nail> items;
         private int currentIndex = 0;
-        private int totalItemCount = 1000;
+        private int totalItemCount = 100;
         private int rows = 3;
         private int cols = 4;
         private int rc;
@@ -28,9 +28,7 @@ namespace nail_gallery
 
         private void MyKeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.I)
-                ShowNailsDialog();
-            else if (e.KeyCode == Keys.Escape)
+            if (e.KeyCode == Keys.Escape)
                 Application.Exit();
         }
         private void NailGalleryLoad(object sender, EventArgs e)
@@ -70,16 +68,6 @@ namespace nail_gallery
                 grid.RowStyles.Add(new RowStyle(SizeType.Percent, 100f / this.rows));
             for (int i = 0; i < this.cols; i++)
                 grid.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100f / this.cols));
-        }
-        private void ShowNailsDialog()
-        {
-            string txt = string.Empty;
-            for (int i = 0; i < items.Count; i++)
-            {
-                txt += items[i].Info(i);
-                txt += "\n";
-            }
-            MessageBox.Show(txt, "Nails");
         }
         private void IndexInputChanged(object sender, EventArgs e)
         {
