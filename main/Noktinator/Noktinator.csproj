@@ -83,6 +83,9 @@
       <DependentUpon>KorisnickaGalerija.cs</DependentUpon>
     </Compile>
     <Compile Include="Nail.cs" />
+    <Compile Include="NailPattern.cs" />
+    <Compile Include="NailShape.cs" />
+    <Compile Include="NailUtils.cs" />
     <Compile Include="SkinChoice.cs">
       <SubType>Form</SubType>
     </Compile>

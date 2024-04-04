@@ -43,19 +43,17 @@ namespace nail_gallery
             // grid
             // 
             grid.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            grid.ColumnCount = 2;
+            grid.ColumnCount = 4;
             grid.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             grid.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             grid.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             grid.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            grid.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            grid.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             grid.Location = new Point(12, 43);
             grid.Name = "grid";
-            grid.RowCount = 2;
-            grid.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            grid.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            grid.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            grid.RowCount = 3;
+            grid.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
+            grid.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
+            grid.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             grid.Size = new Size(776, 353);
             grid.TabIndex = 6;
             // 

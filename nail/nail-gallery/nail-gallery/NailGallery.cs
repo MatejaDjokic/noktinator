@@ -1,8 +1,10 @@
+using System.Security.Cryptography;
+
 namespace nail_gallery
 {
     public partial class NailGallery : Form
     {
-        private int totalItemCount = 10_000;
+        private int totalItemCount = 100;
         private int rows = 3;
         private int cols = 4;
 
@@ -77,16 +79,11 @@ namespace nail_gallery
                 Nail nail = this.filteredNails[i];
                 Button button = new Button();
 
-                string str = string.Empty;
-                str += $"{nail.shape}";
-                str += "\n";
-                str += $"{nail.pattern}";
-                button.Text = str;
+                button.Text = "";
+                button.BackgroundImage = nail.GetImage();
+                button.BackgroundImageLayout = ImageLayout.Zoom;
+                button.Click += (_, _) => new CustomDialog(nail, filteredNails.IndexOf(nail)).ShowDialog();
 
-                button.BackColor = nail.shapeColor;
-                //button.ForeColor = nail.patternColor;
-
-                button.Click += (object _, EventArgs _) => MessageBox.Show(nail.Info(), $"Nail {filteredNails.IndexOf(nail) + 1}");
 
                 button.TextAlign = ContentAlignment.MiddleLeft;
                 button.Dock = DockStyle.Fill;
@@ -112,10 +109,7 @@ namespace nail_gallery
                             x => new string[] {
                                 $"{filteredNails.IndexOf(n) + 1}",
                             $"{n.shape}",
-                            $"{n.pattern}",
-                            $"{GetRgb(n.shapeColor)}",
-                            $"{GetRgb(n.patternColor)}"
-                                    }
+                            $"{n.pattern}"}
                             .ToList().Select(a => a.Trim().ToLower()).Any(attribute => attribute
                             .Contains(x)))).ToList();
 
@@ -129,12 +123,6 @@ namespace nail_gallery
             int blue = color.B;
             return $"{start}{red}{separator}{green}{separator}{blue}{end}";
         }
-        private string ReturnMessage(string message)
-        {
-            MessageBox.Show(message);
-            return message;
-        }
-        private T Return<T>(T t) => t;
 
         private void FirstPage()
         {
@@ -196,7 +184,6 @@ namespace nail_gallery
                 indexInput.ForeColor = Color.Red;
             }
         }
-
         private void SearchBarTextChanged(object sender, EventArgs e)
         {
             searchBarText = searchBar.Text.Trim().ToLower();
@@ -204,109 +191,66 @@ namespace nail_gallery
         }
     }
 
-    public class Nail
+    class CustomDialog : Form
     {
-        private NailShape _shape;
-        private NailPattern _pattern;
-        private Color _shapeColor;
-        private Color _patternColor;
+        public Nail nail;
+        public CustomDialog(Nail nail, int i)
+        {
+            this.nail = nail;
 
-        public Nail(
-            NailShape shape = NailShape.Almond,
-            NailPattern pattern = NailPattern.FireStyle,
-            Color nailColor = default,
-            Color patternColor = default)
-        {
-            this._shape = shape;
-            this._pattern = pattern;
-            this._shapeColor = nailColor;
-            this._patternColor = patternColor;
-        }
+            this.Size = new Size(600, 400);
+            CenterToScreen();
 
-        public NailShape shape
-        {
-            get { return _shape; }
-            set { _shape = value; }
-        }
-        public NailPattern pattern
-        {
-            get { return _pattern; }
-            set { _pattern = value; }
-        }
-        public Color shapeColor
-        {
-            get { return _shapeColor; }
-            set { _shapeColor = value; }
-        }
-        public Color patternColor
-        {
-            get { return _patternColor; }
-            set { _patternColor = value; }
-        }
+            this.KeyDown += (object sender, KeyEventArgs e) =>
+            {
+                if (e.KeyCode == Keys.Escape) this.Close();
+            };
 
-        public String Info()
-        {
-            Color sc = this._shapeColor;
-            Color pc = this._patternColor;
-            string nailColorTxt = $"({sc.R},{sc.G},{sc.B})";
-            string patternColorTxt = $"({pc.R},{pc.G},{pc.B})";
-            return $"    Shape - {this._shape}\n    Pattern - {this._pattern}\n    NailColor - {nailColorTxt}\n    PatternColor - {patternColorTxt}";
-        }
+            Text = $"Nail {i + 1}";
 
-        public static Nail Random()
-        {
-            return new Nail(
-                shape: Nail.RandomShape(),
-                pattern: Nail.RandomPattern(),
-                nailColor: Nail.RandomColor(),
-                patternColor: Nail.RandomColor()
-            );
-        }
-        private static NailShape RandomShape()
-        {
-            return (NailShape)Nail.RandomIndexForEnum<NailShape>();
-        }
-        private static NailPattern RandomPattern()
-        {
-            return (NailPattern)Nail.RandomIndexForEnum<NailPattern>();
-        }
-        private static int RandomIndexForEnum<T>()
-        {
-            Random rnd = new Random();
-            int enumLength = Enum.GetValues(typeof(T)).Length;
-            return rnd.Next(enumLength);
-        }
-        private static Color RandomColor()
-        {
-            Random rnd = new Random();
-            return Color.FromArgb(
-                red: rnd.Next(256),
-                green: rnd.Next(256),
-                blue: rnd.Next(256)
-            );
-        }
-    }
+            TableLayoutPanel table = new TableLayoutPanel()
+            {
+                Dock = DockStyle.Fill,
+                RowCount = 1,
+                ColumnCount = 3,
+                RowStyles = { new RowStyle(SizeType.Percent, 100f) },
+                ColumnStyles = {
+                    new ColumnStyle(SizeType.Percent, 33f),
+                    new ColumnStyle(SizeType.Percent, 33f),
+                    new ColumnStyle(SizeType.Percent, 33f),
+                },
+            };
+            this.Controls.Add(table);
 
-    public enum NailShape
-    {
-        Almond,
-        Ballerina,
-        Lipstick,
-        MountainPeak,
-        Oval,
-        Rounded,
-        Short,
-        Squoval,
-        Stiletto,
-        Wide
-    }
+            Label l1 = new Label()
+            {
+                Text = $"{nail.shape}",
+                Dock = DockStyle.Fill,
+                BackColor = nail.nailColor,
+                Font = new Font("Arial", 12),
+                TextAlign = ContentAlignment.MiddleCenter,
+            };
+            table.Controls.Add(l1, 0, 0);
 
-    public enum NailPattern
-    {
-        FireStyle,
-        LeafStyle,
-        StarsStyle,
-        HeartsStyle,
-        LeavesStyle
+            Label l2 = new Label()
+            {
+                Text = $"{nail.pattern}",
+                Dock = DockStyle.Fill,
+                BackColor = nail.patternColor,
+                Font = new Font("Arial", 12),
+                TextAlign = ContentAlignment.MiddleCenter,
+            };
+            table.Controls.Add(l2, 1, 0);
+
+            Label l3 = new Label()
+            {
+                Text = $"Skin Color",
+                Dock = DockStyle.Fill,
+                BackColor = nail.skinColor,
+                Font = new Font("Arial", 12),
+                TextAlign = ContentAlignment.MiddleCenter,
+            };
+            table.Controls.Add(l3, 2, 0);
+        }
     }
 }

@@ -356,6 +356,7 @@ namespace Noktinator
             this.Controls.Add(this.DomaliPrst);
             this.Controls.Add(this.MaliPrst);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1200, 700);
             this.MinimumSize = new System.Drawing.Size(1200, 700);
             this.Name = "FingerPreview";

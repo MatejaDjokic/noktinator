@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System.Windows.Forms;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using System;
 
 namespace Noktinator
 {
@@ -18,7 +12,7 @@ namespace Noktinator
         }
 
         public static Nail nail = new Nail();
-        
+
         //slika koja se menja iz ChooseShape metode iz Nail.cs
         public static Image shape;
         public static Image pattern;
@@ -33,15 +27,15 @@ namespace Noktinator
 
 
 
-        private void FingerMenu_Load_1(object sender, EventArgs e)
+        private void FingerMenuLoad(object sender, EventArgs e)
         {
             nail.ChangeShape();
-            fingerImage = new Bitmap(nail.FingerShape);
-            nailImage = new Bitmap(nail.NailShape);
-            
-            MergeImages(); 
+            fingerImage = new Bitmap(nail.fingerShapeImage);
+            nailImage = new Bitmap(nail.nailShapeImage);
+
+            MergeImages();
         }
-      
+
         public void MergeImages() //spajanje slike prsta i odgovarajuceg nokta
         {
             // nova bitmapa za drzanje spojenih slika
@@ -80,7 +74,7 @@ namespace Noktinator
         }
 
         //biranje boje nokta 
-        private void BojaNokta_Click(object sender, EventArgs e)
+        private void BojaNoktaClick(object sender, EventArgs e)
         {
             var res = NokatColorDialog.ShowDialog();
             if (res == DialogResult.OK)
@@ -88,13 +82,13 @@ namespace Noktinator
                 nail.nailColor = NokatColorDialog.Color;
 
                 // kreiranje nove instance bitmape za bojenje nokte
-                nailImage = ColorBitmap(new Bitmap(nail.NailShape), NokatColorDialog.Color);
+                nailImage = ColorBitmap(new Bitmap(nail.nailShapeImage), NokatColorDialog.Color);
             }
             MergeImages();
         }
 
         //biranje boje paterna
-        private void BojaPaterna_Click(object sender, EventArgs e)
+        private void BojaPaternaClick(object sender, EventArgs e)
         {
             var res = PaternColorDialog.ShowDialog();
             if (res == DialogResult.OK)
@@ -104,7 +98,7 @@ namespace Noktinator
         }
 
         //biranje boje koze
-        private void Rasa_Click(object sender, EventArgs e)
+        private void RasaClick(object sender, EventArgs e)
         {
             SkinChoice a = new SkinChoice();
             a.Show();
@@ -112,23 +106,23 @@ namespace Noktinator
         }
 
         //biranje oblika
-        private void OblikNokta_Click(object sender, EventArgs e)
+        private void OblikNoktaClick(object sender, EventArgs e)
         {
-           //ChooseShape forma na kojoj se biraju oblici noktiju
-           ChooseShape chooseShape = new ChooseShape();
-           chooseShape.Show();
-           this.Hide();
+            //ChooseShape forma na kojoj se biraju oblici noktiju
+            ChooseShape chooseShape = new ChooseShape();
+            chooseShape.Show();
+            this.Hide();
         }
 
-        
-        private void FingerMenu_VisibleChanged(object sender, EventArgs e)
+
+        private void FingerMenuVisibleChanged(object sender, EventArgs e)
         {
             nail.ChangeShape();
-            
+
             //kad god se ponovo pojavi ova forma, prst i nokat ce imati poslednju sacuvanu boju
-            nailImage = ColorBitmap(new Bitmap(nail.NailShape), nail.nailColor);
-            fingerImage = ColorBitmap(new Bitmap(nail.FingerShape), nail.skinColor);
-            MergeImages();            
+            nailImage = ColorBitmap(new Bitmap(nail.nailShapeImage), nail.nailColor);
+            fingerImage = ColorBitmap(new Bitmap(nail.fingerShapeImage), nail.skinColor);
+            MergeImages();
         }
 
         //biranje paterna
@@ -139,7 +133,7 @@ namespace Noktinator
             this.Hide();
         }
 
-            
+
         //kada se stisne nazad onda 
         private void Nazad_Click(object sender, EventArgs e)
         {

@@ -57,7 +57,7 @@ namespace Noktinator
             this.OblikNokta.TabIndex = 1;
             this.OblikNokta.Text = "oblik nokta";
             this.OblikNokta.UseVisualStyleBackColor = false;
-            this.OblikNokta.Click += new System.EventHandler(this.OblikNokta_Click);
+            this.OblikNokta.Click += new System.EventHandler(this.OblikNoktaClick);
             // 
             // Patern
             // 
@@ -83,7 +83,7 @@ namespace Noktinator
             this.BojaNokta.TabIndex = 3;
             this.BojaNokta.Text = "boja nokta";
             this.BojaNokta.UseVisualStyleBackColor = false;
-            this.BojaNokta.Click += new System.EventHandler(this.BojaNokta_Click);
+            this.BojaNokta.Click += new System.EventHandler(this.BojaNoktaClick);
             // 
             // BojaPaterna
             // 
@@ -96,7 +96,7 @@ namespace Noktinator
             this.BojaPaterna.TabIndex = 4;
             this.BojaPaterna.Text = "boja paterna";
             this.BojaPaterna.UseVisualStyleBackColor = false;
-            this.BojaPaterna.Click += new System.EventHandler(this.BojaPaterna_Click);
+            this.BojaPaterna.Click += new System.EventHandler(this.BojaPaternaClick);
             // 
             // Buttons
             // 
@@ -123,7 +123,7 @@ namespace Noktinator
             this.Rasa.TabIndex = 7;
             this.Rasa.Text = "Izaberite svoju boju koze";
             this.Rasa.UseVisualStyleBackColor = false;
-            this.Rasa.Click += new System.EventHandler(this.Rasa_Click);
+            this.Rasa.Click += new System.EventHandler(this.RasaClick);
             // 
             // fingerView
             // 
@@ -174,8 +174,8 @@ namespace Noktinator
             this.Name = "FingerMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FingerMenu";
-            this.Load += new System.EventHandler(this.FingerMenu_Load_1);
-            this.VisibleChanged += new System.EventHandler(this.FingerMenu_VisibleChanged);
+            this.Load += new System.EventHandler(this.FingerMenuLoad);
+            this.VisibleChanged += new System.EventHandler(this.FingerMenuVisibleChanged);
             this.Buttons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.fingerView)).EndInit();
             this.ResumeLayout(false);

@@ -18,7 +18,7 @@ namespace Noktinator
         }
 
 
-        public void choiceClick(NailPatterns patternEnum)
+        public void choiceClick(NailPattern patternEnum)
         {
             FingerMenu fingerMenu = (FingerMenu)Application.OpenForms["FingerMenu"];
             
@@ -30,27 +30,27 @@ namespace Noktinator
 
         private void FireStyle_Click(object sender, EventArgs e)
         {
-            choiceClick(NailPatterns.FireStyle);
+            choiceClick(NailPattern.FireStyle);
         }
 
         private void LeafStyle_Click(object sender, EventArgs e)
         {
-            choiceClick(NailPatterns.LeafStyle);
+            choiceClick(NailPattern.LeafStyle);
         }
 
         private void StarsStyle_Click(object sender, EventArgs e)
         {
-            choiceClick(NailPatterns.StarsStyle);
+            choiceClick(NailPattern.StarsStyle);
         }
 
         private void HeartsStyle_Click(object sender, EventArgs e)
         {
-            choiceClick(NailPatterns.HeartsStyle);
+            choiceClick(NailPattern.HeartsStyle);
         }
 
         private void LeavesStyle_Click(object sender, EventArgs e)
         {
-            choiceClick(NailPatterns.LeavesStyle);
+            choiceClick(NailPattern.LeavesStyle);
         }
     }
 }

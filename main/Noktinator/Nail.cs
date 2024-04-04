@@ -5,121 +5,85 @@ namespace Noktinator
 {
     public class Nail
     {
-        public NailShapes nailShape;
-        public NailPatterns nailPattern;
+        public NailShape nailShape;
+        public NailPattern nailPattern;
         public Color nailColor = Color.White;
         public Color patternColor = Color.Black;
         public Color skinColor = Color.White;
 
+        public Image nailShapeImage;
+        public Image fingerShapeImage;
 
-        public Image NailShape;
-        public Image FingerShape;
-
-
-        public Nail() 
+        public Nail()
         {
             ChangeShape();
         }
-
-        public void setPattern(NailPatterns newPattern)
+        public void SetPattern(NailPattern newPattern)
         {
             this.nailPattern = newPattern;
         }
-
-        public void setNailColor(Color newNailColor)
+        public void SetNailColor(Color newNailColor)
         {
             this.nailColor = newNailColor;
         }
-
-        public void setPatternColor(Color newPatternColor)
+        public void SetPatternColor(Color newPatternColor)
         {
             this.patternColor = newPatternColor;
         }
-
-        public Bitmap getImage()
-        {
-            throw new Exception("Not yet implemented!");
-        }
-
         public void ChangeShape()
         {
             switch (nailShape)
             {
-                case NailShapes.Almond:
-                    NailShape = Properties.Resources.almond_tip;
-                    FingerShape = Properties.Resources.almond_finger;
+                case Noktinator.NailShape.Almond:
+                    nailShapeImage = Properties.Resources.almond_tip;
+                    fingerShapeImage = Properties.Resources.almond_finger;
                     break;
 
-                case NailShapes.Ballerina:
-                    NailShape = Properties.Resources.ballerina_tip;
-                    FingerShape = Properties.Resources.ballerina_finger;
+                case Noktinator.NailShape.Ballerina:
+                    nailShapeImage = Properties.Resources.ballerina_tip;
+                    fingerShapeImage = Properties.Resources.ballerina_finger;
                     break;
 
-                case NailShapes.Lipstick:
-                    NailShape = Properties.Resources.lipstick_tip;
-                    FingerShape = Properties.Resources.lipstick_finger;
+                case Noktinator.NailShape.Lipstick:
+                    nailShapeImage = Properties.Resources.lipstick_tip;
+                    fingerShapeImage = Properties.Resources.lipstick_finger;
                     break;
 
-                case NailShapes.MountainPeak:
-                    NailShape = Properties.Resources.mountain_peak_tip;
-                    FingerShape = Properties.Resources.mountain_peak_finger;
+                case Noktinator.NailShape.MountainPeak:
+                    nailShapeImage = Properties.Resources.mountain_peak_tip;
+                    fingerShapeImage = Properties.Resources.mountain_peak_finger;
                     break;
 
-                case NailShapes.Oval:
-                    NailShape = Properties.Resources.oval_tip;
-                    FingerShape = Properties.Resources.oval_finger;
+                case Noktinator.NailShape.Oval:
+                    nailShapeImage = Properties.Resources.oval_tip;
+                    fingerShapeImage = Properties.Resources.oval_finger;
                     break;
 
-                case NailShapes.Rounded:
-                    NailShape = Properties.Resources.rounded_tip;
-                    FingerShape = Properties.Resources.rounded_finger;
+                case Noktinator.NailShape.Rounded:
+                    nailShapeImage = Properties.Resources.rounded_tip;
+                    fingerShapeImage = Properties.Resources.rounded_finger;
                     break;
 
-                case NailShapes.Short:
-                    NailShape = Properties.Resources.short_tip;
-                    FingerShape = Properties.Resources.short_finger;
+                case Noktinator.NailShape.Short:
+                    nailShapeImage = Properties.Resources.short_tip;
+                    fingerShapeImage = Properties.Resources.short_finger;
                     break;
 
-                case NailShapes.Squoval:
-                    NailShape = Properties.Resources.squoval_tip;
-                    FingerShape = Properties.Resources.squoval_finger;
+                case Noktinator.NailShape.Squoval:
+                    nailShapeImage = Properties.Resources.squoval_tip;
+                    fingerShapeImage = Properties.Resources.squoval_finger;
                     break;
 
-                case NailShapes.Stiletto:
-                    NailShape = Properties.Resources.stiletto_tip;
-                    FingerShape = Properties.Resources.stiletto_finger;
+                case Noktinator.NailShape.Stiletto:
+                    nailShapeImage = Properties.Resources.stiletto_tip;
+                    fingerShapeImage = Properties.Resources.stiletto_finger;
                     break;
 
-                case NailShapes.Wide:
-                    NailShape = Properties.Resources.wide_tip;
-                    FingerShape = Properties.Resources.wide_finger;
+                case Noktinator.NailShape.Wide:
+                    nailShapeImage = Properties.Resources.wide_tip;
+                    fingerShapeImage = Properties.Resources.wide_finger;
                     break;
             }
         }
-    }
-
-
-
-    public enum NailShapes
-    {
-        Almond,
-        Ballerina,
-        Lipstick,
-        MountainPeak,
-        Oval,
-        Rounded,
-        Short,
-        Squoval,
-        Stiletto,
-        Wide
-    }
-
-    public enum NailPatterns
-    {
-        FireStyle,
-        LeafStyle,
-        StarsStyle,
-        HeartsStyle,
-        LeavesStyle
     }
 }

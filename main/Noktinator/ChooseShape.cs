@@ -17,7 +17,7 @@ namespace Noktinator
             InitializeComponent();
         }
 
-        public void choiceClick(NailShapes shapeEnum) 
+        public void choiceClick(NailShape shapeEnum) 
         {
             FingerMenu fingerMenu = (FingerMenu)Application.OpenForms["FingerMenu"];
             FingerMenu.nail.nailShape = shapeEnum; //noktu u glavnom editoru za atribut shape daje odredjeni oblik
@@ -28,52 +28,52 @@ namespace Noktinator
 
         private void Almond_Click(object sender, EventArgs e)
         {
-            choiceClick(NailShapes.Almond);
+            choiceClick(NailShape.Almond);
         }
 
         private void Ballerina_Click(object sender, EventArgs e)
         {
-            choiceClick(NailShapes.Ballerina);
+            choiceClick(NailShape.Ballerina);
         }
 
         private void Lipstick_Click(object sender, EventArgs e)
         {
-            choiceClick(NailShapes.Lipstick);
+            choiceClick(NailShape.Lipstick);
         }
 
         private void Mountain_peak_Click(object sender, EventArgs e)
         {
-            choiceClick(NailShapes.MountainPeak);
+            choiceClick(NailShape.MountainPeak);
         }
 
         private void Oval_Click(object sender, EventArgs e)
         {
-            choiceClick(NailShapes.Oval);
+            choiceClick(NailShape.Oval);
         }
 
         private void Rounded_Click(object sender, EventArgs e)
         {
-            choiceClick(NailShapes.Rounded);
+            choiceClick(NailShape.Rounded);
         }
 
         private void Short_Click(object sender, EventArgs e)
         {
-            choiceClick(NailShapes.Short);
+            choiceClick(NailShape.Short);
         }
 
         private void Squoval_Click(object sender, EventArgs e)
         {
-            choiceClick(NailShapes.Squoval);
+            choiceClick(NailShape.Squoval);
         }
 
         private void Stiletto_Click(object sender, EventArgs e)
         {
-            choiceClick(NailShapes.Stiletto);
+            choiceClick(NailShape.Stiletto);
         }
 
         private void Wide_Click(object sender, EventArgs e)
         {
-            choiceClick(NailShapes.Wide);
+            choiceClick(NailShape.Wide);
         }
         
 
