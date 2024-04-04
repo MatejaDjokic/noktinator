@@ -151,6 +151,7 @@ namespace nail_gallery
             searchBar.Size = new Size(776, 23);
             searchBar.TabIndex = 0;
             searchBar.TextAlign = HorizontalAlignment.Center;
+            searchBar.TextChanged += SearchBarTextChanged;
             // 
             // NailGallery
             // 
