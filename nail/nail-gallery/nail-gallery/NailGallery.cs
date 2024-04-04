@@ -1,13 +1,8 @@
-using System.Drawing.Design;
-using System.Linq.Expressions;
-using System.Reflection.Metadata;
-using System.Security.Principal;
-
 namespace nail_gallery
 {
     public partial class NailGallery : Form
     {
-        private int totalItemCount = 50;
+        private int totalItemCount = 10_000;
         private int rows = 3;
         private int cols = 4;
 
