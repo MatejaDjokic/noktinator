@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
+using System;
 
 namespace Noktinator
 {
@@ -31,6 +24,13 @@ namespace Noktinator
         private void IzadjiClick(object sender, EventArgs e)
         {
             Application.Exit();
-        }        
+        }
+
+        private void GalleryButtonClick(object sender, EventArgs e)
+        {
+            NailGalerija nailGalerija = new NailGalerija();
+            nailGalerija.Show();
+            //this.Hide();
+        }
     }
 }

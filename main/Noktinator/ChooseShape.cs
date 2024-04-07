@@ -17,11 +17,11 @@ namespace Noktinator
             InitializeComponent();
         }
 
-        public void choiceClick(NailShape shapeEnum) 
+        public void choiceClick(NailShape shapeEnum)
         {
             FingerMenu fingerMenu = (FingerMenu)Application.OpenForms["FingerMenu"];
             FingerMenu.nail.nailShape = shapeEnum; //noktu u glavnom editoru za atribut shape daje odredjeni oblik
-            
+
             this.Hide();
             fingerMenu.Show();
         }
@@ -75,7 +75,7 @@ namespace Noktinator
         {
             choiceClick(NailShape.Wide);
         }
-        
+
 
         private void Darken(object sender, EventArgs e)
         {

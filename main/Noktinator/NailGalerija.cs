@@ -1,9 +1,16 @@
-using Accessibility;
-using System.Security.Cryptography;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace nail_gallery
+namespace Noktinator
 {
-    public partial class NailGallery : Form
+    public partial class NailGalerija : Form
     {
         private int totalItemCount = 100;
         private int rows = 3;
@@ -18,23 +25,23 @@ namespace nail_gallery
         private int currentPageIndex = 0;
         private string searchBarText;
 
-        public NailGallery()
+        public NailGalerija()
         {
             InitializeComponent();
 
-            this.nails = [];
-            this.filteredNails = [];
+            this.nails = new List<Nail>();
+            this.filteredNails = new List<Nail>();
             this.n = this.rows * this.cols;
             this.modifier = filteredNails.Count % this.n == 0 ? 0 : -1;
 
-            this.KeyDown += MyKeyDown!;
+            this.KeyDown += MyKeyDown;
             this.KeyPreview = true;
+
         }
         private void NailGalleryLoad(object sender, EventArgs e)
         {
             InitializeNails();
             DisplayItems();
-
             this.searchBar.TabIndex = 0;
         }
 
@@ -52,12 +59,21 @@ namespace nail_gallery
                 this.NextPage();
             else if (e.KeyCode == Keys.Up)
                 this.LastPage();
+            else if (e.KeyCode == Keys.Back && e.Modifiers == Keys.Control)
+                this.searchBar.Text = string.Empty;
+            else if (e.KeyCode == Keys.I && e.Modifiers == Keys.Control)
+            {
+                MessageBox.Show("Nails: " + nails.Count.ToString());
+                MessageBox.Show("Filtered: " + filteredNails.Count.ToString());
+            }
         }
 
         private void InitializeNails()
         {
-            for (int i = 0; i < totalItemCount; i++)
-                nails.Add(Nail.Random());
+            nails = JsonUtils.LoadNails();
+            //for (int i = 0; i < 30; i++)
+            //    nails.Add(Nail.Random());
+            //JsonUtils.SaveNails(nails);
             filteredNails = nails;
         }
         private void DisplayItems()
@@ -77,7 +93,7 @@ namespace nail_gallery
 
                 button.BackgroundImage = nail.GetImage();
                 button.BackgroundImageLayout = ImageLayout.Zoom;
-                button.Click += (_, _) => new CustomDialog(nail, filteredNails.IndexOf(nail)).ShowDialog();
+                button.Click += (object sender, EventArgs e) => new DetaljiONoktu(nail, filteredNails.IndexOf(nail)).ShowDialog();
 
                 button.Dock = DockStyle.Fill;
                 grid.Controls.Add(button);
@@ -99,15 +115,16 @@ namespace nail_gallery
         {
             filteredNails = nails;
 
-            if (SearchBarTextValid())
-                filteredNails =
-                    filteredNails.Where(
-                        nail => searchBarText.Split(" ").Select(s => s.Trim().ToLower())
-                        .All(str => new string[] {
-                            $"{nail.shape}",
-                            $"{nail.pattern}"}
-                            .ToList().Select(a => a.Trim().ToLower())
-                            .Any(attribute => attribute.Contains(str)))).ToList();
+            // TRENUTNO NE RADI
+            //if (SearchBarTextValid())
+            //    filteredNails =
+            //        filteredNails.Where(
+            //            nail => searchBarText.Split(' ').Select(s => s.Trim().ToLower())
+            //            .All(str => new string[] {
+            //                $"{nail.nailShape}",
+            //                $"{nail.nailPattern}"}
+            //                .ToList().Select(a => a.Trim().ToLower())
+            //                .Any(attribute => attribute.Contains(str)))).ToList();
 
             currentPageIndex = 0;
             DisplayItems();
@@ -148,7 +165,7 @@ namespace nail_gallery
 
         private bool SearchBarTextValid()
         {
-            bool isNotNull = searchBar.Text != null;
+            bool isNotNull = searchBarText != null;
             bool isNotEmpty = searchBar.Text != string.Empty;
             return isNotNull && isNotEmpty;
         }
@@ -177,69 +194,6 @@ namespace nail_gallery
         {
             searchBarText = searchBar.Text.Trim().ToLower();
             //Filter();
-        }
-    }
-
-    class CustomDialog : Form
-    {
-        private Nail nail;
-        public CustomDialog(Nail nail, int i)
-        {
-            this.nail = nail;
-
-            this.Size = new Size(600, 400);
-            CenterToScreen();
-
-            this.KeyDown += (object sender, KeyEventArgs e) =>
-            {
-                if (e.KeyCode == Keys.Escape) this.Close();
-            };
-
-            this.Text = $"Nail {i + 1}";
-
-            TableLayoutPanel table = new TableLayoutPanel()
-            {
-                Dock = DockStyle.Fill,
-                RowCount = 1,
-                ColumnCount = 3,
-                RowStyles = { new RowStyle(SizeType.Percent, 100f) },
-                ColumnStyles = {
-                    new ColumnStyle(SizeType.Percent, 33f),
-                    new ColumnStyle(SizeType.Percent, 33f),
-                    new ColumnStyle(SizeType.Percent, 33f),
-                },
-            };
-            this.Controls.Add(table);
-
-            Label l1 = new Label()
-            {
-                Text = $"{nail.shape}",
-                Dock = DockStyle.Fill,
-                BackColor = nail.nailColor,
-                Font = new Font("Arial", 12),
-                TextAlign = ContentAlignment.MiddleCenter,
-            };
-            table.Controls.Add(l1, 0, 0);
-
-            Label l2 = new Label()
-            {
-                Text = $"{nail.pattern}",
-                Dock = DockStyle.Fill,
-                BackColor = nail.patternColor,
-                Font = new Font("Arial", 12),
-                TextAlign = ContentAlignment.MiddleCenter,
-            };
-            table.Controls.Add(l2, 1, 0);
-
-            Label l3 = new Label()
-            {
-                Text = $"Skin Color",
-                Dock = DockStyle.Fill,
-                BackColor = nail.skinColor,
-                Font = new Font("Arial", 12),
-                TextAlign = ContentAlignment.MiddleCenter,
-            };
-            table.Controls.Add(l3, 2, 0);
         }
     }
 }

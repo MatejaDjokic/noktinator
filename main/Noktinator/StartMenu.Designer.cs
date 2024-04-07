@@ -34,6 +34,7 @@ namespace Noktinator
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.galleryButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,7 +43,7 @@ namespace Noktinator
             this.Dizajniraj.BackColor = System.Drawing.Color.Plum;
             this.Dizajniraj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Dizajniraj.Font = new System.Drawing.Font("Segoe Print", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Dizajniraj.Location = new System.Drawing.Point(160, 370);
+            this.Dizajniraj.Location = new System.Drawing.Point(160, 290);
             this.Dizajniraj.Name = "Dizajniraj";
             this.Dizajniraj.Size = new System.Drawing.Size(279, 92);
             this.Dizajniraj.TabIndex = 0;
@@ -83,12 +84,26 @@ namespace Noktinator
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // galleryButton
+            // 
+            this.galleryButton.BackColor = System.Drawing.Color.Plum;
+            this.galleryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.galleryButton.Font = new System.Drawing.Font("Segoe Print", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.galleryButton.Location = new System.Drawing.Point(160, 388);
+            this.galleryButton.Name = "galleryButton";
+            this.galleryButton.Size = new System.Drawing.Size(279, 92);
+            this.galleryButton.TabIndex = 4;
+            this.galleryButton.Text = "Galerija";
+            this.galleryButton.UseVisualStyleBackColor = false;
+            this.galleryButton.Click += new System.EventHandler(this.GalleryButtonClick);
+            // 
             // StartMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1184, 661);
+            this.Controls.Add(this.galleryButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
@@ -111,6 +126,7 @@ namespace Noktinator
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button galleryButton;
     }
 }
 

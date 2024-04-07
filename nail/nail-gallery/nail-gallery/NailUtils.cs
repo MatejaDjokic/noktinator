@@ -26,7 +26,6 @@
                 }
             return bitmap;
         }
-
         private static bool ColorWithinTolerance(Color color)
         {
             Color check = Color.White;

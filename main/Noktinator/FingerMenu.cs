@@ -30,8 +30,8 @@ namespace Noktinator
         private void FingerMenuLoad(object sender, EventArgs e)
         {
             nail.ChangeShape();
-            fingerImage = new Bitmap(nail.fingerShapeImage);
-            nailImage = new Bitmap(nail.nailShapeImage);
+            fingerImage = new Bitmap(nail.fingerShapeImage());
+            nailImage = new Bitmap(nail.nailShapeImage());
 
             MergeImages();
         }
@@ -82,7 +82,7 @@ namespace Noktinator
                 nail.nailColor = NokatColorDialog.Color;
 
                 // kreiranje nove instance bitmape za bojenje nokte
-                nailImage = ColorBitmap(new Bitmap(nail.nailShapeImage), NokatColorDialog.Color);
+                nailImage = ColorBitmap(new Bitmap(nail.nailShapeImage()), NokatColorDialog.Color);
             }
             MergeImages();
         }
@@ -120,8 +120,8 @@ namespace Noktinator
             nail.ChangeShape();
 
             //kad god se ponovo pojavi ova forma, prst i nokat ce imati poslednju sacuvanu boju
-            nailImage = ColorBitmap(new Bitmap(nail.nailShapeImage), nail.nailColor);
-            fingerImage = ColorBitmap(new Bitmap(nail.fingerShapeImage), nail.skinColor);
+            nailImage = ColorBitmap(new Bitmap(nail.nailShapeImage()), nail.nailColor);
+            fingerImage = ColorBitmap(new Bitmap(nail.fingerShapeImage()), nail.skinColor);
             MergeImages();
         }
 
