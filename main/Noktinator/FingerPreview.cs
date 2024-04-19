@@ -1,21 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System.Windows.Forms;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using System;
 
 namespace Noktinator
 {
     public partial class FingerPreview : Form
     {
-       
+
         public static PictureBox ChosenField;
 
-        Image TempImage;
+        Image CopyPasteImage;
 
 
         public FingerPreview()
@@ -24,40 +18,40 @@ namespace Noktinator
         }
         FingerMenu fingerMenu = new FingerMenu();
 
-        public void FingerChoiceClick(PictureBox Field) 
+        public void FingerChoiceClick(PictureBox field)
         {
-            ChosenField = Field;
+            ChosenField = field;
             fingerMenu.Show();
             this.Hide();
         }
 
-        private void MaliPrst_Click(object sender, EventArgs e)
+        private void LittleFingerClick(object sender, EventArgs e)
         {
-            FingerChoiceClick(MaliPrst);
+            FingerChoiceClick(LittleFinger);
         }
 
-        private void DomaliPrst_Click(object sender, EventArgs e)
+        private void RingFingerClick(object sender, EventArgs e)
         {
-            FingerChoiceClick(DomaliPrst);
+            FingerChoiceClick(RingFinger);
         }
 
-        private void SrednjiPrst_Click(object sender, EventArgs e)
+        private void MiddleFingerClick(object sender, EventArgs e)
         {
-            FingerChoiceClick(SrednjiPrst);
+            FingerChoiceClick(MiddleFinger);
         }
 
-        private void KaziPrst_Click(object sender, EventArgs e)
+        private void IndexFingerClick(object sender, EventArgs e)
         {
-            FingerChoiceClick(KaziPrst);
+            FingerChoiceClick(IndexFinger);
         }
 
-        private void Palac_Click(object sender, EventArgs e)
+        private void ThumbClick(object sender, EventArgs e)
         {
-            FingerChoiceClick(Palac);
+            FingerChoiceClick(Thumb);
         }
 
         //shadeovanje pri hoverovanju misem
-        private void Darken(object sender, EventArgs e) 
+        private void Darken(object sender, EventArgs e)
         {
             PictureBox picBox = (PictureBox)sender;
             picBox.BackColor = Color.Plum;
@@ -70,56 +64,55 @@ namespace Noktinator
         }
 
 
-       
         //kopiranje slika
         private void MaliCopy_Click(object sender, EventArgs e)
         {
-            TempImage = MaliPrst.Image;
+            CopyPasteImage = LittleFinger.Image;
         }
 
         private void DomaliCopy_Click(object sender, EventArgs e)
         {
-            TempImage = DomaliPrst.Image;
+            CopyPasteImage = RingFinger.Image;
         }
 
         private void SrednjiCopy_Click(object sender, EventArgs e)
         {
-            TempImage = SrednjiPrst.Image;
+            CopyPasteImage = MiddleFinger.Image;
         }
 
         private void KaziCopy_Click(object sender, EventArgs e)
         {
-            TempImage = KaziPrst.Image;
+            CopyPasteImage = IndexFinger.Image;
         }
 
         private void PalacCopy_Click(object sender, EventArgs e)
         {
-            TempImage = Palac.Image;
+            CopyPasteImage = Thumb.Image;
         }
 
         private void MaliPaste_Click(object sender, EventArgs e)
         {
-            MaliPrst.Image = TempImage;
+            LittleFinger.Image = CopyPasteImage;
         }
 
         private void DomaliPaste_Click(object sender, EventArgs e)
         {
-            DomaliPrst.Image = TempImage;
+            RingFinger.Image = CopyPasteImage;
         }
 
         private void SrednjiPaste_Click(object sender, EventArgs e)
         {
-            SrednjiPrst.Image = TempImage;
+            MiddleFinger.Image = CopyPasteImage;
         }
 
         private void KaziPaste_Click(object sender, EventArgs e)
         {
-            KaziPrst.Image = TempImage;
+            IndexFinger.Image = CopyPasteImage;
         }
 
         private void PalacPaste_Click(object sender, EventArgs e)
         {
-            Palac.Image = TempImage;
+            Thumb.Image = CopyPasteImage;
         }
 
         private void Nazad_Click(object sender, EventArgs e)

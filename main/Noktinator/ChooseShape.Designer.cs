@@ -64,8 +64,8 @@
             // Almond
             // 
             this.Almond.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.Almond.BackgroundImage = global::Noktinator.Properties.Resources.almond;
-            this.Almond.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Almond.BackgroundImage = global::Noktinator.Properties.Resources.almond_pix1;
+            this.Almond.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Almond.Location = new System.Drawing.Point(252, 12);
             this.Almond.Name = "Almond";
             this.Almond.Size = new System.Drawing.Size(95, 250);
@@ -79,7 +79,7 @@
             // 
             this.Ballerina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Ballerina.BackgroundImage = global::Noktinator.Properties.Resources.ballerina;
-            this.Ballerina.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Ballerina.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Ballerina.Location = new System.Drawing.Point(395, 12);
             this.Ballerina.Name = "Ballerina";
             this.Ballerina.Size = new System.Drawing.Size(95, 250);
@@ -93,7 +93,7 @@
             // 
             this.Lipstick.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Lipstick.BackgroundImage = global::Noktinator.Properties.Resources.lipstick;
-            this.Lipstick.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Lipstick.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Lipstick.Location = new System.Drawing.Point(538, 12);
             this.Lipstick.Name = "Lipstick";
             this.Lipstick.Size = new System.Drawing.Size(95, 250);
@@ -107,7 +107,7 @@
             // 
             this.Mountain_peak.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Mountain_peak.BackgroundImage = global::Noktinator.Properties.Resources.mountain_peak;
-            this.Mountain_peak.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Mountain_peak.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Mountain_peak.Location = new System.Drawing.Point(681, 12);
             this.Mountain_peak.Name = "Mountain_peak";
             this.Mountain_peak.Size = new System.Drawing.Size(95, 250);
@@ -121,7 +121,7 @@
             // 
             this.Oval.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Oval.BackgroundImage = global::Noktinator.Properties.Resources.oval;
-            this.Oval.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Oval.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Oval.Location = new System.Drawing.Point(815, 12);
             this.Oval.Name = "Oval";
             this.Oval.Size = new System.Drawing.Size(95, 250);
@@ -135,7 +135,7 @@
             // 
             this.Rounded.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Rounded.BackgroundImage = global::Noktinator.Properties.Resources.rounded;
-            this.Rounded.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Rounded.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Rounded.Location = new System.Drawing.Point(252, 365);
             this.Rounded.Name = "Rounded";
             this.Rounded.Size = new System.Drawing.Size(95, 250);
@@ -149,7 +149,7 @@
             // 
             this.Short.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Short.BackgroundImage = global::Noktinator.Properties.Resources._short;
-            this.Short.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Short.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Short.Location = new System.Drawing.Point(395, 365);
             this.Short.Name = "Short";
             this.Short.Size = new System.Drawing.Size(95, 250);
@@ -163,7 +163,7 @@
             // 
             this.Squoval.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Squoval.BackgroundImage = global::Noktinator.Properties.Resources.squoval;
-            this.Squoval.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Squoval.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Squoval.Location = new System.Drawing.Point(538, 365);
             this.Squoval.Name = "Squoval";
             this.Squoval.Size = new System.Drawing.Size(95, 250);
@@ -177,7 +177,7 @@
             // 
             this.Stiletto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Stiletto.BackgroundImage = global::Noktinator.Properties.Resources.stiletto;
-            this.Stiletto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Stiletto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Stiletto.Location = new System.Drawing.Point(681, 365);
             this.Stiletto.Name = "Stiletto";
             this.Stiletto.Size = new System.Drawing.Size(95, 250);
@@ -191,7 +191,7 @@
             // 
             this.Wide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Wide.BackgroundImage = global::Noktinator.Properties.Resources.wide;
-            this.Wide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Wide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Wide.Location = new System.Drawing.Point(815, 365);
             this.Wide.Name = "Wide";
             this.Wide.Size = new System.Drawing.Size(95, 250);

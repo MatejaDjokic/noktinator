@@ -30,11 +30,11 @@ namespace Noktinator
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FingerPreview));
-            this.MaliPrst = new System.Windows.Forms.PictureBox();
-            this.DomaliPrst = new System.Windows.Forms.PictureBox();
-            this.SrednjiPrst = new System.Windows.Forms.PictureBox();
-            this.KaziPrst = new System.Windows.Forms.PictureBox();
-            this.Palac = new System.Windows.Forms.PictureBox();
+            this.LittleFinger = new System.Windows.Forms.PictureBox();
+            this.RingFinger = new System.Windows.Forms.PictureBox();
+            this.MiddleFinger = new System.Windows.Forms.PictureBox();
+            this.IndexFinger = new System.Windows.Forms.PictureBox();
+            this.Thumb = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,77 +52,77 @@ namespace Noktinator
             this.PalacPaste = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.Nazad = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.MaliPrst)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DomaliPrst)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SrednjiPrst)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.KaziPrst)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Palac)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LittleFinger)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RingFinger)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MiddleFinger)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IndexFinger)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Thumb)).BeginInit();
             this.SuspendLayout();
             // 
             // MaliPrst
             // 
-            this.MaliPrst.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.MaliPrst.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MaliPrst.Location = new System.Drawing.Point(135, 165);
-            this.MaliPrst.Name = "MaliPrst";
-            this.MaliPrst.Size = new System.Drawing.Size(95, 275);
-            this.MaliPrst.TabIndex = 0;
-            this.MaliPrst.TabStop = false;
-            this.MaliPrst.Click += new System.EventHandler(this.MaliPrst_Click);
-            this.MaliPrst.MouseEnter += new System.EventHandler(this.Darken);
-            this.MaliPrst.MouseLeave += new System.EventHandler(this.Lighten);
+            this.LittleFinger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LittleFinger.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LittleFinger.Location = new System.Drawing.Point(135, 165);
+            this.LittleFinger.Name = "MaliPrst";
+            this.LittleFinger.Size = new System.Drawing.Size(95, 275);
+            this.LittleFinger.TabIndex = 0;
+            this.LittleFinger.TabStop = false;
+            this.LittleFinger.Click += new System.EventHandler(this.LittleFingerClick);
+            this.LittleFinger.MouseEnter += new System.EventHandler(this.Darken);
+            this.LittleFinger.MouseLeave += new System.EventHandler(this.Lighten);
             // 
             // DomaliPrst
             // 
-            this.DomaliPrst.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.DomaliPrst.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.DomaliPrst.Location = new System.Drawing.Point(340, 165);
-            this.DomaliPrst.Name = "DomaliPrst";
-            this.DomaliPrst.Size = new System.Drawing.Size(95, 275);
-            this.DomaliPrst.TabIndex = 1;
-            this.DomaliPrst.TabStop = false;
-            this.DomaliPrst.Click += new System.EventHandler(this.DomaliPrst_Click);
-            this.DomaliPrst.MouseEnter += new System.EventHandler(this.Darken);
-            this.DomaliPrst.MouseLeave += new System.EventHandler(this.Lighten);
+            this.RingFinger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.RingFinger.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.RingFinger.Location = new System.Drawing.Point(340, 165);
+            this.RingFinger.Name = "DomaliPrst";
+            this.RingFinger.Size = new System.Drawing.Size(95, 275);
+            this.RingFinger.TabIndex = 1;
+            this.RingFinger.TabStop = false;
+            this.RingFinger.Click += new System.EventHandler(this.RingFingerClick);
+            this.RingFinger.MouseEnter += new System.EventHandler(this.Darken);
+            this.RingFinger.MouseLeave += new System.EventHandler(this.Lighten);
             // 
             // SrednjiPrst
             // 
-            this.SrednjiPrst.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.SrednjiPrst.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SrednjiPrst.Location = new System.Drawing.Point(545, 165);
-            this.SrednjiPrst.Name = "SrednjiPrst";
-            this.SrednjiPrst.Size = new System.Drawing.Size(95, 275);
-            this.SrednjiPrst.TabIndex = 2;
-            this.SrednjiPrst.TabStop = false;
-            this.SrednjiPrst.Click += new System.EventHandler(this.SrednjiPrst_Click);
-            this.SrednjiPrst.MouseEnter += new System.EventHandler(this.Darken);
-            this.SrednjiPrst.MouseLeave += new System.EventHandler(this.Lighten);
+            this.MiddleFinger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.MiddleFinger.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MiddleFinger.Location = new System.Drawing.Point(545, 165);
+            this.MiddleFinger.Name = "SrednjiPrst";
+            this.MiddleFinger.Size = new System.Drawing.Size(95, 275);
+            this.MiddleFinger.TabIndex = 2;
+            this.MiddleFinger.TabStop = false;
+            this.MiddleFinger.Click += new System.EventHandler(this.MiddleFingerClick);
+            this.MiddleFinger.MouseEnter += new System.EventHandler(this.Darken);
+            this.MiddleFinger.MouseLeave += new System.EventHandler(this.Lighten);
             // 
             // KaziPrst
             // 
-            this.KaziPrst.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.KaziPrst.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.KaziPrst.Location = new System.Drawing.Point(750, 165);
-            this.KaziPrst.Name = "KaziPrst";
-            this.KaziPrst.Size = new System.Drawing.Size(95, 275);
-            this.KaziPrst.TabIndex = 3;
-            this.KaziPrst.TabStop = false;
-            this.KaziPrst.Click += new System.EventHandler(this.KaziPrst_Click);
-            this.KaziPrst.MouseEnter += new System.EventHandler(this.Darken);
-            this.KaziPrst.MouseLeave += new System.EventHandler(this.Lighten);
+            this.IndexFinger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.IndexFinger.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.IndexFinger.Location = new System.Drawing.Point(750, 165);
+            this.IndexFinger.Name = "KaziPrst";
+            this.IndexFinger.Size = new System.Drawing.Size(95, 275);
+            this.IndexFinger.TabIndex = 3;
+            this.IndexFinger.TabStop = false;
+            this.IndexFinger.Click += new System.EventHandler(this.IndexFingerClick);
+            this.IndexFinger.MouseEnter += new System.EventHandler(this.Darken);
+            this.IndexFinger.MouseLeave += new System.EventHandler(this.Lighten);
             // 
             // Palac
             // 
-            this.Palac.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Palac.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Palac.Location = new System.Drawing.Point(955, 165);
-            this.Palac.Name = "Palac";
-            this.Palac.Size = new System.Drawing.Size(95, 275);
-            this.Palac.TabIndex = 4;
-            this.Palac.TabStop = false;
-            this.Palac.Click += new System.EventHandler(this.Palac_Click);
-            this.Palac.MouseEnter += new System.EventHandler(this.Darken);
-            this.Palac.MouseLeave += new System.EventHandler(this.Lighten);
+            this.Thumb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Thumb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Thumb.Location = new System.Drawing.Point(955, 165);
+            this.Thumb.Name = "Palac";
+            this.Thumb.Size = new System.Drawing.Size(95, 275);
+            this.Thumb.TabIndex = 4;
+            this.Thumb.TabStop = false;
+            this.Thumb.Click += new System.EventHandler(this.ThumbClick);
+            this.Thumb.MouseEnter += new System.EventHandler(this.Darken);
+            this.Thumb.MouseLeave += new System.EventHandler(this.Lighten);
             // 
             // label1
             // 
@@ -350,11 +350,11 @@ namespace Noktinator
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Palac);
-            this.Controls.Add(this.KaziPrst);
-            this.Controls.Add(this.SrednjiPrst);
-            this.Controls.Add(this.DomaliPrst);
-            this.Controls.Add(this.MaliPrst);
+            this.Controls.Add(this.Thumb);
+            this.Controls.Add(this.IndexFinger);
+            this.Controls.Add(this.MiddleFinger);
+            this.Controls.Add(this.RingFinger);
+            this.Controls.Add(this.LittleFinger);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1200, 700);
@@ -362,11 +362,11 @@ namespace Noktinator
             this.Name = "FingerPreview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FingerPreview";
-            ((System.ComponentModel.ISupportInitialize)(this.MaliPrst)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DomaliPrst)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SrednjiPrst)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.KaziPrst)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Palac)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LittleFinger)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RingFinger)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MiddleFinger)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IndexFinger)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Thumb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -374,11 +374,11 @@ namespace Noktinator
 
         #endregion
 
-        private System.Windows.Forms.PictureBox MaliPrst;
-        private System.Windows.Forms.PictureBox DomaliPrst;
-        private System.Windows.Forms.PictureBox SrednjiPrst;
-        private System.Windows.Forms.PictureBox KaziPrst;
-        private System.Windows.Forms.PictureBox Palac;
+        private System.Windows.Forms.PictureBox LittleFinger;
+        private System.Windows.Forms.PictureBox RingFinger;
+        private System.Windows.Forms.PictureBox MiddleFinger;
+        private System.Windows.Forms.PictureBox IndexFinger;
+        private System.Windows.Forms.PictureBox Thumb;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

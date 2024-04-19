@@ -18,14 +18,11 @@ namespace Noktinator
         public static Image pattern;
 
         //slika koja sluzi za kopiranje na FingerPreview
-        public static Image CopyImage;
-
+        public static Image copyImage;
 
         public static Bitmap fingerImage;
         private Bitmap nailImage;
         private Bitmap mergedImage;
-
-
 
         private void FingerMenuLoad(object sender, EventArgs e)
         {
@@ -36,7 +33,8 @@ namespace Noktinator
             MergeImages();
         }
 
-        public void MergeImages() //spajanje slike prsta i odgovarajuceg nokta
+        //spajanje slike prsta i odgovarajuceg nokta
+        public void MergeImages()
         {
             // nova bitmapa za drzanje spojenih slika
             mergedImage = new Bitmap(fingerImage.Width, fingerImage.Height);
@@ -49,7 +47,6 @@ namespace Noktinator
                 g.DrawImage(nailImage, new Point(0, 0));
             }
 
-            // rezultat
             fingerView.Image = mergedImage;
         }
 

@@ -284,5 +284,11 @@
   <ItemGroup>
     <None Include="Resources\wide_tip.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\almond_pix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\almond_pix1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
