@@ -93,26 +93,6 @@ namespace Noktinator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap almond_pix {
-            get {
-                object obj = ResourceManager.GetObject("almond_pix", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap almond_pix1 {
-            get {
-                object obj = ResourceManager.GetObject("almond_pix1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap almond_tip {
             get {
                 object obj = ResourceManager.GetObject("almond_tip", resourceCulture);
@@ -146,6 +126,16 @@ namespace Noktinator.Properties {
         internal static System.Drawing.Bitmap ballerina_tip {
             get {
                 object obj = ResourceManager.GetObject("ballerina_tip", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap copy_no_bg {
+            get {
+                object obj = ResourceManager.GetObject("copy_no_bg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -296,6 +286,16 @@ namespace Noktinator.Properties {
         internal static System.Drawing.Bitmap oval_tip {
             get {
                 object obj = ResourceManager.GetObject("oval_tip", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap paste_no_bg {
+            get {
+                object obj = ResourceManager.GetObject("paste_no_bg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -64,7 +64,7 @@
             // Almond
             // 
             this.Almond.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.Almond.BackgroundImage = global::Noktinator.Properties.Resources.almond_pix1;
+            this.Almond.BackgroundImage = global::Noktinator.Properties.Resources.almond;
             this.Almond.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Almond.Location = new System.Drawing.Point(252, 12);
             this.Almond.Name = "Almond";

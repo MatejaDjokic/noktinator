@@ -28,9 +28,9 @@ namespace Noktinator
 
         private void GalleryButtonClick(object sender, EventArgs e)
         {
-            NailGalerija nailGalerija = new NailGalerija();
+            NailGallery nailGalerija = new NailGallery();
             nailGalerija.Show();
-            //this.Hide();
+            this.Hide();
         }
     }
 }

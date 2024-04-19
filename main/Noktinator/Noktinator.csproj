@@ -90,11 +90,11 @@
       <DependentUpon>KorisnickaGalerija.cs</DependentUpon>
     </Compile>
     <Compile Include="Nail.cs" />
-    <Compile Include="NailGalerija.cs">
+    <Compile Include="NailGallery.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NailGalerija.Designer.cs">
-      <DependentUpon>NailGalerija.cs</DependentUpon>
+    <Compile Include="NailGallery.Designer.cs">
+      <DependentUpon>NailGallery.cs</DependentUpon>
     </Compile>
     <Compile Include="NailPattern.cs" />
     <Compile Include="NailShape.cs" />
@@ -128,8 +128,8 @@
     <EmbeddedResource Include="KorisnickaGalerija.resx">
       <DependentUpon>KorisnickaGalerija.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NailGalerija.resx">
-      <DependentUpon>NailGalerija.cs</DependentUpon>
+    <EmbeddedResource Include="NailGallery.resx">
+      <DependentUpon>NailGallery.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SkinChoice.resx">
       <DependentUpon>SkinChoice.cs</DependentUpon>
@@ -177,13 +177,28 @@
     <None Include="Resources\White.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\almond.png" />
+    <None Include="Resources\TrianglesStyle.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ballerina.png" />
+    <None Include="Resources\FireStyle.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\lipstick.png" />
+    <None Include="Resources\HeartsStyle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LeafStyle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LeavesStyle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StarsStyle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\almond_pix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\almond_pix1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mountain_peak.png" />
@@ -207,22 +222,52 @@
     <None Include="Resources\wide.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\TrianglesStyle.png" />
+    <None Include="Resources\almond.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\FireStyle.png" />
+    <None Include="Resources\ballerina.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\HeartsStyle.png" />
+    <None Include="Resources\lipstick.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\LeafStyle.png" />
+    <None Include="Resources\rounded_tip.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\LeavesStyle.png" />
+    <None Include="Resources\short_tip.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\StarsStyle.png" />
+    <None Include="Resources\squoval_tip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stiletto_tip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wide_tip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\almond_tip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ballerina_tip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lipstick_tip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mountain_peak_tip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oval_tip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\squoval_finger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stiletto_finger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wide_finger.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\almond_finger.png" />
@@ -246,49 +291,16 @@
     <None Include="Resources\short_finger.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\squoval_finger.png" />
+    <None Include="Resources\copy_no_bg.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\stiletto_finger.png" />
+    <None Include="Resources\copy_no_bg1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\wide_finger.png" />
+    <None Include="Resources\copy_no_bg2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\almond_tip.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ballerina_tip.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\lipstick_tip.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\mountain_peak_tip.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\oval_tip.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rounded_tip.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\short_tip.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\squoval_tip.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\stiletto_tip.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\wide_tip.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\almond_pix.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\almond_pix1.png" />
+    <None Include="Resources\paste_no_bg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -15,10 +15,17 @@ namespace Noktinator
         public FingerPreview()
         {
             InitializeComponent();
+
+            this.FormClosing += FormClose;
         }
         FingerMenu fingerMenu = new FingerMenu();
 
-        public void FingerChoiceClick(PictureBox field)
+        private void FormClose(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void FingerChoiceClick(PictureBox field)
         {
             ChosenField = field;
             fingerMenu.Show();

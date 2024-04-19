@@ -35,13 +35,13 @@ namespace Noktinator
             this.BojaNokta = new System.Windows.Forms.Button();
             this.BojaPaterna = new System.Windows.Forms.Button();
             this.Buttons = new System.Windows.Forms.GroupBox();
+            this.Galerija = new System.Windows.Forms.Button();
             this.Rasa = new System.Windows.Forms.Button();
             this.NokatColorDialog = new System.Windows.Forms.ColorDialog();
             this.PaternColorDialog = new System.Windows.Forms.ColorDialog();
             this.fingerView = new System.Windows.Forms.PictureBox();
             this.RasaColorDialog = new System.Windows.Forms.ColorDialog();
             this.Nazad = new System.Windows.Forms.Button();
-            this.Galerija = new System.Windows.Forms.Button();
             this.Buttons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fingerView)).BeginInit();
             this.SuspendLayout();
@@ -112,6 +112,18 @@ namespace Noktinator
             this.Buttons.TabIndex = 5;
             this.Buttons.TabStop = false;
             // 
+            // Galerija
+            // 
+            this.Galerija.BackColor = System.Drawing.Color.Plum;
+            this.Galerija.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Galerija.Font = new System.Drawing.Font("Segoe Print", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.Galerija.Location = new System.Drawing.Point(0, 424);
+            this.Galerija.Name = "Galerija";
+            this.Galerija.Size = new System.Drawing.Size(300, 75);
+            this.Galerija.TabIndex = 8;
+            this.Galerija.Text = "Dodaj u galeriju";
+            this.Galerija.UseVisualStyleBackColor = false;
+            // 
             // Rasa
             // 
             this.Rasa.BackColor = System.Drawing.Color.Plum;
@@ -127,10 +139,10 @@ namespace Noktinator
             // 
             // fingerView
             // 
-            this.fingerView.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.fingerView.Location = new System.Drawing.Point(268, 177);
+            this.fingerView.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.fingerView.Location = new System.Drawing.Point(215, 17);
             this.fingerView.Name = "fingerView";
-            this.fingerView.Size = new System.Drawing.Size(95, 275);
+            this.fingerView.Size = new System.Drawing.Size(209, 605);
             this.fingerView.TabIndex = 6;
             this.fingerView.TabStop = false;
             // 
@@ -138,26 +150,14 @@ namespace Noktinator
             // 
             this.Nazad.BackColor = System.Drawing.Color.Plum;
             this.Nazad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Nazad.Font = new System.Drawing.Font("Segoe Print", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.Nazad.Location = new System.Drawing.Point(12, 609);
+            this.Nazad.Font = new System.Drawing.Font("Arial", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.Nazad.Location = new System.Drawing.Point(12, 12);
             this.Nazad.Name = "Nazad";
-            this.Nazad.Size = new System.Drawing.Size(121, 40);
+            this.Nazad.Size = new System.Drawing.Size(50, 50);
             this.Nazad.TabIndex = 7;
-            this.Nazad.Text = "Nazad";
+            this.Nazad.Text = "<";
             this.Nazad.UseVisualStyleBackColor = false;
             this.Nazad.Click += new System.EventHandler(this.Nazad_Click);
-            // 
-            // Galerija
-            // 
-            this.Galerija.BackColor = System.Drawing.Color.Plum;
-            this.Galerija.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Galerija.Font = new System.Drawing.Font("Segoe Print", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.Galerija.Location = new System.Drawing.Point(0, 424);
-            this.Galerija.Name = "Galerija";
-            this.Galerija.Size = new System.Drawing.Size(300, 75);
-            this.Galerija.TabIndex = 8;
-            this.Galerija.Text = "Dodaj u galeriju";
-            this.Galerija.UseVisualStyleBackColor = false;
             // 
             // FingerMenu
             // 

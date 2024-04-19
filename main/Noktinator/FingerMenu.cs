@@ -9,6 +9,8 @@ namespace Noktinator
         public FingerMenu()
         {
             InitializeComponent();
+
+            this.FormClosing += FormClose;
         }
 
         public static Nail nail = new Nail();
@@ -33,6 +35,11 @@ namespace Noktinator
             MergeImages();
         }
 
+        private void FormClose(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         //spajanje slike prsta i odgovarajuceg nokta
         public void MergeImages()
         {
@@ -47,7 +54,7 @@ namespace Noktinator
                 g.DrawImage(nailImage, new Point(0, 0));
             }
 
-            fingerView.Image = mergedImage;
+            fingerView.BackgroundImage = mergedImage;
         }
 
         Bitmap ColorBitmap(Bitmap bmp, Color color)

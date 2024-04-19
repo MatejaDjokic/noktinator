@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace Noktinator
 {
-    partial class NailGalerija
+    partial class NailGallery
     {
         /// <summary>
         /// Required designer variable.

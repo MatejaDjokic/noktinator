@@ -62,7 +62,7 @@ D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.csproj
 D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.csproj.CoreCompileInputs.cache
 D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.exe
 D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.pdb
-D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.NailGalerija.resources
 D:\Programiranje\projects\noktinator\main\Noktinator\bin\Debug\Newtonsoft.Json.dll
 D:\Programiranje\projects\noktinator\main\Noktinator\bin\Debug\Newtonsoft.Json.xml
 D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.csproj.CopyComplete
+D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.NailGallery.resources

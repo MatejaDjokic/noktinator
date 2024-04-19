@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Drawing;
+using System;
 
 namespace Noktinator
 {
-    public partial class NailGalerija : Form
+    public partial class NailGallery : Form
     {
         private int totalItemCount = 100;
         private int rows = 3;
@@ -25,7 +20,7 @@ namespace Noktinator
         private int currentPageIndex = 0;
         private string searchBarText;
 
-        public NailGalerija()
+        public NailGallery()
         {
             InitializeComponent();
 
@@ -36,6 +31,7 @@ namespace Noktinator
 
             this.KeyDown += MyKeyDown;
             this.KeyPreview = true;
+            this.FormClosing += FormClose;
 
         }
         private void NailGalleryLoad(object sender, EventArgs e)
@@ -43,6 +39,11 @@ namespace Noktinator
             InitializeNails();
             DisplayItems();
             this.searchBar.TabIndex = 0;
+        }
+
+        private void FormClose(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void MyKeyDown(object sender, KeyEventArgs e)
@@ -70,9 +71,9 @@ namespace Noktinator
 
         private void InitializeNails()
         {
-            nails = JsonUtils.LoadNails();
-            //for (int i = 0; i < 30; i++)
-            //    nails.Add(Nail.Random());
+            //nails = JsonUtils.LoadNails();
+            for (int i = 0; i < 1; i++)
+                nails.Add(Nail.Random());
             //JsonUtils.SaveNails(nails);
             filteredNails = nails;
         }
