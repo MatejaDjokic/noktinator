@@ -41,6 +41,7 @@ namespace Noktinator
             this.searchBar = new System.Windows.Forms.TextBox();
             this.backBtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.openJson = new System.Windows.Forms.Button();
             this.pagination.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -185,15 +186,30 @@ namespace Noktinator
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Plum;
+            this.button1.BackgroundImage = global::Noktinator.Properties.Resources.refresh;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.button1.Location = new System.Drawing.Point(12, 599);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(50, 50);
             this.button1.TabIndex = 9;
-            this.button1.Text = "R";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.RefreshBtnClick);
+            // 
+            // openJson
+            // 
+            this.openJson.BackColor = System.Drawing.Color.Plum;
+            this.openJson.BackgroundImage = global::Noktinator.Properties.Resources.json;
+            this.openJson.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.openJson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.openJson.Font = new System.Drawing.Font("Arial", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.openJson.Location = new System.Drawing.Point(1122, 599);
+            this.openJson.Name = "openJson";
+            this.openJson.Size = new System.Drawing.Size(50, 50);
+            this.openJson.TabIndex = 10;
+            this.openJson.UseVisualStyleBackColor = false;
+            this.openJson.Click += new System.EventHandler(this.OpenJsonClick);
             // 
             // NailGallery
             // 
@@ -201,6 +217,7 @@ namespace Noktinator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1184, 661);
+            this.Controls.Add(this.openJson);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.backBtn);
             this.Controls.Add(this.searchBar);
@@ -230,5 +247,6 @@ namespace Noktinator
         private TextBox searchBar;
         private Button backBtn;
         private Button button1;
+        private Button openJson;
     }
 }

@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 using System.IO;
+using System.Diagnostics;
 
 namespace Noktinator
 {
-    public static class JsonUtils
+    public static class JsonUtil
     {
         private static readonly string path = "nails/nails.json";
         public static List<Nail> LoadNails()
@@ -16,6 +17,10 @@ namespace Noktinator
         {
             string json = JsonConvert.SerializeObject(nails, Formatting.Indented);
             File.WriteAllText(path, json);
+        }
+        public static void OpenNailsJson()
+        {
+            Process.Start("notepad.exe", path);
         }
     }
 }

@@ -82,7 +82,7 @@
     <Compile Include="FingerView.Designer.cs">
       <DependentUpon>FingerView.cs</DependentUpon>
     </Compile>
-    <Compile Include="JsonUtils.cs" />
+    <Compile Include="JsonUtil.cs" />
     <Compile Include="KorisnickaGalerija.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,7 +98,7 @@
     </Compile>
     <Compile Include="NailPattern.cs" />
     <Compile Include="NailShape.cs" />
-    <Compile Include="NailUtils.cs" />
+    <Compile Include="NailUtil.cs" />
     <Compile Include="SkinChoice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -301,6 +301,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\paste_no_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\json.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

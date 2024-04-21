@@ -2,6 +2,7 @@
 using System.Drawing;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace Noktinator
 {
@@ -14,7 +15,11 @@ namespace Noktinator
             this.FormClosing += FormClose;
         }
 
-        public static Nail nail = new Nail();
+        public static Nail nail = new Nail(
+                shape: NailShape.Almond,
+                nailColor: Color.White,
+                skinColor: Color.FromArgb(240, 184, 160)
+         );
 
         //slika koja se menja iz ChooseShape metode iz Nail.cs
         public static Image shape;
@@ -25,7 +30,6 @@ namespace Noktinator
 
         public static Bitmap fingerImage;
         private Bitmap nailImage;
-        private Bitmap mergedImage;
 
         private void FingerMenuLoad(object sender, EventArgs e)
         {
@@ -44,38 +48,12 @@ namespace Noktinator
         //spajanje slike prsta i odgovarajuceg nokta
         public void MergeImages()
         {
-            // nova bitmapa za drzanje spojenih slika
-            mergedImage = new Bitmap(fingerImage.Width, fingerImage.Height);
-
-            using (Graphics g = Graphics.FromImage(mergedImage))
-            {
-                //crtanje slike prsta
-                g.DrawImage(fingerImage, new Point(0, 0));
-                //crtanje slike nokta
-                g.DrawImage(nailImage, new Point(0, 0));
-            }
-
-            fingerView.BackgroundImage = mergedImage;
+            fingerView.BackgroundImage = NailUtil.MergeBitmaps(fingerImage, nailImage);
         }
 
         Bitmap ColorBitmap(Bitmap bmp, Color color)
         {
-            int tolerance = 120;
-
-            for (int x = 0; x < bmp.Width; x++)
-                for (int y = 0; y < bmp.Height; y++)
-                {
-                    Color pixelColor = bmp.GetPixel(x, y);
-                    if (ColorWithinTolerance(pixelColor, Color.White, tolerance))
-                        bmp.SetPixel(x, y, color);
-                }
-            return bmp;
-        }
-        static bool ColorWithinTolerance(Color color1, Color color2, int tolerance)
-        {
-            return Math.Abs(color1.R - color2.R) <= tolerance &&
-                   Math.Abs(color1.G - color2.G) <= tolerance &&
-                   Math.Abs(color1.B - color2.B) <= tolerance;
+            return NailUtil.ColorBitmap(bmp, color);
         }
 
         //biranje boje nokta 
@@ -151,9 +129,9 @@ namespace Noktinator
 
         private void AddToGallery()
         {
-            List<Nail> nails = JsonUtils.LoadNails();
+            List<Nail> nails = JsonUtil.LoadNails();
             nails.Add(nail);
-            JsonUtils.SaveNails(nails);
+            JsonUtil.SaveNails(nails);
         }
 
         private void GalerijaClick(object sender, EventArgs e) => AddToGallery();

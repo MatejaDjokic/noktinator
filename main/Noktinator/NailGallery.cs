@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using System.Drawing;
 using System;
+using System.Diagnostics;
 
 namespace Noktinator
 {
@@ -31,6 +32,7 @@ namespace Noktinator
             this.KeyDown += MyKeyDown;
             this.KeyPreview = true;
             this.FormClosing += FormClose;
+            CenterToScreen();
 
         }
         private void NailGalleryLoad(object sender, EventArgs e)
@@ -72,8 +74,7 @@ namespace Noktinator
 
         private void InitializeNails()
         {
-            nails = JsonUtils.LoadNails();
-
+            nails = JsonUtil.LoadNails();
             //JsonUtils.SaveNails(nails);
             filteredNails = nails;
         }
@@ -166,10 +167,11 @@ namespace Noktinator
         }
         private void RefreshNails()
         {
-            nails = JsonUtils.LoadNails();
-            filteredNails = JsonUtils.LoadNails();
+            nails = JsonUtil.LoadNails();
+            filteredNails = nails;
             currentPageIndex = 0;
             DisplayItems();
+
         }
 
         private bool SearchBarTextValid()
@@ -213,5 +215,7 @@ namespace Noktinator
         private void FullRightClick(object sender, EventArgs e) => LastPage();
 
         private void RefreshBtnClick(object sender, EventArgs e) => RefreshNails();
+
+        private void OpenJsonClick(object sender, EventArgs e) => JsonUtil.OpenNailsJson();
     }
 }

@@ -7,11 +7,16 @@ using System.Threading.Tasks;
 
 namespace Noktinator
 {
-    public static class NailUtils
+    public static class NailUtil
     {
-        public static Bitmap OverlapBitmaps(Bitmap a, Bitmap b)
+        public static Bitmap GetDefaultNail()
         {
-            //
+            Bitmap tip = NailUtil.ColorBitmap(Properties.Resources.almond_tip, Color.White);
+            Bitmap finger = NailUtil.ColorBitmap(Properties.Resources.almond_finger, Color.FromArgb(240, 184, 160));
+            return NailUtil.MergeBitmaps(tip, finger);
+        }
+        public static Bitmap MergeBitmaps(Bitmap a, Bitmap b)
+        {
             Bitmap merge = new Bitmap(a.Width, a.Height);
 
             using (Graphics g = Graphics.FromImage(merge))

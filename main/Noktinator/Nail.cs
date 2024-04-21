@@ -138,9 +138,9 @@ namespace Noktinator
         }
         public Image GetImage()
         {
-            Bitmap coloredNail = NailUtils.ColorBitmap((Bitmap)_nailShapeImage, _nailColor);
-            Bitmap coloredFinger = NailUtils.ColorBitmap((Bitmap)_fingerShapeImage, _skinColor);
-            Bitmap fullFinger = NailUtils.OverlapBitmaps(coloredNail, coloredFinger);
+            Bitmap coloredNail = NailUtil.ColorBitmap((Bitmap)_nailShapeImage, _nailColor);
+            Bitmap coloredFinger = NailUtil.ColorBitmap((Bitmap)_fingerShapeImage, _skinColor);
+            Bitmap fullFinger = NailUtil.MergeBitmaps(coloredNail, coloredFinger);
             return fullFinger;
         }
 

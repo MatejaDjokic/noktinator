@@ -11,18 +11,27 @@ namespace Noktinator
 
         Image CopyPasteImage;
 
-
         public FingerPreview()
         {
             InitializeComponent();
 
             this.FormClosing += FormClose;
+            this.Load += FingerPreviewLoad;
         }
 
 
         private void FormClose(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+        private void FingerPreviewLoad(object sender, EventArgs e)
+        {
+            Bitmap img = NailUtil.GetDefaultNail();
+            LittleFinger.Image = img;
+            RingFinger.Image = img;
+            MiddleFinger.Image = img;
+            IndexFinger.Image = img;
+            Thumb.Image = img;
         }
 
         private void FingerChoiceClick(PictureBox field)
