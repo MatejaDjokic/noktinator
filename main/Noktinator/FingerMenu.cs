@@ -142,7 +142,7 @@ namespace Noktinator
         private void Nazad_Click(object sender, EventArgs e)
         {
             FingerPreview fingerPreview = (FingerPreview)Application.OpenForms["FingerPreview"];
-            FingerPreview.ChosenField.Image = fingerView.Image;
+            FingerPreview.ChosenField.Image = fingerView.BackgroundImage;
 
             fingerPreview.Show();
             this.Hide();

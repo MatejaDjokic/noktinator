@@ -62,6 +62,7 @@ namespace Noktinator
             // LittleFinger
             // 
             this.LittleFinger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.LittleFinger.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LittleFinger.Location = new System.Drawing.Point(135, 165);
             this.LittleFinger.Name = "LittleFinger";
             this.LittleFinger.Size = new System.Drawing.Size(105, 275);
@@ -74,6 +75,7 @@ namespace Noktinator
             // RingFinger
             // 
             this.RingFinger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.RingFinger.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RingFinger.Location = new System.Drawing.Point(340, 165);
             this.RingFinger.Name = "RingFinger";
             this.RingFinger.Size = new System.Drawing.Size(105, 275);
@@ -86,6 +88,7 @@ namespace Noktinator
             // MiddleFinger
             // 
             this.MiddleFinger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.MiddleFinger.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.MiddleFinger.Location = new System.Drawing.Point(545, 165);
             this.MiddleFinger.Name = "MiddleFinger";
             this.MiddleFinger.Size = new System.Drawing.Size(105, 275);
@@ -98,6 +101,7 @@ namespace Noktinator
             // IndexFinger
             // 
             this.IndexFinger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.IndexFinger.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.IndexFinger.Location = new System.Drawing.Point(750, 165);
             this.IndexFinger.Name = "IndexFinger";
             this.IndexFinger.Size = new System.Drawing.Size(105, 275);
@@ -110,6 +114,7 @@ namespace Noktinator
             // Thumb
             // 
             this.Thumb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Thumb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Thumb.Location = new System.Drawing.Point(955, 165);
             this.Thumb.Name = "Thumb";
             this.Thumb.Size = new System.Drawing.Size(105, 275);
@@ -350,7 +355,7 @@ namespace Noktinator
             this.Nazad.TabIndex = 28;
             this.Nazad.Text = "<";
             this.Nazad.UseVisualStyleBackColor = false;
-            this.Nazad.Click += new System.EventHandler(this.Nazad_Click);
+            this.Nazad.Click += new System.EventHandler(this.NazadClick);
             // 
             // FingerPreview
             // 

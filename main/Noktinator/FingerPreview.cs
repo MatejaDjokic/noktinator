@@ -18,7 +18,7 @@ namespace Noktinator
 
             this.FormClosing += FormClose;
         }
-        FingerMenu fingerMenu = new FingerMenu();
+
 
         private void FormClose(object sender, EventArgs e)
         {
@@ -28,6 +28,7 @@ namespace Noktinator
         private void FingerChoiceClick(PictureBox field)
         {
             ChosenField = field;
+            FingerMenu fingerMenu = (FingerMenu)Application.OpenForms["FingerMenu"];
             fingerMenu.Show();
             this.Hide();
         }
@@ -122,9 +123,9 @@ namespace Noktinator
             Thumb.Image = CopyPasteImage;
         }
 
-        private void Nazad_Click(object sender, EventArgs e)
+        private void NazadClick(object sender, EventArgs e)
         {
-            StartMenu start = new StartMenu();
+            StartMenu start = (StartMenu)Application.OpenForms["StartMenu"];
             start.Show();
             this.Hide();
         }
