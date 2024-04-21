@@ -1,6 +1,7 @@
 ﻿using System.Windows.Forms;
 using System.Drawing;
 using System;
+using System.Collections.Generic;
 
 namespace Noktinator
 {
@@ -147,5 +148,14 @@ namespace Noktinator
             fingerPreview.Show();
             this.Hide();
         }
+
+        private void AddToGallery()
+        {
+            List<Nail> nails = JsonUtils.LoadNails();
+            nails.Add(nail);
+            JsonUtils.SaveNails(nails);
+        }
+
+        private void GalerijaClick(object sender, EventArgs e) => AddToGallery();
     }
 }

@@ -27,7 +27,6 @@ namespace Noktinator
             this.nails = new List<Nail>();
             this.filteredNails = new List<Nail>();
             this.nailsPerPage = this.rows * this.cols;
-            this.modifier = filteredNails.Count % this.nailsPerPage == 0 ? 0 : -1;
 
             this.KeyDown += MyKeyDown;
             this.KeyPreview = true;
@@ -50,6 +49,8 @@ namespace Noktinator
         {
             if (e.KeyCode == Keys.Escape)
                 Application.Exit();
+            else if (e.KeyCode == Keys.R)
+                RefreshNails();
             else if (e.KeyCode == Keys.Enter)
                 Filter();
             else if (e.KeyCode == Keys.Down)
@@ -71,42 +72,14 @@ namespace Noktinator
 
         private void InitializeNails()
         {
-            //nails = JsonUtils.LoadNails();
-            nails.Add(new Nail(NailShape.Lipstick, nailColor: Color.Red, pattern: NailPattern.LeafStyle, patternColor: Color.Orange));
-            nails.Add(new Nail(NailShape.Stiletto, nailColor: Color.Yellow, pattern: NailPattern.LeavesStyle, patternColor: Color.LightBlue)); nails.Add(new Nail(NailShape.Almond, nailColor: Color.Green, pattern: NailPattern.FireStyle, patternColor: Color.Magenta));
-            nails.Add(new Nail(NailShape.Wide, nailColor: Color.Blue, pattern: NailPattern.StarsStyle, patternColor: Color.Pink));
-            nails.Add(new Nail(NailShape.Lipstick, nailColor: Color.Red, pattern: NailPattern.LeafStyle, patternColor: Color.Orange));
-            nails.Add(new Nail(NailShape.Almond, nailColor: Color.Green, pattern: NailPattern.FireStyle, patternColor: Color.Magenta));
-            nails.Add(new Nail(NailShape.Stiletto, nailColor: Color.Yellow, pattern: NailPattern.LeavesStyle, patternColor: Color.LightBlue)); nails.Add(new Nail(NailShape.Almond, nailColor: Color.Green, pattern: NailPattern.FireStyle, patternColor: Color.Magenta));
-            nails.Add(new Nail(NailShape.Wide, nailColor: Color.Blue, pattern: NailPattern.StarsStyle, patternColor: Color.Pink));
-            nails.Add(new Nail(NailShape.Stiletto, nailColor: Color.Yellow, pattern: NailPattern.LeavesStyle, patternColor: Color.LightBlue)); nails.Add(new Nail(NailShape.Almond, nailColor: Color.Green, pattern: NailPattern.FireStyle, patternColor: Color.Magenta));
-            nails.Add(new Nail(NailShape.Lipstick, nailColor: Color.Red, pattern: NailPattern.LeafStyle, patternColor: Color.Orange));
-            nails.Add(new Nail(NailShape.Stiletto, nailColor: Color.Yellow, pattern: NailPattern.LeavesStyle, patternColor: Color.LightBlue)); nails.Add(new Nail(NailShape.Almond, nailColor: Color.Green, pattern: NailPattern.FireStyle, patternColor: Color.Magenta));
-            nails.Add(new Nail(NailShape.Wide, nailColor: Color.Blue, pattern: NailPattern.StarsStyle, patternColor: Color.Pink));
-            nails.Add(new Nail(NailShape.Lipstick, nailColor: Color.Red, pattern: NailPattern.LeafStyle, patternColor: Color.Orange));
-            nails.Add(new Nail(NailShape.Wide, nailColor: Color.Blue, pattern: NailPattern.StarsStyle, patternColor: Color.Pink));
-            nails.Add(new Nail(NailShape.Wide, nailColor: Color.Blue, pattern: NailPattern.StarsStyle, patternColor: Color.Pink));
-            nails.Add(new Nail(NailShape.Lipstick, nailColor: Color.Red, pattern: NailPattern.LeafStyle, patternColor: Color.Orange));
-            nails.Add(new Nail(NailShape.Stiletto, nailColor: Color.Yellow, pattern: NailPattern.LeavesStyle, patternColor: Color.LightBlue)); nails.Add(new Nail(NailShape.Almond, nailColor: Color.Green, pattern: NailPattern.FireStyle, patternColor: Color.Magenta));
-            nails.Add(new Nail(NailShape.Wide, nailColor: Color.Blue, pattern: NailPattern.StarsStyle, patternColor: Color.Pink));
-            nails.Add(new Nail(NailShape.Stiletto, nailColor: Color.Yellow, pattern: NailPattern.LeavesStyle, patternColor: Color.LightBlue)); nails.Add(new Nail(NailShape.Almond, nailColor: Color.Green, pattern: NailPattern.FireStyle, patternColor: Color.Magenta));
-            nails.Add(new Nail(NailShape.Lipstick, nailColor: Color.Red, pattern: NailPattern.LeafStyle, patternColor: Color.Orange));
-            nails.Add(new Nail(NailShape.Lipstick, nailColor: Color.Red, pattern: NailPattern.LeafStyle, patternColor: Color.Orange));
-            nails.Add(new Nail(NailShape.Stiletto, nailColor: Color.Yellow, pattern: NailPattern.LeavesStyle, patternColor: Color.LightBlue)); nails.Add(new Nail(NailShape.Almond, nailColor: Color.Green, pattern: NailPattern.FireStyle, patternColor: Color.Magenta));
-            nails.Add(new Nail(NailShape.Wide, nailColor: Color.Blue, pattern: NailPattern.StarsStyle, patternColor: Color.Pink));
-            nails.Add(new Nail(NailShape.Lipstick, nailColor: Color.Red, pattern: NailPattern.LeafStyle, patternColor: Color.Orange));
-            nails.Add(new Nail(NailShape.Stiletto, nailColor: Color.Yellow, pattern: NailPattern.LeavesStyle, patternColor: Color.LightBlue));
-            nails.Add(new Nail(NailShape.Wide, nailColor: Color.Blue, pattern: NailPattern.StarsStyle, patternColor: Color.Pink));
-            nails.Add(new Nail(NailShape.Stiletto, nailColor: Color.Yellow, pattern: NailPattern.LeavesStyle, patternColor: Color.LightBlue)); nails.Add(new Nail(NailShape.Almond, nailColor: Color.Green, pattern: NailPattern.FireStyle, patternColor: Color.Magenta));
-            nails.Add(new Nail(NailShape.Lipstick, nailColor: Color.Red, pattern: NailPattern.LeafStyle, patternColor: Color.Orange));
-            nails.Add(new Nail(NailShape.Wide, nailColor: Color.Blue, pattern: NailPattern.StarsStyle, patternColor: Color.Pink));
+            nails = JsonUtils.LoadNails();
+
             //JsonUtils.SaveNails(nails);
-            filteredNails.Clear();
-            filteredNails.AddRange(nails);
-            //filteredNails = nails;
+            filteredNails = nails;
         }
         private void DisplayItems()
         {
+            this.modifier = filteredNails.Count % this.nailsPerPage == 0 ? -1 : 0;
             this.indexInput.Text = $"{currentPageIndex + 1}";
 
 
@@ -185,11 +158,18 @@ namespace Noktinator
         }
         private void LastPage()
         {
-            //if (currentPageIndex != filteredNails.Count / this.nailsPerPage + modifier)
-            //{
+            if (currentPageIndex != filteredNails.Count / this.nailsPerPage + modifier)
+            {
                 currentPageIndex = filteredNails.Count / this.nailsPerPage + modifier;
                 DisplayItems();
-            //}
+            }
+        }
+        private void RefreshNails()
+        {
+            nails = JsonUtils.LoadNails();
+            filteredNails = JsonUtils.LoadNails();
+            currentPageIndex = 0;
+            DisplayItems();
         }
 
         private bool SearchBarTextValid()
@@ -220,16 +200,18 @@ namespace Noktinator
             //Filter();
         }
 
+
         private void BackBtnClick(object sender, EventArgs e)
         {
             StartMenu sm = (StartMenu)Application.OpenForms["StartMenu"];
             sm.Show();
             this.Hide();
         }
-
         private void FullLeftClick(object sender, EventArgs e) => FirstPage();
         private void LeftClick(object sender, EventArgs e) => PreviousPage();
         private void RightClick(object sender, EventArgs e) => NextPage();
         private void FullRightClick(object sender, EventArgs e) => LastPage();
+
+        private void RefreshBtnClick(object sender, EventArgs e) => RefreshNails();
     }
 }

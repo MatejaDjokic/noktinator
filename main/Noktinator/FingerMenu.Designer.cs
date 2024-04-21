@@ -123,6 +123,7 @@ namespace Noktinator
             this.Galerija.TabIndex = 8;
             this.Galerija.Text = "Dodaj u galeriju";
             this.Galerija.UseVisualStyleBackColor = false;
+            this.Galerija.Click += new System.EventHandler(this.GalerijaClick);
             // 
             // Rasa
             // 

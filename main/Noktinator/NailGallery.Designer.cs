@@ -40,6 +40,7 @@ namespace Noktinator
             this.indexInput = new System.Windows.Forms.TextBox();
             this.searchBar = new System.Windows.Forms.TextBox();
             this.backBtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.pagination.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -133,7 +134,7 @@ namespace Noktinator
             this.pagination.Controls.Add(this.right, 3, 0);
             this.pagination.Controls.Add(this.fullRight, 4, 0);
             this.pagination.Controls.Add(this.indexInput, 2, 0);
-            this.pagination.Location = new System.Drawing.Point(171, 605);
+            this.pagination.Location = new System.Drawing.Point(172, 605);
             this.pagination.Name = "pagination";
             this.pagination.RowCount = 1;
             this.pagination.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -173,7 +174,7 @@ namespace Noktinator
             this.backBtn.BackColor = System.Drawing.Color.Plum;
             this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backBtn.Font = new System.Drawing.Font("Arial", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.backBtn.Location = new System.Drawing.Point(12, 9);
+            this.backBtn.Location = new System.Drawing.Point(12, 12);
             this.backBtn.Name = "backBtn";
             this.backBtn.Size = new System.Drawing.Size(50, 50);
             this.backBtn.TabIndex = 8;
@@ -181,12 +182,26 @@ namespace Noktinator
             this.backBtn.UseVisualStyleBackColor = false;
             this.backBtn.Click += new System.EventHandler(this.BackBtnClick);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Plum;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.button1.Location = new System.Drawing.Point(12, 599);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(50, 50);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "R";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.RefreshBtnClick);
+            // 
             // NailGallery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1184, 661);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.backBtn);
             this.Controls.Add(this.searchBar);
             this.Controls.Add(this.pagination);
@@ -214,5 +229,6 @@ namespace Noktinator
         private TextBox indexInput;
         private TextBox searchBar;
         private Button backBtn;
+        private Button button1;
     }
 }
