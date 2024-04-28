@@ -199,7 +199,7 @@ namespace Noktinator
                 DisplayItems();
             }
         }
-        private void RefreshNails()
+        public void RefreshNails()
         {
             nails = JsonUtil.LoadNails();
             nails.ForEach(n => n.Update());
@@ -251,5 +251,10 @@ namespace Noktinator
         private void RefreshBtnClick(object sender, EventArgs e) => RefreshNails();
 
         private void OpenJsonClick(object sender, EventArgs e) => JsonUtil.OpenNailsJson();
+
+        private void NailGallery_EnabledChanged(object sender, EventArgs e)
+        {
+             
+        }
     }
 }

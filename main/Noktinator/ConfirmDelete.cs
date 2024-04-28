@@ -33,6 +33,7 @@ namespace Noktinator
             List<Nail> nails = JsonUtil.LoadNails();
             nails.RemoveAt(ng.buttonIndex);
             JsonUtil.SaveNails(nails);
+            ng.RefreshNails();
         }
 
         private void No_Click(object sender, EventArgs e)

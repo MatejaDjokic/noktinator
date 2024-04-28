@@ -335,5 +335,14 @@
   <ItemGroup>
     <None Include="Resources\fire_pattern_stiletto.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart_pattern_stiletto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart_pattern_short.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart_pattern_rounded.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

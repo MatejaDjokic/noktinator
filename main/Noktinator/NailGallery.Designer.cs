@@ -229,6 +229,7 @@ namespace Noktinator
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nail Gallery";
             this.Load += new System.EventHandler(this.NailGalleryLoad);
+            this.EnabledChanged += new System.EventHandler(this.NailGallery_EnabledChanged);
             this.pagination.ResumeLayout(false);
             this.pagination.PerformLayout();
             this.ResumeLayout(false);

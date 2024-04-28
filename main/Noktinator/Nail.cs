@@ -213,12 +213,15 @@ namespace Noktinator
                         case NailShape.Oval:
                             break;
                         case NailShape.Rounded:
+                            _patternImage = Properties.Resources.heart_pattern_rounded;
                             break;
                         case NailShape.Short:
+                            _patternImage = Properties.Resources.heart_pattern_short;
                             break;
                         case NailShape.Squoval:
                             break;
                         case NailShape.Stiletto:
+                            _patternImage = Properties.Resources.heart_pattern_stiletto;
                             break;
                         case NailShape.Wide:
                             break;
