@@ -137,5 +137,15 @@ namespace Noktinator
         }
 
         private void GalerijaClick(object sender, EventArgs e) => AddToGallery();
+
+        private void ResetDesign_Click(object sender, EventArgs e)
+        {
+            fingerView.BackgroundImage = NailUtil.GetDefaultNail();
+            nail = new Nail(
+               shape: NailShape.Almond,
+               nailColor: Color.White,
+               skinColor: Color.FromArgb(240, 184, 160)
+        );
+        }
     }
 }

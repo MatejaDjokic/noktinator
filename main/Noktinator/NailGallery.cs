@@ -20,6 +20,11 @@ namespace Noktinator
         private int currentPageIndex = 0;
         private string searchBarText;
 
+        public List<Button> nailButtons = new List<Button>();
+        public int buttonIndex = -1;
+
+
+
         public NailGallery()
         {
             InitializeComponent();
@@ -36,6 +41,9 @@ namespace Noktinator
         private void NailGalleryLoad(object sender, EventArgs e)
         {
             InitializeNails();
+            //
+            
+            //
             DisplayItems();
             this.searchBar.TabIndex = 0;
         }
@@ -76,8 +84,29 @@ namespace Noktinator
             nails.ForEach(n => n.Update());
             filteredNails = nails;
         }
+
+
+        //desni klik za deletovanje
+        private void ClickButton(object sender, MouseEventArgs e) 
+        {
+            Button btn = (Button)sender;
+            if (e.Button == MouseButtons.Right)
+            {
+                ConfirmDelete cd = new ConfirmDelete();
+                buttonIndex = nailButtons.IndexOf(btn);
+                cd.Show();
+                Enabled = false;
+            }
+        }
+
+
+
         private void DisplayItems()
         {
+            //
+            nailButtons.Clear();
+            //
+            
             this.modifier = filteredNails.Count % this.nailsPerPage == 0 ? -1 : 0;
             this.indexInput.Text = $"{currentPageIndex + 1}";
 
@@ -92,9 +121,16 @@ namespace Noktinator
                 Nail nail = this.filteredNails[i];
                 Button button = new Button();
 
+
                 button.BackgroundImage = nail.GetImage();
                 button.BackgroundImageLayout = ImageLayout.Zoom;
                 button.Click += (object sender, EventArgs e) => new DetaljiONoktu(nail, filteredNails.IndexOf(nail)).ShowDialog();
+                
+                //desni klik za deletovanje
+                button.MouseDown += ClickButton;
+                //
+                nailButtons.Add(button);
+                nailButtons[i].Name = i.ToString();
 
                 button.Dock = DockStyle.Fill;
                 grid.Controls.Add(button);

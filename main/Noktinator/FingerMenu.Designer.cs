@@ -35,6 +35,7 @@ namespace Noktinator
             this.BojaNokta = new System.Windows.Forms.Button();
             this.BojaPaterna = new System.Windows.Forms.Button();
             this.Buttons = new System.Windows.Forms.GroupBox();
+            this.ResetDesign = new System.Windows.Forms.Button();
             this.Galerija = new System.Windows.Forms.Button();
             this.Rasa = new System.Windows.Forms.Button();
             this.NokatColorDialog = new System.Windows.Forms.ColorDialog();
@@ -55,7 +56,7 @@ namespace Noktinator
             this.OblikNokta.Name = "OblikNokta";
             this.OblikNokta.Size = new System.Drawing.Size(300, 75);
             this.OblikNokta.TabIndex = 1;
-            this.OblikNokta.Text = "oblik nokta";
+            this.OblikNokta.Text = "Oblik nokta";
             this.OblikNokta.UseVisualStyleBackColor = false;
             this.OblikNokta.Click += new System.EventHandler(this.OblikNoktaClick);
             // 
@@ -68,7 +69,7 @@ namespace Noktinator
             this.Patern.Name = "Patern";
             this.Patern.Size = new System.Drawing.Size(300, 75);
             this.Patern.TabIndex = 2;
-            this.Patern.Text = "patern";
+            this.Patern.Text = "Patern";
             this.Patern.UseVisualStyleBackColor = false;
             this.Patern.Click += new System.EventHandler(this.Patern_Click);
             // 
@@ -81,7 +82,7 @@ namespace Noktinator
             this.BojaNokta.Name = "BojaNokta";
             this.BojaNokta.Size = new System.Drawing.Size(300, 75);
             this.BojaNokta.TabIndex = 3;
-            this.BojaNokta.Text = "boja nokta";
+            this.BojaNokta.Text = "Boja nokta";
             this.BojaNokta.UseVisualStyleBackColor = false;
             this.BojaNokta.Click += new System.EventHandler(this.BojaNoktaClick);
             // 
@@ -94,23 +95,37 @@ namespace Noktinator
             this.BojaPaterna.Name = "BojaPaterna";
             this.BojaPaterna.Size = new System.Drawing.Size(300, 75);
             this.BojaPaterna.TabIndex = 4;
-            this.BojaPaterna.Text = "boja paterna";
+            this.BojaPaterna.Text = "Boja paterna";
             this.BojaPaterna.UseVisualStyleBackColor = false;
             this.BojaPaterna.Click += new System.EventHandler(this.BojaPaternaClick);
             // 
             // Buttons
             // 
+            this.Buttons.Controls.Add(this.ResetDesign);
             this.Buttons.Controls.Add(this.Galerija);
             this.Buttons.Controls.Add(this.Rasa);
             this.Buttons.Controls.Add(this.OblikNokta);
             this.Buttons.Controls.Add(this.BojaPaterna);
             this.Buttons.Controls.Add(this.Patern);
             this.Buttons.Controls.Add(this.BojaNokta);
-            this.Buttons.Location = new System.Drawing.Point(702, 78);
+            this.Buttons.Location = new System.Drawing.Point(715, 28);
             this.Buttons.Name = "Buttons";
-            this.Buttons.Size = new System.Drawing.Size(300, 505);
+            this.Buttons.Size = new System.Drawing.Size(300, 581);
             this.Buttons.TabIndex = 5;
             this.Buttons.TabStop = false;
+            // 
+            // ResetDesign
+            // 
+            this.ResetDesign.BackColor = System.Drawing.Color.Plum;
+            this.ResetDesign.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ResetDesign.Font = new System.Drawing.Font("Segoe Print", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.ResetDesign.Location = new System.Drawing.Point(0, 505);
+            this.ResetDesign.Name = "ResetDesign";
+            this.ResetDesign.Size = new System.Drawing.Size(300, 75);
+            this.ResetDesign.TabIndex = 9;
+            this.ResetDesign.Text = "Resetuj dizajn";
+            this.ResetDesign.UseVisualStyleBackColor = false;
+            this.ResetDesign.Click += new System.EventHandler(this.ResetDesign_Click);
             // 
             // Galerija
             // 
@@ -134,14 +149,14 @@ namespace Noktinator
             this.Rasa.Name = "Rasa";
             this.Rasa.Size = new System.Drawing.Size(300, 75);
             this.Rasa.TabIndex = 7;
-            this.Rasa.Text = "Izaberite svoju boju koze";
+            this.Rasa.Text = "Boja koze";
             this.Rasa.UseVisualStyleBackColor = false;
             this.Rasa.Click += new System.EventHandler(this.RasaClick);
             // 
             // fingerView
             // 
             this.fingerView.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.fingerView.Location = new System.Drawing.Point(215, 17);
+            this.fingerView.Location = new System.Drawing.Point(216, 16);
             this.fingerView.Name = "fingerView";
             this.fingerView.Size = new System.Drawing.Size(209, 605);
             this.fingerView.TabIndex = 6;
@@ -196,5 +211,6 @@ namespace Noktinator
         private System.Windows.Forms.ColorDialog RasaColorDialog;
         private System.Windows.Forms.Button Nazad;
         private System.Windows.Forms.Button Galerija;
+        private System.Windows.Forms.Button ResetDesign;
     }
 }

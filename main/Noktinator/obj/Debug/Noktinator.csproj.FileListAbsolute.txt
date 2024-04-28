@@ -66,3 +66,13 @@ D:\Programiranje\projects\noktinator\main\Noktinator\bin\Debug\Newtonsoft.Json.d
 D:\Programiranje\projects\noktinator\main\Noktinator\bin\Debug\Newtonsoft.Json.xml
 D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.csproj.CopyComplete
 D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.NailGallery.resources
+C:\Users\Strahinja\Documents\GitHub\nail-maker-2024\main\Noktinator\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Strahinja\Documents\GitHub\nail-maker-2024\main\Noktinator\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Strahinja\Documents\GitHub\nail-maker-2024\main\Noktinator\obj\Debug\Noktinator.ChoosePattern.resources
+C:\Users\Strahinja\Documents\GitHub\nail-maker-2024\main\Noktinator\obj\Debug\Noktinator.ChooseShape.resources
+C:\Users\Strahinja\Documents\GitHub\nail-maker-2024\main\Noktinator\obj\Debug\Noktinator.FingerPreview.resources
+C:\Users\Strahinja\Documents\GitHub\nail-maker-2024\main\Noktinator\obj\Debug\Noktinator.KorisnickaGalerija.resources
+C:\Users\Strahinja\Documents\GitHub\nail-maker-2024\main\Noktinator\obj\Debug\Noktinator.NailGallery.resources
+C:\Users\Strahinja\Documents\GitHub\nail-maker-2024\main\Noktinator\obj\Debug\Noktinator.SkinChoice.resources
+C:\Users\Strahinja\Documents\GitHub\nail-maker-2024\main\Noktinator\obj\Debug\Noktinator.csproj.CopyComplete
+C:\Users\Strahinja\Documents\GitHub\nail-maker-2024\main\Noktinator\obj\Debug\Noktinator.ConfirmDelete.resources
