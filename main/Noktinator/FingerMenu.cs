@@ -21,22 +21,20 @@ namespace Noktinator
                 skinColor: Color.FromArgb(240, 184, 160)
          );
 
-        //slika koja se menja iz ChooseShape metode iz Nail.cs
-        public static Image shape;
-        public static Image pattern;
-
         //slika koja sluzi za kopiranje na FingerPreview
         public static Image copyImage;
 
         public static Bitmap fingerImage;
         private Bitmap nailImage;
+        public static Bitmap patternImage;
 
         private void FingerMenuLoad(object sender, EventArgs e)
         {
-            nail.ChangeShape();
+            nail.Update();
+
             fingerImage = new Bitmap(nail.fingerShapeImage());
             nailImage = new Bitmap(nail.nailShapeImage());
-
+            patternImage = new Bitmap(nail.patternImage());
             MergeImages();
         }
 
@@ -48,7 +46,7 @@ namespace Noktinator
         //spajanje slike prsta i odgovarajuceg nokta
         public void MergeImages()
         {
-            fingerView.BackgroundImage = NailUtil.MergeBitmaps(fingerImage, nailImage);
+            fingerView.BackgroundImage = NailUtil.MergeBitmaps(fingerImage, nailImage, patternImage);
         }
 
         Bitmap ColorBitmap(Bitmap bmp, Color color)
@@ -76,8 +74,11 @@ namespace Noktinator
             var res = PaternColorDialog.ShowDialog();
             if (res == DialogResult.OK)
             {
-                nail.patternColor = NokatColorDialog.Color;
+                nail.patternColor = PaternColorDialog.Color;
+
+                patternImage = ColorBitmap(new Bitmap(nail.patternImage()), PaternColorDialog.Color);
             }
+            MergeImages();
         }
 
         //biranje boje koze
@@ -100,11 +101,12 @@ namespace Noktinator
 
         private void FingerMenuVisibleChanged(object sender, EventArgs e)
         {
-            nail.ChangeShape();
+            nail.Update();
 
             //kad god se ponovo pojavi ova forma, prst i nokat ce imati poslednju sacuvanu boju
             nailImage = ColorBitmap(new Bitmap(nail.nailShapeImage()), nail.nailColor);
             fingerImage = ColorBitmap(new Bitmap(nail.fingerShapeImage()), nail.skinColor);
+            patternImage = ColorBitmap(new Bitmap(nail.patternImage()), nail.patternColor);
             MergeImages();
         }
 

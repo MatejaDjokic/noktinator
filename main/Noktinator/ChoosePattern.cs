@@ -18,11 +18,11 @@ namespace Noktinator
         }
 
 
-        public void choiceClick(NailPattern patternEnum)
+        public void choiceClick(NailPattern pattern)
         {
             FingerMenu fingerMenu = (FingerMenu)Application.OpenForms["FingerMenu"];
             
-            FingerMenu.nail.nailPattern = patternEnum; //noktu u glavnom editoru za atribut pattern daje odredjeni pattern
+            FingerMenu.nail.nailPattern = pattern; //noktu u glavnom editoru za atribut pattern daje odredjeni pattern
 
             this.Hide();
             fingerMenu.Show();
@@ -30,27 +30,27 @@ namespace Noktinator
 
         private void FireStyle_Click(object sender, EventArgs e)
         {
-            choiceClick(NailPattern.FireStyle);
+            choiceClick(NailPattern.Fire);
         }
 
         private void LeafStyle_Click(object sender, EventArgs e)
         {
-            choiceClick(NailPattern.LeafStyle);
+            choiceClick(NailPattern.Leaf);
         }
 
         private void StarsStyle_Click(object sender, EventArgs e)
         {
-            choiceClick(NailPattern.StarsStyle);
+            choiceClick(NailPattern.Stars);
         }
 
         private void HeartsStyle_Click(object sender, EventArgs e)
         {
-            choiceClick(NailPattern.HeartsStyle);
+            choiceClick(NailPattern.Hearts);
         }
 
         private void LeavesStyle_Click(object sender, EventArgs e)
         {
-            choiceClick(NailPattern.LeavesStyle);
+            choiceClick(NailPattern.Leaves);
         }
     }
 }

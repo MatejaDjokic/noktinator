@@ -59,7 +59,7 @@ namespace Noktinator
             this.button2.Location = new System.Drawing.Point(160, 486);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(279, 92);
-            this.button2.TabIndex = 1;
+            this.button2.TabIndex = 2;
             this.button2.Text = "Izadji";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.IzadjiClick);
@@ -92,7 +92,7 @@ namespace Noktinator
             this.galleryButton.Location = new System.Drawing.Point(160, 388);
             this.galleryButton.Name = "galleryButton";
             this.galleryButton.Size = new System.Drawing.Size(279, 92);
-            this.galleryButton.TabIndex = 4;
+            this.galleryButton.TabIndex = 1;
             this.galleryButton.Text = "Galerija";
             this.galleryButton.UseVisualStyleBackColor = false;
             this.galleryButton.Click += new System.EventHandler(this.GalleryButtonClick);

@@ -8,10 +8,11 @@ namespace Noktinator
 {
     public enum NailPattern
     {
-        FireStyle,
-        LeafStyle,
-        StarsStyle,
-        HeartsStyle,
-        LeavesStyle
+        None,
+        Fire,
+        Leaf,
+        Stars,
+        Hearts,
+        Leaves
     }
 }

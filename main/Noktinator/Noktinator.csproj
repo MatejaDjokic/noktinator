@@ -308,5 +308,23 @@
   <ItemGroup>
     <None Include="Resources\json.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fire_pattern_almond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart_pattern_almond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fire_pattern_rounded.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fire_pattern_short.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fire_pattern_squoval.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fire_pattern_stiletto.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
