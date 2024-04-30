@@ -1,17 +1,16 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Forms;
-using System.Drawing;
+using Noktinator.Util;
 using System;
 
 namespace Noktinator
 {
-    public partial class NailGallery : Form
+    public partial class NailGallery : BaseForm
     {
         private int rows = 3;
         private int cols = 4;
 
         private List<Nail> nails;
-        private List<Nail> filteredNails;
 
         private int nailsPerPage;
         private int modifier;
@@ -26,7 +25,6 @@ namespace Noktinator
             InitializeComponent();
 
             this.nails = new List<Nail>();
-            this.filteredNails = new List<Nail>();
             this.nailsPerPage = this.rows * this.cols;
 
             this.KeyDown += MyKeyDown;
@@ -37,9 +35,6 @@ namespace Noktinator
         private void NailGalleryLoad(object sender, EventArgs e)
         {
             InitializeNails();
-            //
-
-            //
             DisplayItems();
         }
 
@@ -69,7 +64,6 @@ namespace Noktinator
         {
             nails = JsonUtil.LoadNails();
             nails.ForEach(n => n.Update());
-            filteredNails = nails;
         }
 
         private void ClickButton(object sender, MouseEventArgs e)
@@ -88,22 +82,22 @@ namespace Noktinator
         {
             nailButtons.Clear();
 
-            this.modifier = filteredNails.Count % this.nailsPerPage == 0 ? -1 : 0;
+            this.modifier = nails.Count % this.nailsPerPage == 0 ? -1 : 0;
 
             this.grid.Controls.Clear();
 
             int startIndex = currentPageIndex * this.nailsPerPage;
-            int endIndex = Math.Min(startIndex + this.nailsPerPage, filteredNails.Count);
+            int endIndex = Math.Min(startIndex + this.nailsPerPage, nails.Count);
             this.itemInPageLabel.Text = nails.Count > 0 ? $"{startIndex + 1} - {endIndex}" : "No nails";
 
             for (int i = startIndex; i < endIndex; i++)
             {
-                Nail nail = this.filteredNails[i];
+                Nail nail = this.nails[i];
                 Button button = new Button();
 
                 button.BackgroundImage = nail.GetImage();
                 button.BackgroundImageLayout = ImageLayout.Zoom;
-                button.Click += (object sender, EventArgs e) => new NailDetailsPage(nail, filteredNails.IndexOf(nail)).ShowDialog();
+                button.Click += (object sender, EventArgs e) => new NailDetailsPage(nail, nails.IndexOf(nail)).ShowDialog();
 
                 //desni klik za deletovanje
                 button.MouseDown += ClickButton;
@@ -146,7 +140,7 @@ namespace Noktinator
         }
         private void NextPage()
         {
-            if (currentPageIndex < (filteredNails.Count / this.nailsPerPage) + modifier)
+            if (currentPageIndex < (nails.Count / this.nailsPerPage) + modifier)
             {
                 currentPageIndex++;
                 DisplayItems();
@@ -154,9 +148,9 @@ namespace Noktinator
         }
         private void LastPage()
         {
-            if (currentPageIndex != filteredNails.Count / this.nailsPerPage + modifier)
+            if (currentPageIndex != nails.Count / this.nailsPerPage + modifier)
             {
-                currentPageIndex = filteredNails.Count / this.nailsPerPage + modifier;
+                currentPageIndex = nails.Count / this.nailsPerPage + modifier;
                 DisplayItems();
             }
         }
@@ -164,7 +158,6 @@ namespace Noktinator
         {
             nails = JsonUtil.LoadNails();
             nails.ForEach(n => n.Update());
-            filteredNails = nails;
             currentPageIndex = 0;
             DisplayItems();
         }

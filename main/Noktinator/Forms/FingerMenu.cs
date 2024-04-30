@@ -38,7 +38,7 @@ namespace Noktinator
                 case Keys.D4: BojaPaternaClick(); break;
                 case Keys.D5: Navigator.GotoRetain<SkinChoice, FingerMenu>(); break;
                 case Keys.D6: AddNailToGallery(); break;
-                case Keys.D7: break;
+                case Keys.D7: ResetDesignClick(); break;
             }
         }
         private void FingerMenuLoad(object sender, EventArgs e)
@@ -130,14 +130,21 @@ namespace Noktinator
             List<Nail> nails = JsonUtil.LoadNails();
             nails.Add(nail);
             JsonUtil.SaveNails(nails);
+            MessageBox.Show("Successfully added to gallery!", "Add To Gallery", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void AddNailToGalleryButtonClick(object sender, EventArgs e) => AddNailToGallery();
 
-        private void ResetDesign_Click(object sender, EventArgs e)
+        void ResetDesignClick()
         {
-            nail = NailUtil.GetDefaultNailData();
-            fingerView.BackgroundImage = NailUtil.GetDefaultNail();
+            DialogResult result = MessageBox.Show("Are you sure?", "Reset Design", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                nail = NailUtil.GetDefaultNailData();
+                fingerView.BackgroundImage = NailUtil.GetDefaultNail();
+            }
         }
+
+        private void ResetDesignButtonClick(object sender, EventArgs e) => ResetDesignClick();
     }
 }

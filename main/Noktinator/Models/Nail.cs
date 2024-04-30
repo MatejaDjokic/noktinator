@@ -283,6 +283,7 @@ namespace Noktinator
                             break;
                     }
                     break;
+
                 case NailPattern.Leaves:
                     switch (nailShape)
                     {

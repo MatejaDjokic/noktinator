@@ -82,12 +82,6 @@
     <Compile Include="Forms\FingerPreview.Designer.cs">
       <DependentUpon>FingerPreview.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FingerView.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Forms\FingerView.Designer.cs">
-      <DependentUpon>FingerView.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>

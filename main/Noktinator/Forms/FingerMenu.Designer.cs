@@ -125,7 +125,7 @@ namespace Noktinator
             this.ResetDesign.TabIndex = 9;
             this.ResetDesign.Text = "Resetuj dizajn";
             this.ResetDesign.UseVisualStyleBackColor = false;
-            this.ResetDesign.Click += new System.EventHandler(this.ResetDesign_Click);
+            this.ResetDesign.Click += new System.EventHandler(this.ResetDesignButtonClick);
             // 
             // Galerija
             // 

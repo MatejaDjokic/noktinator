@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Forms;
 using System;
+using Noktinator.Util;
 
 namespace Noktinator
 {
