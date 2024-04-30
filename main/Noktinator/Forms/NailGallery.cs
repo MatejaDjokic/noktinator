@@ -7,7 +7,6 @@ namespace Noktinator
 {
     public partial class NailGallery : Form
     {
-        private int totalItemCount = 100;
         private int rows = 3;
         private int cols = 4;
 
@@ -18,12 +17,9 @@ namespace Noktinator
         private int modifier;
 
         private int currentPageIndex = 0;
-        private string searchBarText;
 
         public List<Button> nailButtons = new List<Button>();
         public int buttonIndex = -1;
-
-
 
         public NailGallery()
         {
@@ -42,10 +38,9 @@ namespace Noktinator
         {
             InitializeNails();
             //
-            
+
             //
             DisplayItems();
-            this.searchBar.TabIndex = 0;
         }
 
         private void FormClose(object sender, EventArgs e)
@@ -56,11 +51,11 @@ namespace Noktinator
         private void MyKeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
-                Application.Exit();
+                Navigator.GotoRetain<StartMenu, NailGallery>();
             else if (e.KeyCode == Keys.R)
                 RefreshNails();
-            else if (e.KeyCode == Keys.Enter)
-                Filter();
+            else if (e.KeyCode == Keys.O)
+                JsonUtil.OpenNailsJson();
             else if (e.KeyCode == Keys.Down)
                 this.FirstPage();
             else if (e.KeyCode == Keys.Left)
@@ -69,15 +64,7 @@ namespace Noktinator
                 this.NextPage();
             else if (e.KeyCode == Keys.Up)
                 this.LastPage();
-            else if (e.KeyCode == Keys.Back && e.Modifiers == Keys.Control)
-                this.searchBar.Text = string.Empty;
-            else if (e.KeyCode == Keys.I && e.Modifiers == Keys.Control)
-            {
-                MessageBox.Show("Nails: " + nails.Count.ToString());
-                MessageBox.Show("Filtered: " + filteredNails.Count.ToString());
-            }
         }
-
         private void InitializeNails()
         {
             nails = JsonUtil.LoadNails();
@@ -85,9 +72,7 @@ namespace Noktinator
             filteredNails = nails;
         }
 
-
-        //desni klik za deletovanje
-        private void ClickButton(object sender, MouseEventArgs e) 
+        private void ClickButton(object sender, MouseEventArgs e)
         {
             Button btn = (Button)sender;
             if (e.Button == MouseButtons.Right)
@@ -99,38 +84,32 @@ namespace Noktinator
             }
         }
 
-
-
         private void DisplayItems()
         {
-            //
             nailButtons.Clear();
-            //
-            
-            this.modifier = filteredNails.Count % this.nailsPerPage == 0 ? -1 : 0;
-            this.indexInput.Text = $"{currentPageIndex + 1}";
 
+            this.modifier = filteredNails.Count % this.nailsPerPage == 0 ? -1 : 0;
 
             this.grid.Controls.Clear();
 
             int startIndex = currentPageIndex * this.nailsPerPage;
             int endIndex = Math.Min(startIndex + this.nailsPerPage, filteredNails.Count);
+            this.itemInPageLabel.Text = nails.Count > 0 ? $"{startIndex + 1} - {endIndex}" : "No nails";
 
             for (int i = startIndex; i < endIndex; i++)
             {
                 Nail nail = this.filteredNails[i];
                 Button button = new Button();
 
-
                 button.BackgroundImage = nail.GetImage();
                 button.BackgroundImageLayout = ImageLayout.Zoom;
-                button.Click += (object sender, EventArgs e) => new DetaljiONoktu(nail, filteredNails.IndexOf(nail)).ShowDialog();
-                
+                button.Click += (object sender, EventArgs e) => new NailDetailsPage(nail, filteredNails.IndexOf(nail)).ShowDialog();
+
                 //desni klik za deletovanje
                 button.MouseDown += ClickButton;
-                //
+
                 nailButtons.Add(button);
-                nailButtons[i].Name = i.ToString();
+                nailButtons[i % nailButtons.Count].Name = i.ToString();
 
                 button.Dock = DockStyle.Fill;
                 grid.Controls.Add(button);
@@ -147,24 +126,6 @@ namespace Noktinator
 
             for (int i = 0; i < this.cols; i++)
                 grid.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100f / this.cols));
-        }
-        private void Filter()
-        {
-            filteredNails = nails;
-
-            // TRENUTNO NE RADI
-            //if (SearchBarTextValid())
-            //    filteredNails =
-            //        filteredNails.Where(
-            //            nail => searchBarText.Split(' ').Select(s => s.Trim().ToLower())
-            //            .All(str => new string[] {
-            //                $"{nail.nailShape}",
-            //                $"{nail.nailPattern}"}
-            //                .ToList().Select(a => a.Trim().ToLower())
-            //                .Any(attribute => attribute.Contains(str)))).ToList();
-
-            currentPageIndex = 0;
-            DisplayItems();
         }
 
         private void FirstPage()
@@ -208,53 +169,22 @@ namespace Noktinator
             DisplayItems();
         }
 
-        //private bool SearchBarTextValid()
-        //{
-        //    bool isNotNull = searchBarText != null;
-        //    bool isNotEmpty = searchBar.Text != string.Empty;
-        //    return isNotNull && isNotEmpty;
-        //}
-
-        private void IndexInputChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                currentPageIndex = int.Parse(indexInput.Text) - 1;
-                if (currentPageIndex < 0 || currentPageIndex > totalItemCount / this.nailsPerPage + this.modifier)
-                    throw new Exception();
-                indexInput.ForeColor = Color.Black;
-                DisplayItems();
-            }
-            catch
-            {
-                indexInput.ForeColor = Color.Red;
-            }
-        }
-        private void SearchBarTextChanged(object sender, EventArgs e)
-        {
-            searchBarText = searchBar.Text.Trim().ToLower();
-            //Filter();
-        }
-
-
         private void BackBtnClick(object sender, EventArgs e)
         {
-            StartMenu sm = (StartMenu)Application.OpenForms["StartMenu"];
-            sm.Show();
-            this.Hide();
+            Navigator.GotoRetain<StartMenu, NailGallery>();
         }
+
         private void FullLeftClick(object sender, EventArgs e) => FirstPage();
         private void LeftClick(object sender, EventArgs e) => PreviousPage();
         private void RightClick(object sender, EventArgs e) => NextPage();
         private void FullRightClick(object sender, EventArgs e) => LastPage();
 
         private void RefreshBtnClick(object sender, EventArgs e) => RefreshNails();
-
         private void OpenJsonClick(object sender, EventArgs e) => JsonUtil.OpenNailsJson();
 
         private void NailGallery_EnabledChanged(object sender, EventArgs e)
         {
-             
+
         }
     }
 }

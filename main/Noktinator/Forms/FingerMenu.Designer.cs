@@ -36,7 +36,7 @@ namespace Noktinator
             this.BojaPaterna = new System.Windows.Forms.Button();
             this.Buttons = new System.Windows.Forms.GroupBox();
             this.ResetDesign = new System.Windows.Forms.Button();
-            this.Galerija = new System.Windows.Forms.Button();
+            this.addNailToGalleryButton = new System.Windows.Forms.Button();
             this.Rasa = new System.Windows.Forms.Button();
             this.NokatColorDialog = new System.Windows.Forms.ColorDialog();
             this.PaternColorDialog = new System.Windows.Forms.ColorDialog();
@@ -102,7 +102,7 @@ namespace Noktinator
             // Buttons
             // 
             this.Buttons.Controls.Add(this.ResetDesign);
-            this.Buttons.Controls.Add(this.Galerija);
+            this.Buttons.Controls.Add(this.addNailToGalleryButton);
             this.Buttons.Controls.Add(this.Rasa);
             this.Buttons.Controls.Add(this.OblikNokta);
             this.Buttons.Controls.Add(this.BojaPaterna);
@@ -129,16 +129,16 @@ namespace Noktinator
             // 
             // Galerija
             // 
-            this.Galerija.BackColor = System.Drawing.Color.Plum;
-            this.Galerija.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Galerija.Font = new System.Drawing.Font("Segoe Print", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.Galerija.Location = new System.Drawing.Point(0, 424);
-            this.Galerija.Name = "Galerija";
-            this.Galerija.Size = new System.Drawing.Size(300, 75);
-            this.Galerija.TabIndex = 8;
-            this.Galerija.Text = "Dodaj u galeriju";
-            this.Galerija.UseVisualStyleBackColor = false;
-            this.Galerija.Click += new System.EventHandler(this.GalerijaClick);
+            this.addNailToGalleryButton.BackColor = System.Drawing.Color.Plum;
+            this.addNailToGalleryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addNailToGalleryButton.Font = new System.Drawing.Font("Segoe Print", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.addNailToGalleryButton.Location = new System.Drawing.Point(0, 424);
+            this.addNailToGalleryButton.Name = "addNailToGalleryButton";
+            this.addNailToGalleryButton.Size = new System.Drawing.Size(300, 75);
+            this.addNailToGalleryButton.TabIndex = 8;
+            this.addNailToGalleryButton.Text = "Dodaj u galeriju";
+            this.addNailToGalleryButton.UseVisualStyleBackColor = false;
+            this.addNailToGalleryButton.Click += new System.EventHandler(this.AddNailToGalleryButtonClick);
             // 
             // Rasa
             // 
@@ -173,7 +173,7 @@ namespace Noktinator
             this.Nazad.TabIndex = 7;
             this.Nazad.Text = "<";
             this.Nazad.UseVisualStyleBackColor = false;
-            this.Nazad.Click += new System.EventHandler(this.Nazad_Click);
+            this.Nazad.Click += new System.EventHandler(this.BackButttonClick);
             // 
             // FingerMenu
             // 
@@ -210,7 +210,7 @@ namespace Noktinator
         private System.Windows.Forms.Button Rasa;
         private System.Windows.Forms.ColorDialog RasaColorDialog;
         private System.Windows.Forms.Button Nazad;
-        private System.Windows.Forms.Button Galerija;
+        private System.Windows.Forms.Button addNailToGalleryButton;
         private System.Windows.Forms.Button ResetDesign;
     }
 }

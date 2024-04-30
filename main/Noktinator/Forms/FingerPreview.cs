@@ -17,9 +17,15 @@ namespace Noktinator
 
             this.FormClosing += FormClose;
             this.Load += FingerPreviewLoad;
+            this.KeyDown += MyKeyDown;
+            this.KeyPreview = true;
         }
 
-
+        private void MyKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+                Navigator.GotoRetain<StartMenu, FingerPreview>();
+        }
         private void FormClose(object sender, EventArgs e)
         {
             Application.Exit();
@@ -37,9 +43,7 @@ namespace Noktinator
         private void FingerChoiceClick(PictureBox field)
         {
             ChosenField = field;
-            FingerMenu fingerMenu = (FingerMenu)Application.OpenForms["FingerMenu"];
-            fingerMenu.Show();
-            this.Hide();
+            Navigator.GotoRetain<FingerMenu, FingerPreview>();
         }
 
         private void LittleFingerClick(object sender, EventArgs e)
@@ -134,9 +138,7 @@ namespace Noktinator
 
         private void NazadClick(object sender, EventArgs e)
         {
-            StartMenu start = (StartMenu)Application.OpenForms["StartMenu"];
-            start.Show();
-            this.Hide();
+            Navigator.GotoRetain<StartMenu, FingerPreview>();
         }
     }
 }

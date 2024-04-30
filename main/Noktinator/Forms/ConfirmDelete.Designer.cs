@@ -59,7 +59,7 @@ namespace Noktinator
             this.No.TabIndex = 10;
             this.No.Text = "Ne";
             this.No.UseVisualStyleBackColor = false;
-            this.No.Click += new System.EventHandler(this.No_Click);
+            this.No.Click += new System.EventHandler(this.NoClick);
             // 
             // label1
             // 
@@ -85,7 +85,7 @@ namespace Noktinator
             this.Name = "ConfirmDelete";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConfirmDelete";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ConfirmDelete_FormClosed);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ConfirmDeleteFormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

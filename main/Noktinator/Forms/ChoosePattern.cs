@@ -20,12 +20,8 @@ namespace Noktinator
 
         public void choiceClick(NailPattern pattern)
         {
-            FingerMenu fingerMenu = (FingerMenu)Application.OpenForms["FingerMenu"];
-            
             FingerMenu.nail.nailPattern = pattern; //noktu u glavnom editoru za atribut pattern daje odredjeni pattern
-
-            this.Hide();
-            fingerMenu.Show();
+            Navigator.GotoRetain<FingerMenu, ChoosePattern>();
         }
 
         private void FireStyle_Click(object sender, EventArgs e)

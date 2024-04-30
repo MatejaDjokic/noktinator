@@ -3,10 +3,10 @@ using System.Drawing;
 
 namespace Noktinator
 {
-    class DetaljiONoktu : Form
+    class NailDetailsPage : Form
     {
         private Nail nail;
-        public DetaljiONoktu(Nail nail, int i)
+        public NailDetailsPage(Nail nail, int i)
         {
             this.nail = nail;
 

@@ -22,12 +22,10 @@ namespace Noktinator
 
         }
 
-        public void SkinSelection(Button btn) 
+        public void SkinSelection(Button btn)
         {
-            FingerMenu fingerMenu = (FingerMenu)Application.OpenForms["FingerMenu"];
             FingerMenu.nail.skinColor = btn.BackColor;
-            fingerMenu.Show();
-            this.Hide();
+            Navigator.GotoRetain<FingerMenu, SkinChoice>();
         }
 
         private void button1_Click(object sender, EventArgs e)

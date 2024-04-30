@@ -54,7 +54,6 @@ D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.Choose
 D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.ChooseShape.resources
 D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.FingerMenu.resources
 D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.FingerPreview.resources
-D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.KorisnickaGalerija.resources
 D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.SkinChoice.resources
 D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.StartMenu.resources
 D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.Properties.Resources.resources
@@ -76,3 +75,5 @@ C:\Users\Strahinja\Documents\GitHub\nail-maker-2024\main\Noktinator\obj\Debug\No
 C:\Users\Strahinja\Documents\GitHub\nail-maker-2024\main\Noktinator\obj\Debug\Noktinator.SkinChoice.resources
 C:\Users\Strahinja\Documents\GitHub\nail-maker-2024\main\Noktinator\obj\Debug\Noktinator.csproj.CopyComplete
 C:\Users\Strahinja\Documents\GitHub\nail-maker-2024\main\Noktinator\obj\Debug\Noktinator.ConfirmDelete.resources
+D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.ConfirmDelete.resources
+D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.Util.BaseForm.resources

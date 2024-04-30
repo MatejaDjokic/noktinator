@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Reflection;
+﻿using System.Drawing;
 
 namespace Noktinator
 {
@@ -44,7 +41,6 @@ namespace Noktinator
             {
                 _nailShape = value;
                 Update();
-
             }
         }
         public NailPattern nailPattern
@@ -76,10 +72,6 @@ namespace Noktinator
         {
             return _nailShapeImage;
         }
-        public Image nailPatternImage()
-        {
-            return _nailShapeImage;
-        }
         public Image fingerShapeImage()
         {
             return _fingerShapeImage;
@@ -98,52 +90,52 @@ namespace Noktinator
         {
             switch (_nailShape)
             {
-                case Noktinator.NailShape.Almond:
+                case NailShape.Almond:
                     _nailShapeImage = Properties.Resources.almond_tip;
                     _fingerShapeImage = Properties.Resources.almond_finger;
                     break;
 
-                case Noktinator.NailShape.Ballerina:
+                case NailShape.Ballerina:
                     _nailShapeImage = Properties.Resources.ballerina_tip;
                     _fingerShapeImage = Properties.Resources.ballerina_finger;
                     break;
 
-                case Noktinator.NailShape.Lipstick:
+                case NailShape.Lipstick:
                     _nailShapeImage = Properties.Resources.lipstick_tip;
                     _fingerShapeImage = Properties.Resources.lipstick_finger;
                     break;
 
-                case Noktinator.NailShape.MountainPeak:
+                case NailShape.MountainPeak:
                     _nailShapeImage = Properties.Resources.mountain_peak_tip;
                     _fingerShapeImage = Properties.Resources.mountain_peak_finger;
                     break;
 
-                case Noktinator.NailShape.Oval:
+                case NailShape.Oval:
                     _nailShapeImage = Properties.Resources.oval_tip;
                     _fingerShapeImage = Properties.Resources.oval_finger;
                     break;
 
-                case Noktinator.NailShape.Rounded:
+                case NailShape.Rounded:
                     _nailShapeImage = Properties.Resources.rounded_tip;
                     _fingerShapeImage = Properties.Resources.rounded_finger;
                     break;
 
-                case Noktinator.NailShape.Short:
+                case NailShape.Short:
                     _nailShapeImage = Properties.Resources.short_tip;
                     _fingerShapeImage = Properties.Resources.short_finger;
                     break;
 
-                case Noktinator.NailShape.Squoval:
+                case NailShape.Squoval:
                     _nailShapeImage = Properties.Resources.squoval_tip;
                     _fingerShapeImage = Properties.Resources.squoval_finger;
                     break;
 
-                case Noktinator.NailShape.Stiletto:
+                case NailShape.Stiletto:
                     _nailShapeImage = Properties.Resources.stiletto_tip;
                     _fingerShapeImage = Properties.Resources.stiletto_finger;
                     break;
 
-                case Noktinator.NailShape.Wide:
+                case NailShape.Wide:
                     _nailShapeImage = Properties.Resources.wide_tip;
                     _fingerShapeImage = Properties.Resources.wide_finger;
                     break;
@@ -190,14 +182,16 @@ namespace Noktinator
                             _patternImage = Properties.Resources.fire_pattern_almond;
                             break;
                     }
-
                     break;
+                
                 case NailPattern.Leaf:
                     _patternImage = NailUtil.none;
                     break;
+                
                 case NailPattern.Stars:
                     _patternImage = NailUtil.none;
                     break;
+                
                 case NailPattern.Hearts:
                     switch (nailShape)
                     {

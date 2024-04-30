@@ -37,8 +37,7 @@ namespace Noktinator
             this.left = new System.Windows.Forms.Button();
             this.right = new System.Windows.Forms.Button();
             this.pagination = new System.Windows.Forms.TableLayoutPanel();
-            this.indexInput = new System.Windows.Forms.TextBox();
-            this.searchBar = new System.Windows.Forms.TextBox();
+            this.itemInPageLabel = new System.Windows.Forms.Label();
             this.backBtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.openJson = new System.Windows.Forms.Button();
@@ -55,13 +54,13 @@ namespace Noktinator
             this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.grid.Location = new System.Drawing.Point(92, 38);
+            this.grid.Location = new System.Drawing.Point(92, 12);
             this.grid.Name = "grid";
             this.grid.RowCount = 3;
             this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.grid.Size = new System.Drawing.Size(1000, 561);
+            this.grid.Size = new System.Drawing.Size(1000, 587);
             this.grid.TabIndex = 6;
             // 
             // fullRight
@@ -134,7 +133,7 @@ namespace Noktinator
             this.pagination.Controls.Add(this.left, 1, 0);
             this.pagination.Controls.Add(this.right, 3, 0);
             this.pagination.Controls.Add(this.fullRight, 4, 0);
-            this.pagination.Controls.Add(this.indexInput, 2, 0);
+            this.pagination.Controls.Add(this.itemInPageLabel, 2, 0);
             this.pagination.Location = new System.Drawing.Point(172, 605);
             this.pagination.Name = "pagination";
             this.pagination.RowCount = 1;
@@ -144,31 +143,17 @@ namespace Noktinator
             this.pagination.Size = new System.Drawing.Size(841, 45);
             this.pagination.TabIndex = 7;
             // 
-            // indexInput
+            // itemInPageLabel
             // 
-            this.indexInput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.indexInput.BackColor = System.Drawing.Color.Plum;
-            this.indexInput.Location = new System.Drawing.Point(339, 3);
-            this.indexInput.MaxLength = 3;
-            this.indexInput.Multiline = true;
-            this.indexInput.Name = "indexInput";
-            this.indexInput.Size = new System.Drawing.Size(162, 39);
-            this.indexInput.TabIndex = 3;
-            this.indexInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // searchBar
-            // 
-            this.searchBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchBar.BackColor = System.Drawing.Color.Plum;
-            this.searchBar.Location = new System.Drawing.Point(92, 12);
-            this.searchBar.MaxLength = 100;
-            this.searchBar.Name = "searchBar";
-            this.searchBar.Size = new System.Drawing.Size(1000, 20);
-            this.searchBar.TabIndex = 0;
-            this.searchBar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.itemInPageLabel.AutoSize = true;
+            this.itemInPageLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.itemInPageLabel.Font = new System.Drawing.Font("Arial", 15F);
+            this.itemInPageLabel.Location = new System.Drawing.Point(339, 0);
+            this.itemInPageLabel.Name = "itemInPageLabel";
+            this.itemInPageLabel.Size = new System.Drawing.Size(162, 45);
+            this.itemInPageLabel.TabIndex = 6;
+            this.itemInPageLabel.Text = "1 - 12";
+            this.itemInPageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // backBtn
             // 
@@ -220,7 +205,6 @@ namespace Noktinator
             this.Controls.Add(this.openJson);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.backBtn);
-            this.Controls.Add(this.searchBar);
             this.Controls.Add(this.pagination);
             this.Controls.Add(this.grid);
             this.MaximumSize = new System.Drawing.Size(1200, 700);
@@ -233,7 +217,6 @@ namespace Noktinator
             this.pagination.ResumeLayout(false);
             this.pagination.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -244,10 +227,9 @@ namespace Noktinator
         private Button fullLeft;
         private TableLayoutPanel grid;
         private TableLayoutPanel pagination;
-        private TextBox indexInput;
-        private TextBox searchBar;
         private Button backBtn;
         private Button button1;
         private Button openJson;
+        private Label itemInPageLabel;
     }
 }

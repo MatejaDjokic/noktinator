@@ -49,101 +49,99 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChoosePattern.cs">
+    <Compile Include="Pages\ChoosePattern.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChoosePattern.Designer.cs">
+    <Compile Include="Pages\ChoosePattern.Designer.cs">
       <DependentUpon>ChoosePattern.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChooseShape.cs">
+    <Compile Include="Pages\ChooseShape.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChooseShape.Designer.cs">
+    <Compile Include="Pages\ChooseShape.Designer.cs">
       <DependentUpon>ChooseShape.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConfirmDelete.cs">
+    <Compile Include="Pages\ConfirmDelete.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConfirmDelete.Designer.cs">
+    <Compile Include="Pages\ConfirmDelete.Designer.cs">
       <DependentUpon>ConfirmDelete.cs</DependentUpon>
     </Compile>
-    <Compile Include="DetaljiONoktu.cs">
+    <Compile Include="Pages\NailDetailsPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FingerMenu.cs">
+    <Compile Include="Pages\FingerMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FingerMenu.Designer.cs">
+    <Compile Include="Pages\FingerMenu.Designer.cs">
       <DependentUpon>FingerMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FingerPreview.cs">
+    <Compile Include="Pages\FingerPreview.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FingerPreview.Designer.cs">
+    <Compile Include="Pages\FingerPreview.Designer.cs">
       <DependentUpon>FingerPreview.cs</DependentUpon>
     </Compile>
-    <Compile Include="FingerView.cs">
+    <Compile Include="Pages\FingerView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="FingerView.Designer.cs">
+    <Compile Include="Pages\FingerView.Designer.cs">
       <DependentUpon>FingerView.cs</DependentUpon>
     </Compile>
-    <Compile Include="JsonUtil.cs" />
-    <Compile Include="KorisnickaGalerija.cs">
+    <Compile Include="Util\BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KorisnickaGalerija.Designer.cs">
-      <DependentUpon>KorisnickaGalerija.cs</DependentUpon>
+    <Compile Include="Util\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Nail.cs" />
-    <Compile Include="NailGallery.cs">
+    <Compile Include="Util\JsonUtil.cs" />
+    <Compile Include="Models\Nail.cs" />
+    <Compile Include="Pages\NailGallery.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NailGallery.Designer.cs">
+    <Compile Include="Pages\NailGallery.Designer.cs">
       <DependentUpon>NailGallery.cs</DependentUpon>
     </Compile>
-    <Compile Include="NailPattern.cs" />
-    <Compile Include="NailShape.cs" />
-    <Compile Include="NailUtil.cs" />
-    <Compile Include="SkinChoice.cs">
+    <Compile Include="Models\NailPattern.cs" />
+    <Compile Include="Models\NailShape.cs" />
+    <Compile Include="Util\NailUtil.cs" />
+    <Compile Include="Pages\SkinChoice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SkinChoice.Designer.cs">
+    <Compile Include="Pages\SkinChoice.Designer.cs">
       <DependentUpon>SkinChoice.cs</DependentUpon>
     </Compile>
-    <Compile Include="StartMenu.cs">
+    <Compile Include="Pages\StartMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StartMenu.Designer.cs">
+    <Compile Include="Pages\StartMenu.Designer.cs">
       <DependentUpon>StartMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ChoosePattern.resx">
+    <Compile Include="Util\Navigator.cs" />
+    <EmbeddedResource Include="Pages\ChoosePattern.resx">
       <DependentUpon>ChoosePattern.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChooseShape.resx">
+    <EmbeddedResource Include="Pages\ChooseShape.resx">
       <DependentUpon>ChooseShape.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConfirmDelete.resx">
+    <EmbeddedResource Include="Pages\ConfirmDelete.resx">
       <DependentUpon>ConfirmDelete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FingerMenu.resx">
+    <EmbeddedResource Include="Pages\FingerMenu.resx">
       <DependentUpon>FingerMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FingerPreview.resx">
+    <EmbeddedResource Include="Pages\FingerPreview.resx">
       <DependentUpon>FingerPreview.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KorisnickaGalerija.resx">
-      <DependentUpon>KorisnickaGalerija.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NailGallery.resx">
+    <EmbeddedResource Include="Pages\NailGallery.resx">
       <DependentUpon>NailGallery.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SkinChoice.resx">
+    <EmbeddedResource Include="Pages\SkinChoice.resx">
       <DependentUpon>SkinChoice.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StartMenu.resx">
+    <EmbeddedResource Include="Pages\StartMenu.resx">
       <DependentUpon>StartMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -156,6 +154,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Util\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

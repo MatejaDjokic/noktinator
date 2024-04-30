@@ -1,8 +1,7 @@
-﻿using System.Windows.Forms;
+﻿using System.Collections.Generic;
+using System.Windows.Forms;
 using System.Drawing;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 
 namespace Noktinator
 {
@@ -13,21 +12,25 @@ namespace Noktinator
             InitializeComponent();
 
             this.FormClosing += FormClose;
+            this.KeyDown += MyKeyDown;
+            this.KeyPreview = true;
         }
 
-        public static Nail nail = new Nail(
-                shape: NailShape.Almond,
-                nailColor: Color.White,
-                skinColor: Color.FromArgb(240, 184, 160)
-         );
+        public static Nail nail = NailUtil.GetDefaultNailData();
 
         //slika koja sluzi za kopiranje na FingerPreview
         public static Image copyImage;
 
         public static Bitmap fingerImage;
-        private Bitmap nailImage;
+        private static Bitmap nailImage;
         public static Bitmap patternImage;
 
+
+        private void MyKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+                Navigator.GotoRetain<FingerPreview, FingerMenu>();
+        }
         private void FingerMenuLoad(object sender, EventArgs e)
         {
             nail.Update();
@@ -49,11 +52,6 @@ namespace Noktinator
             fingerView.BackgroundImage = NailUtil.MergeBitmaps(fingerImage, nailImage, patternImage);
         }
 
-        Bitmap ColorBitmap(Bitmap bmp, Color color)
-        {
-            return NailUtil.ColorBitmap(bmp, color);
-        }
-
         //biranje boje nokta 
         private void BojaNoktaClick(object sender, EventArgs e)
         {
@@ -63,7 +61,7 @@ namespace Noktinator
                 nail.nailColor = NokatColorDialog.Color;
 
                 // kreiranje nove instance bitmape za bojenje nokte
-                nailImage = ColorBitmap(new Bitmap(nail.nailShapeImage()), NokatColorDialog.Color);
+                nailImage = NailUtil.ColorBitmap(new Bitmap(nail.nailShapeImage()), NokatColorDialog.Color);
             }
             MergeImages();
         }
@@ -76,7 +74,7 @@ namespace Noktinator
             {
                 nail.patternColor = PaternColorDialog.Color;
 
-                patternImage = ColorBitmap(new Bitmap(nail.patternImage()), PaternColorDialog.Color);
+                patternImage = NailUtil.ColorBitmap(new Bitmap(nail.patternImage()), PaternColorDialog.Color);
             }
             MergeImages();
         }
@@ -92,10 +90,7 @@ namespace Noktinator
         //biranje oblika
         private void OblikNoktaClick(object sender, EventArgs e)
         {
-            //ChooseShape forma na kojoj se biraju oblici noktiju
-            ChooseShape chooseShape = new ChooseShape();
-            chooseShape.Show();
-            this.Hide();
+            Navigator.GotoRetain<ChooseShape, FingerMenu>();
         }
 
 
@@ -104,9 +99,9 @@ namespace Noktinator
             nail.Update();
 
             //kad god se ponovo pojavi ova forma, prst i nokat ce imati poslednju sacuvanu boju
-            nailImage = ColorBitmap(new Bitmap(nail.nailShapeImage()), nail.nailColor);
-            fingerImage = ColorBitmap(new Bitmap(nail.fingerShapeImage()), nail.skinColor);
-            patternImage = ColorBitmap(new Bitmap(nail.patternImage()), nail.patternColor);
+            nailImage = NailUtil.ColorBitmap(new Bitmap(nail.nailShapeImage()), nail.nailColor);
+            fingerImage = NailUtil.ColorBitmap(new Bitmap(nail.fingerShapeImage()), nail.skinColor);
+            patternImage = NailUtil.ColorBitmap(new Bitmap(nail.patternImage()), nail.patternColor);
             MergeImages();
         }
 
@@ -120,32 +115,25 @@ namespace Noktinator
 
 
         //kada se stisne nazad onda 
-        private void Nazad_Click(object sender, EventArgs e)
+        private void BackButttonClick(object sender, EventArgs e)
         {
-            FingerPreview fingerPreview = (FingerPreview)Application.OpenForms["FingerPreview"];
+            Navigator.GotoRetain<FingerPreview, FingerMenu>();
             FingerPreview.ChosenField.Image = fingerView.BackgroundImage;
-
-            fingerPreview.Show();
-            this.Hide();
         }
 
-        private void AddToGallery()
+        private void AddNailToGallery()
         {
             List<Nail> nails = JsonUtil.LoadNails();
             nails.Add(nail);
             JsonUtil.SaveNails(nails);
         }
 
-        private void GalerijaClick(object sender, EventArgs e) => AddToGallery();
+        private void AddNailToGalleryButtonClick(object sender, EventArgs e) => AddNailToGallery();
 
         private void ResetDesign_Click(object sender, EventArgs e)
         {
+            nail = NailUtil.GetDefaultNailData();
             fingerView.BackgroundImage = NailUtil.GetDefaultNail();
-            nail = new Nail(
-               shape: NailShape.Almond,
-               nailColor: Color.White,
-               skinColor: Color.FromArgb(240, 184, 160)
-        );
         }
     }
 }
