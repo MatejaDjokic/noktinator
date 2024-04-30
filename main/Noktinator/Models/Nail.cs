@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Drawing;
+using System.Reflection;
 
 namespace Noktinator
 {
@@ -283,7 +284,39 @@ namespace Noktinator
                     }
                     break;
                 case NailPattern.Leaves:
-                    _patternImage = NailUtil.none;
+                    switch (nailShape)
+                    {
+                        case NailShape.Almond:
+                            _patternImage = Properties.Resources.leaves_pattern_almond;
+                            break;
+                        case NailShape.Ballerina:
+                            _patternImage = Properties.Resources.leaves_pattern_almond;
+                            break;
+                        case NailShape.Lipstick:
+                            _patternImage = Properties.Resources.leaves_pattern_almond;
+                            break;
+                        case NailShape.MountainPeak:
+                            _patternImage = Properties.Resources.leaves_pattern_almond;
+                            break;
+                        case NailShape.Oval:
+                            _patternImage = Properties.Resources.leaves_pattern_almond;
+                            break;
+                        case NailShape.Rounded:
+                            _patternImage = Properties.Resources.leaves_pattern_rounded;
+                            break;
+                        case NailShape.Short:
+                            _patternImage = Properties.Resources.leaves_pattern_short;
+                            break;
+                        case NailShape.Squoval:
+                            _patternImage = Properties.Resources.leaves_pattern_squoval;
+                            break;
+                        case NailShape.Stiletto:
+                            _patternImage = Properties.Resources.leaves_pattern_stiletto;
+                            break;
+                        case NailShape.Wide:
+                            _patternImage = Properties.Resources.leaves_pattern_almond;
+                            break;
+                    }
                     break;
             }
         }

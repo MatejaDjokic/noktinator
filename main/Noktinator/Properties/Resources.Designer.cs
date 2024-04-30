@@ -343,6 +343,56 @@ namespace Noktinator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap leaves_pattern_almond {
+            get {
+                object obj = ResourceManager.GetObject("leaves_pattern_almond", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap leaves_pattern_rounded {
+            get {
+                object obj = ResourceManager.GetObject("leaves_pattern_rounded", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap leaves_pattern_short {
+            get {
+                object obj = ResourceManager.GetObject("leaves_pattern_short", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap leaves_pattern_squoval {
+            get {
+                object obj = ResourceManager.GetObject("leaves_pattern_squoval", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap leaves_pattern_stiletto {
+            get {
+                object obj = ResourceManager.GetObject("leaves_pattern_stiletto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LeavesStyle {
             get {
                 object obj = ResourceManager.GetObject("LeavesStyle", resourceCulture);

@@ -366,5 +366,20 @@
   <ItemGroup>
     <None Include="Resources\leaf_pattern_wide.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leaves_pattern_almond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leaves_pattern_rounded.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leaves_pattern_short.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leaves_pattern_squoval.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leaves_pattern_stiletto.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
