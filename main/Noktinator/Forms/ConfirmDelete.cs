@@ -28,11 +28,13 @@ namespace Noktinator
             nails.RemoveAt(ng.buttonIndex);
             JsonUtil.SaveNails(nails);
             ng.RefreshNails();
+            Hide();
         }
 
         private void NoClick(object sender, EventArgs e)
         {
             ShowGallery();
+            Hide();
         }
 
         private void ConfirmDeleteFormClosed(object sender, FormClosedEventArgs e)
