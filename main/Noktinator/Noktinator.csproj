@@ -375,5 +375,38 @@
   <ItemGroup>
     <None Include="Resources\leaves_pattern_stiletto.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stars_pattern_almond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stars_pattern_stiletto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stars_pattern_short.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stars_pattern_wide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stars_pattern_oval.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SniwFlakeStyle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snowflake_pattern_almond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snowflake_pattern_stiletto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snowflake_pattern_short.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\triangles_pattern_almond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TrianglesStyleClean.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

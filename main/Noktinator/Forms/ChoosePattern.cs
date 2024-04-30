@@ -54,5 +54,15 @@ namespace Noktinator
         {
             ChoiceClick(NailPattern.Leaves);
         }
+
+        private void SnowFlakeStyle_Click(object sender, EventArgs e)
+        {
+            ChoiceClick(NailPattern.Snowflake);
+        }
+
+        private void Triangles_Click(object sender, EventArgs e)
+        {
+            ChoiceClick(NailPattern.Triangles);
+        }
     }
 }

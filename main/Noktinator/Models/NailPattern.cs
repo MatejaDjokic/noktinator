@@ -7,6 +7,8 @@
         Leaf,
         Stars,
         Hearts,
-        Leaves
+        Leaves,
+        Snowflake,
+        Triangles
     }
 }

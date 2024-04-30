@@ -583,6 +583,46 @@ namespace Noktinator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SniwFlakeStyle {
+            get {
+                object obj = ResourceManager.GetObject("SniwFlakeStyle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap snowflake_pattern_almond {
+            get {
+                object obj = ResourceManager.GetObject("snowflake_pattern_almond", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap snowflake_pattern_short {
+            get {
+                object obj = ResourceManager.GetObject("snowflake_pattern_short", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap snowflake_pattern_stiletto {
+            get {
+                object obj = ResourceManager.GetObject("snowflake_pattern_stiletto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap squoval {
             get {
                 object obj = ResourceManager.GetObject("squoval", resourceCulture);
@@ -606,6 +646,56 @@ namespace Noktinator.Properties {
         internal static System.Drawing.Bitmap squoval_tip {
             get {
                 object obj = ResourceManager.GetObject("squoval_tip", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stars_pattern_almond {
+            get {
+                object obj = ResourceManager.GetObject("stars_pattern_almond", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stars_pattern_oval {
+            get {
+                object obj = ResourceManager.GetObject("stars_pattern_oval", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stars_pattern_short {
+            get {
+                object obj = ResourceManager.GetObject("stars_pattern_short", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stars_pattern_stiletto {
+            get {
+                object obj = ResourceManager.GetObject("stars_pattern_stiletto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stars_pattern_wide {
+            get {
+                object obj = ResourceManager.GetObject("stars_pattern_wide", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -646,6 +736,26 @@ namespace Noktinator.Properties {
         internal static System.Drawing.Bitmap stiletto_tip {
             get {
                 object obj = ResourceManager.GetObject("stiletto_tip", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap triangles_pattern_almond {
+            get {
+                object obj = ResourceManager.GetObject("triangles_pattern_almond", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TrianglesStyleClean {
+            get {
+                object obj = ResourceManager.GetObject("TrianglesStyleClean", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

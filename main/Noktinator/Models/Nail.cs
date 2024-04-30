@@ -226,24 +226,34 @@ namespace Noktinator
                     switch (nailShape)
                     {
                         case NailShape.Almond:
+                            _patternImage = Properties.Resources.stars_pattern_almond;
                             break;
                         case NailShape.Ballerina:
+                            _patternImage = Properties.Resources.stars_pattern_almond;
                             break;
                         case NailShape.Lipstick:
+                            _patternImage = Properties.Resources.stars_pattern_almond;
                             break;
                         case NailShape.MountainPeak:
+                            _patternImage = Properties.Resources.stars_pattern_almond;
                             break;
                         case NailShape.Oval:
+                            _patternImage = Properties.Resources.stars_pattern_oval;
                             break;
                         case NailShape.Rounded:
+                            _patternImage = Properties.Resources.stars_pattern_almond;
                             break;
                         case NailShape.Short:
+                            _patternImage = Properties.Resources.stars_pattern_short;
                             break;
                         case NailShape.Squoval:
+                            _patternImage = Properties.Resources.stars_pattern_almond;
                             break;
                         case NailShape.Stiletto:
+                            _patternImage = Properties.Resources.stars_pattern_stiletto;
                             break;
                         case NailShape.Wide:
+                            _patternImage = Properties.Resources.stars_pattern_wide;
                             break;
                     }
                     break;
@@ -319,6 +329,81 @@ namespace Noktinator
                             break;
                     }
                     break;
+
+                case NailPattern.Snowflake:
+                    switch (nailShape)
+                    {
+                        case NailShape.Almond:
+                            _patternImage = Properties.Resources.snowflake_pattern_almond;
+                            break;
+                        case NailShape.Ballerina:
+                            _patternImage = Properties.Resources.snowflake_pattern_almond;
+                            break;
+                        case NailShape.Lipstick:
+                            _patternImage = Properties.Resources.snowflake_pattern_almond;
+                            break;
+                        case NailShape.MountainPeak:
+                            _patternImage = Properties.Resources.snowflake_pattern_almond;
+                            break;
+                        case NailShape.Oval:
+                            _patternImage = Properties.Resources.snowflake_pattern_almond;
+                            break;
+                        case NailShape.Rounded:
+                            _patternImage = Properties.Resources.snowflake_pattern_almond;
+                            break;
+                        case NailShape.Short:
+                            _patternImage = Properties.Resources.snowflake_pattern_short;
+                            break;
+                        case NailShape.Squoval:
+                            _patternImage = Properties.Resources.snowflake_pattern_almond;
+                            break;
+                        case NailShape.Stiletto:
+                            _patternImage = Properties.Resources.snowflake_pattern_stiletto;
+                            ;
+                            break;
+                        case NailShape.Wide:
+                            _patternImage = Properties.Resources.snowflake_pattern_almond;
+                            break;
+                    }
+                    break;
+
+                case NailPattern.Triangles:
+                    switch (nailShape)
+                    {
+                        case NailShape.Almond:
+                            _patternImage = Properties.Resources.triangles_pattern_almond;
+                            break;
+                        case NailShape.Ballerina:
+                            _patternImage = Properties.Resources.triangles_pattern_almond;
+                            break;
+                        case NailShape.Lipstick:
+                            _patternImage = Properties.Resources.triangles_pattern_almond;
+                            break;
+                        case NailShape.MountainPeak:
+                            _patternImage = Properties.Resources.triangles_pattern_almond;
+                            break;
+                        case NailShape.Oval:
+                            _patternImage = Properties.Resources.triangles_pattern_almond;
+                            break;
+                        case NailShape.Rounded:
+                            _patternImage = Properties.Resources.triangles_pattern_almond;
+                            break;
+                        case NailShape.Short:
+                            _patternImage = Properties.Resources.triangles_pattern_almond;
+                            break;
+                        case NailShape.Squoval:
+                            _patternImage = Properties.Resources.triangles_pattern_almond;
+                            break;
+                        case NailShape.Stiletto:
+                            _patternImage = Properties.Resources.triangles_pattern_almond;
+                            break;
+                        case NailShape.Wide:
+                            _patternImage = Properties.Resources.triangles_pattern_almond;
+                            break;
+                    }
+                    break;
+
+
             }
         }
 
