@@ -1,10 +1,11 @@
 ﻿using System.Windows.Forms;
 using System.Drawing;
 using System;
+using Noktinator.Util;
 
 namespace Noktinator
 {
-    public partial class FingerPreview : Form
+    public partial class FingerPreview : BaseForm
     {
 
         public static PictureBox ChosenField;
@@ -23,8 +24,15 @@ namespace Noktinator
 
         private void MyKeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Escape)
-                Navigator.GotoRetain<StartMenu, FingerPreview>();
+            switch (e.KeyCode)
+            {
+                case Keys.Escape: Navigator.GotoRetain<StartMenu, FingerPreview>(); break;
+                case Keys.D1: FingerChoiceClick(LittleFinger); break;
+                case Keys.D2: FingerChoiceClick(RingFinger); break;
+                case Keys.D3: FingerChoiceClick(MiddleFinger); break;
+                case Keys.D4: FingerChoiceClick(IndexFinger); break;
+                case Keys.D5: FingerChoiceClick(Thumb); break;
+            }
         }
         private void FormClose(object sender, EventArgs e)
         {

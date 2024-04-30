@@ -1,22 +1,38 @@
 ﻿using System.Windows.Forms;
 using System.Drawing;
 using System;
+using Noktinator.Util;
 
 namespace Noktinator
 {
-    public partial class ChooseShape : Form
+    public partial class ChooseShape : BaseForm
     {
         public ChooseShape()
         {
             InitializeComponent();
+            this.KeyDown += ChooseShapeKeyDown;
         }
 
         public void ChoiceClick(NailShape shapeEnum)
         {
             FingerMenu.nail.nailShape = shapeEnum; //noktu u glavnom editoru za atribut shape daje odredjeni oblik
-            Navigator.Open<FingerMenu>();
-            this.Hide();
-            //Navigator.Goto<FingerMenu, ChoosePattern>();
+            Navigator.GotoRetain<FingerMenu, ChooseShape>();
+        }
+        private void ChooseShapeKeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.D1: ChoiceClick(NailShape.Almond); break;
+                case Keys.D2: ChoiceClick(NailShape.Ballerina); break;
+                case Keys.D3: ChoiceClick(NailShape.Lipstick); break;
+                case Keys.D4: ChoiceClick(NailShape.MountainPeak); break;
+                case Keys.D5: ChoiceClick(NailShape.Oval); break;
+                case Keys.D6: ChoiceClick(NailShape.Rounded); break;
+                case Keys.D7: ChoiceClick(NailShape.Short); break;
+                case Keys.D8: ChoiceClick(NailShape.Squoval); break;
+                case Keys.D9: ChoiceClick(NailShape.Stiletto); break;
+                case Keys.D0: ChoiceClick(NailShape.Wide); break;
+            }
         }
 
         private void Almond_Click(object sender, EventArgs e)

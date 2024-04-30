@@ -49,99 +49,99 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pages\ChoosePattern.cs">
+    <Compile Include="Forms\ChoosePattern.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pages\ChoosePattern.Designer.cs">
+    <Compile Include="Forms\ChoosePattern.Designer.cs">
       <DependentUpon>ChoosePattern.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ChooseShape.cs">
+    <Compile Include="Forms\ChooseShape.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pages\ChooseShape.Designer.cs">
+    <Compile Include="Forms\ChooseShape.Designer.cs">
       <DependentUpon>ChooseShape.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ConfirmDelete.cs">
+    <Compile Include="Forms\ConfirmDelete.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pages\ConfirmDelete.Designer.cs">
+    <Compile Include="Forms\ConfirmDelete.Designer.cs">
       <DependentUpon>ConfirmDelete.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pages\NailDetailsPage.cs">
+    <Compile Include="Forms\NailDetailsPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pages\FingerMenu.cs">
+    <Compile Include="Forms\FingerMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pages\FingerMenu.Designer.cs">
+    <Compile Include="Forms\FingerMenu.Designer.cs">
       <DependentUpon>FingerMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pages\FingerPreview.cs">
+    <Compile Include="Forms\FingerPreview.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pages\FingerPreview.Designer.cs">
+    <Compile Include="Forms\FingerPreview.Designer.cs">
       <DependentUpon>FingerPreview.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pages\FingerView.cs">
+    <Compile Include="Forms\FingerView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Pages\FingerView.Designer.cs">
+    <Compile Include="Forms\FingerView.Designer.cs">
       <DependentUpon>FingerView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Util\BaseForm.cs">
+    <Compile Include="Forms\BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Util\BaseForm.Designer.cs">
+    <Compile Include="Forms\BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Util\JsonUtil.cs" />
     <Compile Include="Models\Nail.cs" />
-    <Compile Include="Pages\NailGallery.cs">
+    <Compile Include="Forms\NailGallery.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pages\NailGallery.Designer.cs">
+    <Compile Include="Forms\NailGallery.Designer.cs">
       <DependentUpon>NailGallery.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\NailPattern.cs" />
     <Compile Include="Models\NailShape.cs" />
     <Compile Include="Util\NailUtil.cs" />
-    <Compile Include="Pages\SkinChoice.cs">
+    <Compile Include="Forms\SkinChoice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pages\SkinChoice.Designer.cs">
+    <Compile Include="Forms\SkinChoice.Designer.cs">
       <DependentUpon>SkinChoice.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pages\StartMenu.cs">
+    <Compile Include="Forms\StartMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pages\StartMenu.Designer.cs">
+    <Compile Include="Forms\StartMenu.Designer.cs">
       <DependentUpon>StartMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\Navigator.cs" />
-    <EmbeddedResource Include="Pages\ChoosePattern.resx">
+    <EmbeddedResource Include="Forms\ChoosePattern.resx">
       <DependentUpon>ChoosePattern.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pages\ChooseShape.resx">
+    <EmbeddedResource Include="Forms\ChooseShape.resx">
       <DependentUpon>ChooseShape.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pages\ConfirmDelete.resx">
+    <EmbeddedResource Include="Forms\ConfirmDelete.resx">
       <DependentUpon>ConfirmDelete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pages\FingerMenu.resx">
+    <EmbeddedResource Include="Forms\FingerMenu.resx">
       <DependentUpon>FingerMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pages\FingerPreview.resx">
+    <EmbeddedResource Include="Forms\FingerPreview.resx">
       <DependentUpon>FingerPreview.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pages\NailGallery.resx">
+    <EmbeddedResource Include="Forms\NailGallery.resx">
       <DependentUpon>NailGallery.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pages\SkinChoice.resx">
+    <EmbeddedResource Include="Forms\SkinChoice.resx">
       <DependentUpon>SkinChoice.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pages\StartMenu.resx">
+    <EmbeddedResource Include="Forms\StartMenu.resx">
       <DependentUpon>StartMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -154,7 +154,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Util\BaseForm.resx">
+    <EmbeddedResource Include="Forms\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -322,9 +322,6 @@
     <None Include="Resources\fire_pattern_almond.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\heart_pattern_almond.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\fire_pattern_rounded.png" />
   </ItemGroup>
   <ItemGroup>
@@ -337,13 +334,37 @@
     <None Include="Resources\fire_pattern_stiletto.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\heart_pattern_stiletto.png" />
+    <None Include="Resources\heart_pattern_almond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart_pattern_rounded.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\heart_pattern_short.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\heart_pattern_rounded.png" />
+    <None Include="Resources\heart_pattern_squoval.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart_pattern_stiletto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leaf_pattern_lipstick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leaf_pattern_oval.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leaf_pattern_almond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leaf_pattern_short.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leaf_pattern_stiletto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leaf_pattern_wide.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

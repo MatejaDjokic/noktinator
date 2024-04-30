@@ -1,52 +1,58 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Noktinator.Util;
+using System;
 using System.Windows.Forms;
 
 namespace Noktinator
 {
-    public partial class ChoosePattern : Form
+    public partial class ChoosePattern : BaseForm
     {
         public ChoosePattern()
         {
             InitializeComponent();
+            this.KeyDown += ChoosePatternKeyDown;
         }
 
 
-        public void choiceClick(NailPattern pattern)
+        public void ChoiceClick(NailPattern pattern)
         {
             FingerMenu.nail.nailPattern = pattern; //noktu u glavnom editoru za atribut pattern daje odredjeni pattern
             Navigator.GotoRetain<FingerMenu, ChoosePattern>();
         }
+        private void ChoosePatternKeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.D1: ChoiceClick(NailPattern.Fire); break;
+                case Keys.D2: ChoiceClick(NailPattern.Leaf); break;
+                case Keys.D3: ChoiceClick(NailPattern.Stars); break;
+                case Keys.D4: ChoiceClick(NailPattern.Hearts); break;
+                case Keys.D5: ChoiceClick(NailPattern.Leaves); break;
+            }
+        }
 
         private void FireStyle_Click(object sender, EventArgs e)
         {
-            choiceClick(NailPattern.Fire);
+            ChoiceClick(NailPattern.Fire);
         }
 
         private void LeafStyle_Click(object sender, EventArgs e)
         {
-            choiceClick(NailPattern.Leaf);
+            ChoiceClick(NailPattern.Leaf);
         }
 
         private void StarsStyle_Click(object sender, EventArgs e)
         {
-            choiceClick(NailPattern.Stars);
+            ChoiceClick(NailPattern.Stars);
         }
 
         private void HeartsStyle_Click(object sender, EventArgs e)
         {
-            choiceClick(NailPattern.Hearts);
+            ChoiceClick(NailPattern.Hearts);
         }
 
         private void LeavesStyle_Click(object sender, EventArgs e)
         {
-            choiceClick(NailPattern.Leaves);
+            ChoiceClick(NailPattern.Leaves);
         }
     }
 }

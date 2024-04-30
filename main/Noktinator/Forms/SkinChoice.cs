@@ -1,25 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
+using System;
+using Noktinator.Util;
 
 namespace Noktinator
 {
-    public partial class SkinChoice : Form
+    public partial class SkinChoice : BaseForm
     {
         public SkinChoice()
         {
             InitializeComponent();
+            this.KeyDown += SkinChoiceKeyDown;
         }
 
-        private void SkinChoice_Load(object sender, EventArgs e)
+        void SkinChoiceKeyDown(object sender, KeyEventArgs e)
         {
-
+            switch (e.KeyCode)
+            {
+                case Keys.D1: SkinSelection(button1); break;
+                case Keys.D2: SkinSelection(button2); break;
+                case Keys.D3: SkinSelection(button3); break;
+                case Keys.D4: SkinSelection(button4); break;
+                case Keys.D5: SkinSelection(button5); break;
+                case Keys.D6: SkinSelection(button6); break;
+                case Keys.D7: SkinSelection(button7); break;
+                case Keys.D8: SkinSelection(button8); break;
+                case Keys.D9: SkinSelection(button9); break;
+            }
         }
 
         public void SkinSelection(Button btn)

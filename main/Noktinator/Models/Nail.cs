@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System.Diagnostics;
+using System.Drawing;
 
 namespace Noktinator
 {
@@ -183,20 +184,47 @@ namespace Noktinator
                             break;
                     }
                     break;
-                
+
                 case NailPattern.Leaf:
-                    _patternImage = NailUtil.none;
-                    break;
-                
-                case NailPattern.Stars:
-                    _patternImage = NailUtil.none;
-                    break;
-                
-                case NailPattern.Hearts:
                     switch (nailShape)
                     {
                         case NailShape.Almond:
-                            _patternImage = Properties.Resources.heart_pattern_almond;
+                            _patternImage = Properties.Resources.leaf_pattern_almond;
+                            break;
+                        case NailShape.Ballerina:
+                            _patternImage = Properties.Resources.leaf_pattern_almond;
+                            break;
+                        case NailShape.Lipstick:
+                            _patternImage = Properties.Resources.leaf_pattern_lipstick;
+                            break;
+                        case NailShape.MountainPeak:
+                            _patternImage = Properties.Resources.leaf_pattern_almond;
+                            break;
+                        case NailShape.Oval:
+                            _patternImage = Properties.Resources.leaf_pattern_oval;
+                            break;
+                        case NailShape.Rounded:
+                            _patternImage = Properties.Resources.leaf_pattern_almond;
+                            break;
+                        case NailShape.Short:
+                            _patternImage = Properties.Resources.leaf_pattern_short;
+                            break;
+                        case NailShape.Squoval:
+                            _patternImage = Properties.Resources.leaf_pattern_almond;
+                            break;
+                        case NailShape.Stiletto:
+                            _patternImage = Properties.Resources.leaf_pattern_stiletto;
+                            break;
+                        case NailShape.Wide:
+                            _patternImage = Properties.Resources.leaf_pattern_wide;
+                            break;
+                    }
+                    break;
+
+                case NailPattern.Stars:
+                    switch (nailShape)
+                    {
+                        case NailShape.Almond:
                             break;
                         case NailShape.Ballerina:
                             break;
@@ -207,19 +235,50 @@ namespace Noktinator
                         case NailShape.Oval:
                             break;
                         case NailShape.Rounded:
+                            break;
+                        case NailShape.Short:
+                            break;
+                        case NailShape.Squoval:
+                            break;
+                        case NailShape.Stiletto:
+                            break;
+                        case NailShape.Wide:
+                            break;
+                    }
+                    break;
+
+                case NailPattern.Hearts:
+                    switch (nailShape)
+                    {
+                        case NailShape.Almond:
+                            _patternImage = Properties.Resources.heart_pattern_almond;
+                            break;
+                        case NailShape.Ballerina:
+                            _patternImage = Properties.Resources.heart_pattern_almond;
+                            break;
+                        case NailShape.Lipstick:
+                            _patternImage = Properties.Resources.heart_pattern_almond;
+                            break;
+                        case NailShape.MountainPeak:
+                            _patternImage = Properties.Resources.heart_pattern_almond;
+                            break;
+                        case NailShape.Oval:
+                            _patternImage = Properties.Resources.heart_pattern_almond;
+                            break;
+                        case NailShape.Rounded:
                             _patternImage = Properties.Resources.heart_pattern_rounded;
                             break;
                         case NailShape.Short:
                             _patternImage = Properties.Resources.heart_pattern_short;
                             break;
                         case NailShape.Squoval:
+                            _patternImage = Properties.Resources.heart_pattern_squoval;
                             break;
                         case NailShape.Stiletto:
                             _patternImage = Properties.Resources.heart_pattern_stiletto;
                             break;
                         case NailShape.Wide:
-                            break;
-                        default:
+                            _patternImage = Properties.Resources.heart_pattern_almond;
                             break;
                     }
                     break;

@@ -2,17 +2,18 @@
 using System.Windows.Forms;
 using System.Drawing;
 using System;
+using Noktinator.Util;
+using System.Globalization;
 
 namespace Noktinator
 {
-    public partial class FingerMenu : Form
+    public partial class FingerMenu : BaseForm
     {
         public FingerMenu()
         {
             InitializeComponent();
 
-            this.FormClosing += FormClose;
-            this.KeyDown += MyKeyDown;
+            this.KeyDown += FingeMenuKeyDown;
             this.KeyPreview = true;
         }
 
@@ -26,10 +27,19 @@ namespace Noktinator
         public static Bitmap patternImage;
 
 
-        private void MyKeyDown(object sender, KeyEventArgs e)
+        private void FingeMenuKeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Escape)
-                Navigator.GotoRetain<FingerPreview, FingerMenu>();
+            switch (e.KeyCode)
+            {
+                case Keys.Escape: Navigator.GotoRetain<FingerPreview, FingerMenu>(); break;
+                case Keys.D1: Navigator.GotoRetain<ChooseShape, FingerMenu>(); break;
+                case Keys.D2: BojaNoktaClick(); break;
+                case Keys.D3: Navigator.GotoRetain<ChoosePattern, FingerMenu>(); break;
+                case Keys.D4: BojaPaternaClick(); break;
+                case Keys.D5: Navigator.GotoRetain<SkinChoice, FingerMenu>(); break;
+                case Keys.D6: AddNailToGallery(); break;
+                case Keys.D7: break;
+            }
         }
         private void FingerMenuLoad(object sender, EventArgs e)
         {
@@ -41,11 +51,6 @@ namespace Noktinator
             MergeImages();
         }
 
-        private void FormClose(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         //spajanje slike prsta i odgovarajuceg nokta
         public void MergeImages()
         {
@@ -53,7 +58,7 @@ namespace Noktinator
         }
 
         //biranje boje nokta 
-        private void BojaNoktaClick(object sender, EventArgs e)
+        void BojaNoktaClick()
         {
             var res = NokatColorDialog.ShowDialog();
             if (res == DialogResult.OK)
@@ -65,9 +70,10 @@ namespace Noktinator
             }
             MergeImages();
         }
+        private void BojaNoktaButtonClick(object sender, EventArgs e) => BojaNoktaClick();
 
         //biranje boje paterna
-        private void BojaPaternaClick(object sender, EventArgs e)
+        void BojaPaternaClick()
         {
             var res = PaternColorDialog.ShowDialog();
             if (res == DialogResult.OK)
@@ -77,14 +83,14 @@ namespace Noktinator
                 patternImage = NailUtil.ColorBitmap(new Bitmap(nail.patternImage()), PaternColorDialog.Color);
             }
             MergeImages();
+
         }
+        void BojaPaternaButtonClick(object sender, EventArgs e) => BojaPaternaClick();
 
         //biranje boje koze
-        private void RasaClick(object sender, EventArgs e)
+        void RasaClick(object sender, EventArgs e)
         {
-            SkinChoice a = new SkinChoice();
-            a.Show();
-            this.Hide();
+            Navigator.GotoRetain<SkinChoice, FingerMenu>();
         }
 
         //biranje oblika
@@ -108,9 +114,7 @@ namespace Noktinator
         //biranje paterna
         private void Patern_Click(object sender, EventArgs e)
         {
-            ChoosePattern choosePattern = new ChoosePattern();
-            choosePattern.Show();
-            this.Hide();
+            Navigator.GotoRetain<ChoosePattern, FingerMenu>();
         }
 
 

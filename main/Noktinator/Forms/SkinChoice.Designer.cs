@@ -184,7 +184,6 @@ namespace Noktinator
             this.Name = "SkinChoice";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SkinChoice";
-            this.Load += new System.EventHandler(this.SkinChoice_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

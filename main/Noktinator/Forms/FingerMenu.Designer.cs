@@ -32,7 +32,7 @@ namespace Noktinator
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FingerMenu));
             this.OblikNokta = new System.Windows.Forms.Button();
             this.Patern = new System.Windows.Forms.Button();
-            this.BojaNokta = new System.Windows.Forms.Button();
+            this.BojaNoktaButton = new System.Windows.Forms.Button();
             this.BojaPaterna = new System.Windows.Forms.Button();
             this.Buttons = new System.Windows.Forms.GroupBox();
             this.ResetDesign = new System.Windows.Forms.Button();
@@ -75,16 +75,16 @@ namespace Noktinator
             // 
             // BojaNokta
             // 
-            this.BojaNokta.BackColor = System.Drawing.Color.Plum;
-            this.BojaNokta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BojaNokta.Font = new System.Drawing.Font("Segoe Print", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.BojaNokta.Location = new System.Drawing.Point(0, 100);
-            this.BojaNokta.Name = "BojaNokta";
-            this.BojaNokta.Size = new System.Drawing.Size(300, 75);
-            this.BojaNokta.TabIndex = 3;
-            this.BojaNokta.Text = "Boja nokta";
-            this.BojaNokta.UseVisualStyleBackColor = false;
-            this.BojaNokta.Click += new System.EventHandler(this.BojaNoktaClick);
+            this.BojaNoktaButton.BackColor = System.Drawing.Color.Plum;
+            this.BojaNoktaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BojaNoktaButton.Font = new System.Drawing.Font("Segoe Print", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.BojaNoktaButton.Location = new System.Drawing.Point(0, 100);
+            this.BojaNoktaButton.Name = "BojaNokta";
+            this.BojaNoktaButton.Size = new System.Drawing.Size(300, 75);
+            this.BojaNoktaButton.TabIndex = 3;
+            this.BojaNoktaButton.Text = "Boja nokta";
+            this.BojaNoktaButton.UseVisualStyleBackColor = false;
+            this.BojaNoktaButton.Click += new System.EventHandler(this.BojaNoktaButtonClick);
             // 
             // BojaPaterna
             // 
@@ -97,7 +97,7 @@ namespace Noktinator
             this.BojaPaterna.TabIndex = 4;
             this.BojaPaterna.Text = "Boja paterna";
             this.BojaPaterna.UseVisualStyleBackColor = false;
-            this.BojaPaterna.Click += new System.EventHandler(this.BojaPaternaClick);
+            this.BojaPaterna.Click += new System.EventHandler(this.BojaPaternaButtonClick);
             // 
             // Buttons
             // 
@@ -107,7 +107,7 @@ namespace Noktinator
             this.Buttons.Controls.Add(this.OblikNokta);
             this.Buttons.Controls.Add(this.BojaPaterna);
             this.Buttons.Controls.Add(this.Patern);
-            this.Buttons.Controls.Add(this.BojaNokta);
+            this.Buttons.Controls.Add(this.BojaNoktaButton);
             this.Buttons.Location = new System.Drawing.Point(715, 28);
             this.Buttons.Name = "Buttons";
             this.Buttons.Size = new System.Drawing.Size(300, 581);
@@ -201,7 +201,7 @@ namespace Noktinator
         #endregion
         private System.Windows.Forms.Button OblikNokta;
         private System.Windows.Forms.Button Patern;
-        private System.Windows.Forms.Button BojaNokta;
+        private System.Windows.Forms.Button BojaNoktaButton;
         private System.Windows.Forms.Button BojaPaterna;
         private System.Windows.Forms.GroupBox Buttons;
         private System.Windows.Forms.ColorDialog NokatColorDialog;

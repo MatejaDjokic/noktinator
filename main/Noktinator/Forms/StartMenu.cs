@@ -10,6 +10,7 @@ namespace Noktinator
         {
             InitializeComponent();
             this.Load += StartMenuLoad;
+            this.KeyDown += StartMenuKeyDown;
         }
 
         private void StartMenuLoad(object sender, EventArgs e)
@@ -19,8 +20,18 @@ namespace Noktinator
                 new FingerPreview(),
                 new FingerMenu(),
                 new ChooseShape(),
+                new ChoosePattern(),
                 new SkinChoice()
             );
+        }
+        private void StartMenuKeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.D1: Navigator.GotoRetain<FingerPreview, StartMenu>(); break;
+                case Keys.D2: Navigator.GotoRetain<NailGallery, StartMenu>(); break;
+                case Keys.D3: Application.Exit(); break;
+            }
         }
 
         //dizajniraj
