@@ -37,6 +37,8 @@ namespace Noktinator
             this.LeavesStyle = new System.Windows.Forms.PictureBox();
             this.SnowFlakeStyle = new System.Windows.Forms.PictureBox();
             this.Triangles = new System.Windows.Forms.PictureBox();
+            this.YinYang = new System.Windows.Forms.PictureBox();
+            this.Butterfly = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.FireStyle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LeafStyle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StarsStyle)).BeginInit();
@@ -44,6 +46,8 @@ namespace Noktinator
             ((System.ComponentModel.ISupportInitialize)(this.LeavesStyle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SnowFlakeStyle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Triangles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.YinYang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Butterfly)).BeginInit();
             this.SuspendLayout();
             // 
             // FireStyle
@@ -130,12 +134,38 @@ namespace Noktinator
             this.Triangles.TabStop = false;
             this.Triangles.Click += new System.EventHandler(this.Triangles_Click);
             // 
+            // YinYang
+            // 
+            this.YinYang.BackgroundImage = global::Noktinator.Properties.Resources.YinYangStyle;
+            this.YinYang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.YinYang.Location = new System.Drawing.Point(986, 13);
+            this.YinYang.Margin = new System.Windows.Forms.Padding(4);
+            this.YinYang.Name = "YinYang";
+            this.YinYang.Size = new System.Drawing.Size(127, 234);
+            this.YinYang.TabIndex = 7;
+            this.YinYang.TabStop = false;
+            this.YinYang.Click += new System.EventHandler(this.YinYang_Click);
+            // 
+            // Butterfly
+            // 
+            this.Butterfly.BackgroundImage = global::Noktinator.Properties.Resources.ButterflyStyle;
+            this.Butterfly.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Butterfly.Location = new System.Drawing.Point(1121, 13);
+            this.Butterfly.Margin = new System.Windows.Forms.Padding(4);
+            this.Butterfly.Name = "Butterfly";
+            this.Butterfly.Size = new System.Drawing.Size(127, 234);
+            this.Butterfly.TabIndex = 8;
+            this.Butterfly.TabStop = false;
+            this.Butterfly.Click += new System.EventHandler(this.Butterfly_Click);
+            // 
             // ChoosePattern
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1576, 804);
+            this.Controls.Add(this.Butterfly);
+            this.Controls.Add(this.YinYang);
             this.Controls.Add(this.Triangles);
             this.Controls.Add(this.SnowFlakeStyle);
             this.Controls.Add(this.LeavesStyle);
@@ -157,6 +187,8 @@ namespace Noktinator
             ((System.ComponentModel.ISupportInitialize)(this.LeavesStyle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SnowFlakeStyle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Triangles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.YinYang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Butterfly)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -170,5 +202,7 @@ namespace Noktinator
         private System.Windows.Forms.PictureBox LeavesStyle;
         private System.Windows.Forms.PictureBox SnowFlakeStyle;
         private System.Windows.Forms.PictureBox Triangles;
+        private System.Windows.Forms.PictureBox YinYang;
+        private System.Windows.Forms.PictureBox Butterfly;
     }
 }

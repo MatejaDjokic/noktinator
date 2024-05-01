@@ -133,6 +133,36 @@ namespace Noktinator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap butterfly_pattern_almond {
+            get {
+                object obj = ResourceManager.GetObject("butterfly_pattern_almond", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap butterfly_pattern_stiletto {
+            get {
+                object obj = ResourceManager.GetObject("butterfly_pattern_stiletto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ButterflyStyle {
+            get {
+                object obj = ResourceManager.GetObject("ButterflyStyle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap copy_no_bg {
             get {
                 object obj = ResourceManager.GetObject("copy_no_bg", resourceCulture);
@@ -796,6 +826,36 @@ namespace Noktinator.Properties {
         internal static System.Drawing.Bitmap wide_tip {
             get {
                 object obj = ResourceManager.GetObject("wide_tip", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yinyang_pattern_almond {
+            get {
+                object obj = ResourceManager.GetObject("yinyang_pattern_almond", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yinyang_pattern_stiletto {
+            get {
+                object obj = ResourceManager.GetObject("yinyang_pattern_stiletto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap YinYangStyle {
+            get {
+                object obj = ResourceManager.GetObject("YinYangStyle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

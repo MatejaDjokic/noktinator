@@ -408,5 +408,23 @@
   <ItemGroup>
     <None Include="Resources\TrianglesStyleClean.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yinyang_pattern_almond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YinYangStyle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yinyang_pattern_stiletto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButterflyStyle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\butterfly_pattern_almond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\butterfly_pattern_stiletto.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

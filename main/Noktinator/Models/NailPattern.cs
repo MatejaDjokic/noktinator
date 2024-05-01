@@ -9,6 +9,8 @@
         Hearts,
         Leaves,
         Snowflake,
-        Triangles
+        Triangles,
+        Yinyang,
+        Butterfly
     }
 }

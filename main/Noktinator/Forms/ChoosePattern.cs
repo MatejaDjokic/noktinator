@@ -64,5 +64,15 @@ namespace Noktinator
         {
             ChoiceClick(NailPattern.Triangles);
         }
+
+        private void YinYang_Click(object sender, EventArgs e)
+        {
+            ChoiceClick(NailPattern.Yinyang);
+        }
+
+        private void Butterfly_Click(object sender, EventArgs e)
+        {
+            ChoiceClick(NailPattern.Butterfly);
+        }
     }
 }
