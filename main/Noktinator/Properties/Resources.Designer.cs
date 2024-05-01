@@ -613,6 +613,26 @@ namespace Noktinator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap snake_patern_almond {
+            get {
+                object obj = ResourceManager.GetObject("snake_patern_almond", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SnakeStyle {
+            get {
+                object obj = ResourceManager.GetObject("SnakeStyle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SniwFlakeStyle {
             get {
                 object obj = ResourceManager.GetObject("SniwFlakeStyle", resourceCulture);

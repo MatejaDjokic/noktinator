@@ -39,6 +39,7 @@ namespace Noktinator
             this.Triangles = new System.Windows.Forms.PictureBox();
             this.YinYang = new System.Windows.Forms.PictureBox();
             this.Butterfly = new System.Windows.Forms.PictureBox();
+            this.Snake = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.FireStyle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LeafStyle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StarsStyle)).BeginInit();
@@ -48,6 +49,7 @@ namespace Noktinator
             ((System.ComponentModel.ISupportInitialize)(this.Triangles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.YinYang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Butterfly)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Snake)).BeginInit();
             this.SuspendLayout();
             // 
             // FireStyle
@@ -61,6 +63,8 @@ namespace Noktinator
             this.FireStyle.TabIndex = 0;
             this.FireStyle.TabStop = false;
             this.FireStyle.Click += new System.EventHandler(this.FireStyle_Click);
+            this.FireStyle.MouseEnter += new System.EventHandler(this.Darken);
+            this.FireStyle.MouseLeave += new System.EventHandler(this.Lighten);
             // 
             // LeafStyle
             // 
@@ -73,6 +77,8 @@ namespace Noktinator
             this.LeafStyle.TabIndex = 1;
             this.LeafStyle.TabStop = false;
             this.LeafStyle.Click += new System.EventHandler(this.LeafStyle_Click);
+            this.LeafStyle.MouseEnter += new System.EventHandler(this.Darken);
+            this.LeafStyle.MouseLeave += new System.EventHandler(this.Lighten);
             // 
             // StarsStyle
             // 
@@ -85,6 +91,8 @@ namespace Noktinator
             this.StarsStyle.TabIndex = 2;
             this.StarsStyle.TabStop = false;
             this.StarsStyle.Click += new System.EventHandler(this.StarsStyle_Click);
+            this.StarsStyle.MouseEnter += new System.EventHandler(this.Darken);
+            this.StarsStyle.MouseLeave += new System.EventHandler(this.Lighten);
             // 
             // HeartsStyle
             // 
@@ -97,6 +105,8 @@ namespace Noktinator
             this.HeartsStyle.TabIndex = 3;
             this.HeartsStyle.TabStop = false;
             this.HeartsStyle.Click += new System.EventHandler(this.HeartsStyle_Click);
+            this.HeartsStyle.MouseEnter += new System.EventHandler(this.Darken);
+            this.HeartsStyle.MouseLeave += new System.EventHandler(this.Lighten);
             // 
             // LeavesStyle
             // 
@@ -109,6 +119,8 @@ namespace Noktinator
             this.LeavesStyle.TabIndex = 4;
             this.LeavesStyle.TabStop = false;
             this.LeavesStyle.Click += new System.EventHandler(this.LeavesStyle_Click);
+            this.LeavesStyle.MouseEnter += new System.EventHandler(this.Darken);
+            this.LeavesStyle.MouseLeave += new System.EventHandler(this.Lighten);
             // 
             // SnowFlakeStyle
             // 
@@ -121,6 +133,8 @@ namespace Noktinator
             this.SnowFlakeStyle.TabIndex = 5;
             this.SnowFlakeStyle.TabStop = false;
             this.SnowFlakeStyle.Click += new System.EventHandler(this.SnowFlakeStyle_Click);
+            this.SnowFlakeStyle.MouseEnter += new System.EventHandler(this.Darken);
+            this.SnowFlakeStyle.MouseLeave += new System.EventHandler(this.Lighten);
             // 
             // Triangles
             // 
@@ -133,6 +147,8 @@ namespace Noktinator
             this.Triangles.TabIndex = 6;
             this.Triangles.TabStop = false;
             this.Triangles.Click += new System.EventHandler(this.Triangles_Click);
+            this.Triangles.MouseEnter += new System.EventHandler(this.Darken);
+            this.Triangles.MouseLeave += new System.EventHandler(this.Lighten);
             // 
             // YinYang
             // 
@@ -145,6 +161,8 @@ namespace Noktinator
             this.YinYang.TabIndex = 7;
             this.YinYang.TabStop = false;
             this.YinYang.Click += new System.EventHandler(this.YinYang_Click);
+            this.YinYang.MouseEnter += new System.EventHandler(this.Darken);
+            this.YinYang.MouseLeave += new System.EventHandler(this.Lighten);
             // 
             // Butterfly
             // 
@@ -157,6 +175,22 @@ namespace Noktinator
             this.Butterfly.TabIndex = 8;
             this.Butterfly.TabStop = false;
             this.Butterfly.Click += new System.EventHandler(this.Butterfly_Click);
+            this.Butterfly.MouseEnter += new System.EventHandler(this.Darken);
+            this.Butterfly.MouseLeave += new System.EventHandler(this.Lighten);
+            // 
+            // Snake
+            // 
+            this.Snake.BackgroundImage = global::Noktinator.Properties.Resources.SnakeStyle;
+            this.Snake.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Snake.Location = new System.Drawing.Point(1256, 13);
+            this.Snake.Margin = new System.Windows.Forms.Padding(4);
+            this.Snake.Name = "Snake";
+            this.Snake.Size = new System.Drawing.Size(127, 234);
+            this.Snake.TabIndex = 9;
+            this.Snake.TabStop = false;
+            this.Snake.Click += new System.EventHandler(this.Snake_Click);
+            this.Snake.MouseEnter += new System.EventHandler(this.Darken);
+            this.Snake.MouseLeave += new System.EventHandler(this.Lighten);
             // 
             // ChoosePattern
             // 
@@ -164,6 +198,7 @@ namespace Noktinator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1576, 804);
+            this.Controls.Add(this.Snake);
             this.Controls.Add(this.Butterfly);
             this.Controls.Add(this.YinYang);
             this.Controls.Add(this.Triangles);
@@ -189,6 +224,7 @@ namespace Noktinator
             ((System.ComponentModel.ISupportInitialize)(this.Triangles)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.YinYang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Butterfly)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Snake)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -204,5 +240,6 @@ namespace Noktinator
         private System.Windows.Forms.PictureBox Triangles;
         private System.Windows.Forms.PictureBox YinYang;
         private System.Windows.Forms.PictureBox Butterfly;
+        private System.Windows.Forms.PictureBox Snake;
     }
 }

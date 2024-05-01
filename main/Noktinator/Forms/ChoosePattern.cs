@@ -1,5 +1,6 @@
 ﻿using Noktinator.Util;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Noktinator
@@ -18,6 +19,22 @@ namespace Noktinator
             FingerMenu.nail.nailPattern = pattern; //noktu u glavnom editoru za atribut pattern daje odredjeni pattern
             Navigator.GotoRetain<FingerMenu, ChoosePattern>();
         }
+
+        //shadeovanje pri hoverovanju misem
+        private void Darken(object sender, EventArgs e)
+        {
+            PictureBox picBox = (PictureBox)sender;
+            picBox.BackColor = Color.Plum;
+        }
+
+        private void Lighten(object sender, EventArgs e)
+        {
+            PictureBox picBox = (PictureBox)sender;
+            picBox.BackColor = Color.Transparent;
+        }
+
+
+
         private void ChoosePatternKeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
@@ -73,6 +90,11 @@ namespace Noktinator
         private void Butterfly_Click(object sender, EventArgs e)
         {
             ChoiceClick(NailPattern.Butterfly);
+        }
+
+        private void Snake_Click(object sender, EventArgs e)
+        {
+            ChoiceClick(NailPattern.Snake);
         }
     }
 }

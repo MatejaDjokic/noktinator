@@ -63,6 +63,18 @@ namespace Noktinator
                 TextAlign = ContentAlignment.MiddleCenter,
             };
             table.Controls.Add(l3, 2, 0);
+
+            if (IsColorDarkerThanBrown(l2.BackColor))
+            {
+                l2.ForeColor = Color.White;
+            }
+        }
+
+        public bool IsColorDarkerThanBrown(Color color)
+        {   
+            double brightness = (0.299 * color.R) + (0.587 * color.G) + (0.114 * color.B);
+            
+            return brightness < 74;
         }
     }
 }

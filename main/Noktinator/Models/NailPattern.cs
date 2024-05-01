@@ -11,6 +11,7 @@
         Snowflake,
         Triangles,
         Yinyang,
-        Butterfly
+        Butterfly,
+        Snake
     }
 }

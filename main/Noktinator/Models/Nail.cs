@@ -474,6 +474,45 @@ namespace Noktinator
                             break;
                     }
                     break;
+
+
+                case NailPattern.Snake:
+                    switch (nailShape)
+                    {
+                        case NailShape.Almond:
+                            _patternImage = Properties.Resources.snake_patern_almond;
+                            break;
+                        case NailShape.Ballerina:
+                            _patternImage = Properties.Resources.snake_patern_almond;
+                            break;
+                        case NailShape.Lipstick:
+                            _patternImage = Properties.Resources.snake_patern_almond;
+                            break;
+                        case NailShape.MountainPeak:
+                            _patternImage = Properties.Resources.snake_patern_almond;
+                            break;
+                        case NailShape.Oval:
+                            _patternImage = Properties.Resources.snake_patern_almond;
+                            break;
+                        case NailShape.Rounded:
+                            _patternImage = Properties.Resources.snake_patern_almond;
+                            break;
+                        case NailShape.Short:
+                            _patternImage = Properties.Resources.snake_patern_almond;
+                            break;
+                        case NailShape.Squoval:
+                            _patternImage = Properties.Resources.snake_patern_almond;
+                            break;
+                        case NailShape.Stiletto:
+                            _patternImage = Properties.Resources.snake_patern_almond;
+                            break;
+                        case NailShape.Wide:
+                            _patternImage = Properties.Resources.snake_patern_almond;
+                            break;
+                    }
+                    break;
+
+
             }
         }
 
