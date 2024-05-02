@@ -98,3 +98,4 @@ C:\Users\Joka\Documents\GitHub\noktinator\main\Noktinator\obj\Debug\Noktinator.c
 C:\Users\Joka\Documents\GitHub\noktinator\main\Noktinator\obj\Debug\Noktinator.csproj.Up2Date
 C:\Users\Joka\Documents\GitHub\noktinator\main\Noktinator\obj\Debug\Noktinator.exe
 C:\Users\Joka\Documents\GitHub\noktinator\main\Noktinator\obj\Debug\Noktinator.pdb
+C:\Users\Joka\Documents\GitHub\noktinator\main\Noktinator\obj\Debug\Noktinator.Forms.DeleteOrDownload.resources

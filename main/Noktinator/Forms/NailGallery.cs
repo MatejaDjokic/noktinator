@@ -2,6 +2,8 @@
 using System.Windows.Forms;
 using Noktinator.Util;
 using System;
+using Noktinator.Forms;
+using System.Drawing;
 
 namespace Noktinator
 {
@@ -19,6 +21,7 @@ namespace Noktinator
 
         public List<Button> nailButtons = new List<Button>();
         public int buttonIndex = -1;
+        public Image nailbuttonImage;
 
         public NailGallery()
         {
@@ -65,16 +68,16 @@ namespace Noktinator
             nails = JsonUtil.LoadNails();
             nails.ForEach(n => n.Update());
         }
-
+        
         private void ClickButton(object sender, MouseEventArgs e)
         {
             Button btn = (Button)sender;
             if (e.Button == MouseButtons.Right)
             {
-                ConfirmDelete cd = new ConfirmDelete();
+                DeleteOrDownload dd = new DeleteOrDownload();
+                nailbuttonImage = btn.BackgroundImage;
+                dd.Show();
                 buttonIndex = nailButtons.IndexOf(btn);
-                cd.Show();
-                Enabled = false;
             }
         }
 

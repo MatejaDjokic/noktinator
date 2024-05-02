@@ -67,6 +67,12 @@
     <Compile Include="Forms\ConfirmDelete.Designer.cs">
       <DependentUpon>ConfirmDelete.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\DeleteOrDownload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DeleteOrDownload.Designer.cs">
+      <DependentUpon>DeleteOrDownload.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\NailDetailsPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ConfirmDelete.resx">
       <DependentUpon>ConfirmDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DeleteOrDownload.resx">
+      <DependentUpon>DeleteOrDownload.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FingerMenu.resx">
       <DependentUpon>FingerMenu.cs</DependentUpon>
