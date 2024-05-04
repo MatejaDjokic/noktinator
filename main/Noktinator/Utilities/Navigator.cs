@@ -1,5 +1,6 @@
 ﻿using System.Windows.Forms;
 using System.Drawing;
+using System;
 
 namespace Noktinator
 {
@@ -25,7 +26,7 @@ namespace Noktinator
                 where T : Form
                 where U : Form
         {
-            U oldForm = GetFormFromType<U>();
+            U oldForm = Get<U>();
             OpenWithSizeAndLocation<T>(oldForm.Size, oldForm.Location);
             Close<U>();
         }
@@ -36,7 +37,8 @@ namespace Noktinator
         /// <typeparam name="T"></typeparam>
         public static void Open<T>() where T : Form
         {
-            T form = GetFormFromType<T>();
+            T form = Get<T>();
+            if (form is null) throw new Exception("The form was never opened!");
             form.Show();
         }
 
@@ -49,7 +51,7 @@ namespace Noktinator
         public static void OpenWithSizeAndLocation<T>(Size size, Point location)
             where T : Form
         {
-            T form = GetFormFromType<T>();
+            T form = Get<T>();
             form.Size = size;
             form.Location = location;
             form.Show();
@@ -62,7 +64,8 @@ namespace Noktinator
         public static void Close<T>()
               where T : Form
         {
-            T form = GetFormFromType<T>();
+            T form = Get<T>();
+            if (form is null) throw new Exception("The form was never opened!");
             form.Hide();
         }
 
@@ -84,7 +87,7 @@ namespace Noktinator
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        private static T GetFormFromType<T>() where T : Form
+        public static T Get<T>() where T : Form
         {
             string formName = typeof(T).FullName.Split('.')[1];
             return (T)Application.OpenForms[formName];

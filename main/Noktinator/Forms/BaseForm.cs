@@ -11,10 +11,16 @@ namespace Noktinator.Util
             InitializeComponent();
             this.FormClosed += BaseFormClose;
             this.KeyPreview = true;
+            this.KeyDown += BaseFormKeyDown;
         }
         void BaseFormClose(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+        void BaseFormKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.C && e.Modifiers == Keys.Control)
+                CenterToScreen();
         }
     }
 }

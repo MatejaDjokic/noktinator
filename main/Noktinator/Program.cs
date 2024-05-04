@@ -10,7 +10,22 @@ namespace Noktinator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StartMenu());
+
+            // OPENS AND IMMEDIATELY HIDES THE FORMS
+            // SO THEY ARE ADDED TO THE OPEN FORMS BUFFER
+            Navigator.Init(
+                new NailGallery(),
+                new FingerPreview(),
+                new FingerMenu(),
+                new ChooseShape(),
+                new ChoosePattern(),
+                new SkinChoice()
+            );
+
+            // RUNS THE MAIN APPLICATION PAGE (START MENU)
+            Application.Run(
+                new StartMenu()
+            );
         }
     }
 }

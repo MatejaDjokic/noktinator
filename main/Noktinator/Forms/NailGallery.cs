@@ -20,8 +20,7 @@ namespace Noktinator
         private int currentPageIndex = 0;
 
         public List<Button> nailButtons = new List<Button>();
-        public int buttonIndex = -1;
-        public Image nailbuttonImage;
+
 
         public NailGallery()
         {
@@ -68,18 +67,6 @@ namespace Noktinator
             nails = JsonUtil.LoadNails();
             nails.ForEach(n => n.Update());
         }
-        
-        private void ClickButton(object sender, MouseEventArgs e)
-        {
-            Button btn = (Button)sender;
-            if (e.Button == MouseButtons.Right)
-            {
-                DeleteOrDownload dd = new DeleteOrDownload();
-                nailbuttonImage = btn.BackgroundImage;
-                dd.Show();
-                buttonIndex = nailButtons.IndexOf(btn);
-            }
-        }
 
         private void DisplayItems()
         {
@@ -91,7 +78,12 @@ namespace Noktinator
 
             int startIndex = currentPageIndex * this.nailsPerPage;
             int endIndex = Math.Min(startIndex + this.nailsPerPage, nails.Count);
-            this.itemInPageLabel.Text = nails.Count > 0 ? $"{startIndex + 1} - {endIndex}" : "No nails";
+            if (nails.Count == 0)
+                this.itemInPageLabel.Text = "No Nails";
+            else if (nails.Count == 1)
+                this.itemInPageLabel.Text = "1";
+            else
+                this.itemInPageLabel.Text = $"{startIndex + 1} - {endIndex}";
 
             for (int i = startIndex; i < endIndex; i++)
             {
@@ -100,10 +92,13 @@ namespace Noktinator
 
                 button.BackgroundImage = nail.GetImage();
                 button.BackgroundImageLayout = ImageLayout.Zoom;
-                button.Click += (object sender, EventArgs e) => new NailDetailsPage(nail, nails.IndexOf(nail)).ShowDialog();
-
-                //desni klik za deletovanje
-                button.MouseDown += ClickButton;
+                button.FlatStyle = FlatStyle.Flat;
+                button.Click += (object sender, EventArgs e) =>
+                {
+                    DialogResult result = new ActionPanel(nail, nails.IndexOf(nail)).ShowDialog();
+                    if (result == DialogResult.OK)
+                        RefreshNails();
+                };
 
                 nailButtons.Add(button);
                 nailButtons[i % nailButtons.Count].Name = i.ToString();

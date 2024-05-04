@@ -16,7 +16,7 @@ namespace Noktinator
 
         public void ChoiceClick(NailPattern pattern)
         {
-            FingerMenu.nail.nailPattern = pattern; //noktu u glavnom editoru za atribut pattern daje odredjeni pattern
+            FingerMenu.nail.pattern = pattern; //noktu u glavnom editoru za atribut pattern daje odredjeni pattern
             Navigator.GotoRetain<FingerMenu, ChoosePattern>();
         }
 

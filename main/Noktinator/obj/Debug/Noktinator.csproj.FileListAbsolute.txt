@@ -75,7 +75,6 @@ C:\Users\Strahinja\Documents\GitHub\nail-maker-2024\main\Noktinator\obj\Debug\No
 C:\Users\Strahinja\Documents\GitHub\nail-maker-2024\main\Noktinator\obj\Debug\Noktinator.SkinChoice.resources
 C:\Users\Strahinja\Documents\GitHub\nail-maker-2024\main\Noktinator\obj\Debug\Noktinator.csproj.CopyComplete
 C:\Users\Strahinja\Documents\GitHub\nail-maker-2024\main\Noktinator\obj\Debug\Noktinator.ConfirmDelete.resources
-D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.ConfirmDelete.resources
 D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.Util.BaseForm.resources
 C:\Users\Joka\Documents\GitHub\noktinator\main\Noktinator\bin\Debug\Noktinator.exe.config
 C:\Users\Joka\Documents\GitHub\noktinator\main\Noktinator\bin\Debug\Noktinator.exe
@@ -99,3 +98,5 @@ C:\Users\Joka\Documents\GitHub\noktinator\main\Noktinator\obj\Debug\Noktinator.c
 C:\Users\Joka\Documents\GitHub\noktinator\main\Noktinator\obj\Debug\Noktinator.exe
 C:\Users\Joka\Documents\GitHub\noktinator\main\Noktinator\obj\Debug\Noktinator.pdb
 C:\Users\Joka\Documents\GitHub\noktinator\main\Noktinator\obj\Debug\Noktinator.Forms.DeleteOrDownload.resources
+D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.Forms.ActionPanel.resources
+D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.Forms.SetFingerFromGallery.resources

@@ -15,7 +15,7 @@ namespace Noktinator
 
         public void ChoiceClick(NailShape shapeEnum)
         {
-            FingerMenu.nail.nailShape = shapeEnum; //noktu u glavnom editoru za atribut shape daje odredjeni oblik
+            FingerMenu.nail.shape = shapeEnum; //noktu u glavnom editoru za atribut shape daje odredjeni oblik
             Navigator.GotoRetain<FingerMenu, ChooseShape>();
         }
         private void ChooseShapeKeyDown(object sender, KeyEventArgs e)

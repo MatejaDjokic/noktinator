@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
-using System;
 using Noktinator.Util;
+using System;
 
 namespace Noktinator
 {
@@ -9,38 +9,28 @@ namespace Noktinator
         public StartMenu()
         {
             InitializeComponent();
-            this.Load += StartMenuLoad;
+            // ADD THE KEYDOWN HANDLER TO THE START MENU FORM
             this.KeyDown += StartMenuKeyDown;
         }
 
-        private void StartMenuLoad(object sender, EventArgs e)
-        {
-            Navigator.Init(
-                new NailGallery(),
-                new FingerPreview(),
-                new FingerMenu(),
-                new ChooseShape(),
-                new ChoosePattern(),
-                new SkinChoice()
-            );
-        }
         private void StartMenuKeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
             {
+                // GO TO THE FINGER PREVIEW FORM
                 case Keys.D1: Navigator.GotoRetain<FingerPreview, StartMenu>(); break;
+                // GO TO THE NAIL GALLERY FORM
                 case Keys.D2: Navigator.GotoRetain<NailGallery, StartMenu>(); break;
+                // EXIT THE APP
                 case Keys.D3: Application.Exit(); break;
             }
         }
 
-        //dizajniraj
         private void DizajnirajClick(object sender, EventArgs e)
         {
             Navigator.GotoRetain<FingerPreview, StartMenu>();
         }
 
-        //izadji
         private void IzadjiClick(object sender, EventArgs e)
         {
             Application.Exit();

@@ -47,7 +47,7 @@ namespace Noktinator
             this.Dizajniraj.Name = "Dizajniraj";
             this.Dizajniraj.Size = new System.Drawing.Size(279, 92);
             this.Dizajniraj.TabIndex = 0;
-            this.Dizajniraj.Text = "Dizajniraj";
+            this.Dizajniraj.Text = "Designer";
             this.Dizajniraj.UseVisualStyleBackColor = false;
             this.Dizajniraj.Click += new System.EventHandler(this.DizajnirajClick);
             // 
@@ -60,7 +60,7 @@ namespace Noktinator
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(279, 92);
             this.button2.TabIndex = 2;
-            this.button2.Text = "Izadji";
+            this.button2.Text = "Exit";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.IzadjiClick);
             // 
@@ -78,7 +78,7 @@ namespace Noktinator
             // 
             this.pictureBox1.BackgroundImage = global::Noktinator.Properties.Resources.NoktinatorLogo;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(614, 33);
+            this.pictureBox1.Location = new System.Drawing.Point(622, 30);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(428, 569);
             this.pictureBox1.TabIndex = 2;
@@ -93,7 +93,7 @@ namespace Noktinator
             this.galleryButton.Name = "galleryButton";
             this.galleryButton.Size = new System.Drawing.Size(279, 92);
             this.galleryButton.TabIndex = 1;
-            this.galleryButton.Text = "Galerija";
+            this.galleryButton.Text = "Gallery";
             this.galleryButton.UseVisualStyleBackColor = false;
             this.galleryButton.Click += new System.EventHandler(this.GalleryButtonClick);
             // 

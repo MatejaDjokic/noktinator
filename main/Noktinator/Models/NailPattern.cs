@@ -2,7 +2,7 @@
 {
     public enum NailPattern
     {
-        None,
+        Empty,
         Fire,
         Leaf,
         Stars,

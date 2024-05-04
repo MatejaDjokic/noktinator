@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-using System.Drawing;
-using System.Reflection;
+﻿using System.Drawing;
 
 namespace Noktinator
 {
@@ -20,7 +18,7 @@ namespace Noktinator
             Color nailColor,
             Color skinColor,
             NailShape shape = NailShape.Almond,
-            NailPattern pattern = NailPattern.None,
+            NailPattern pattern = NailPattern.Empty,
             Image nailShapeImage = default,
             Image fingerShapeImage = default,
             Image patternImage = default)
@@ -36,7 +34,7 @@ namespace Noktinator
             Update();
         }
 
-        public NailShape nailShape
+        public NailShape shape
         {
             get { return _nailShape; }
             set
@@ -45,7 +43,7 @@ namespace Noktinator
                 Update();
             }
         }
-        public NailPattern nailPattern
+        public NailPattern pattern
         {
             get { return _nailPattern; }
             set
@@ -54,7 +52,7 @@ namespace Noktinator
                 Update();
             }
         }
-        public Color nailColor
+        public Color shapeColor
         {
             get { return _nailColor; }
             set { _nailColor = value; }
@@ -145,13 +143,13 @@ namespace Noktinator
         }
         public void ChangePattern()
         {
-            switch (nailPattern)
+            switch (pattern)
             {
-                case NailPattern.None:
+                case NailPattern.Empty:
                     _patternImage = NailUtil.none;
                     break;
                 case NailPattern.Fire:
-                    switch (nailShape)
+                    switch (shape)
                     {
                         case NailShape.Almond:
                             _patternImage = Properties.Resources.fire_pattern_almond;
@@ -187,7 +185,7 @@ namespace Noktinator
                     break;
 
                 case NailPattern.Leaf:
-                    switch (nailShape)
+                    switch (shape)
                     {
                         case NailShape.Almond:
                             _patternImage = Properties.Resources.leaf_pattern_almond;
@@ -223,7 +221,7 @@ namespace Noktinator
                     break;
 
                 case NailPattern.Stars:
-                    switch (nailShape)
+                    switch (shape)
                     {
                         case NailShape.Almond:
                             _patternImage = Properties.Resources.stars_pattern_almond;
@@ -259,7 +257,7 @@ namespace Noktinator
                     break;
 
                 case NailPattern.Hearts:
-                    switch (nailShape)
+                    switch (shape)
                     {
                         case NailShape.Almond:
                             _patternImage = Properties.Resources.heart_pattern_almond;
@@ -295,7 +293,7 @@ namespace Noktinator
                     break;
 
                 case NailPattern.Leaves:
-                    switch (nailShape)
+                    switch (shape)
                     {
                         case NailShape.Almond:
                             _patternImage = Properties.Resources.leaves_pattern_almond;
@@ -331,7 +329,7 @@ namespace Noktinator
                     break;
 
                 case NailPattern.Snowflake:
-                    switch (nailShape)
+                    switch (shape)
                     {
                         case NailShape.Almond:
                             _patternImage = Properties.Resources.snowflake_pattern_almond;
@@ -368,7 +366,7 @@ namespace Noktinator
                     break;
 
                 case NailPattern.Triangles:
-                    switch (nailShape)
+                    switch (shape)
                     {
                         case NailShape.Almond:
                             _patternImage = Properties.Resources.triangles_pattern_almond;
@@ -404,7 +402,7 @@ namespace Noktinator
                     break;
 
                 case NailPattern.Yinyang:
-                    switch (nailShape)
+                    switch (shape)
                     {
                         case NailShape.Almond:
                             _patternImage = Properties.Resources.yinyang_pattern_almond;
@@ -440,7 +438,7 @@ namespace Noktinator
                     break;
 
                 case NailPattern.Butterfly:
-                    switch (nailShape)
+                    switch (shape)
                     {
                         case NailShape.Almond:
                             _patternImage = Properties.Resources.butterfly_pattern_almond;
@@ -477,7 +475,7 @@ namespace Noktinator
 
 
                 case NailPattern.Snake:
-                    switch (nailShape)
+                    switch (shape)
                     {
                         case NailShape.Almond:
                             _patternImage = Properties.Resources.snake_patern_almond;

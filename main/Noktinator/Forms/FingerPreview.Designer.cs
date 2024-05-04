@@ -30,332 +30,647 @@ namespace Noktinator
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FingerPreview));
-            this.LittleFinger = new System.Windows.Forms.PictureBox();
-            this.RingFinger = new System.Windows.Forms.PictureBox();
-            this.MiddleFinger = new System.Windows.Forms.PictureBox();
-            this.IndexFinger = new System.Windows.Forms.PictureBox();
-            this.Thumb = new System.Windows.Forms.PictureBox();
+            this.littleFingerPictureBox = new System.Windows.Forms.PictureBox();
+            this.ringFingerPictureBox = new System.Windows.Forms.PictureBox();
+            this.middleFingerPictureBox = new System.Windows.Forms.PictureBox();
+            this.indexFingerPictureBox = new System.Windows.Forms.PictureBox();
+            this.thumbPictureBox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.MaliCopy = new System.Windows.Forms.Button();
-            this.MaliPaste = new System.Windows.Forms.Button();
-            this.DomaliCopy = new System.Windows.Forms.Button();
-            this.DomaliPaste = new System.Windows.Forms.Button();
-            this.SrednjiCopy = new System.Windows.Forms.Button();
-            this.SrednjiPaste = new System.Windows.Forms.Button();
-            this.KaziCopy = new System.Windows.Forms.Button();
-            this.KaziPaste = new System.Windows.Forms.Button();
-            this.PalacCopy = new System.Windows.Forms.Button();
-            this.PalacPaste = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.Nazad = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.LittleFinger)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RingFinger)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MiddleFinger)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IndexFinger)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Thumb)).BeginInit();
+            this.littleFingerCopy = new System.Windows.Forms.Button();
+            this.ringFingerCopy = new System.Windows.Forms.Button();
+            this.middleFingerCopy = new System.Windows.Forms.Button();
+            this.indexFingerCopy = new System.Windows.Forms.Button();
+            this.thumbCopy = new System.Windows.Forms.Button();
+            this.littleFingerPaste = new System.Windows.Forms.Button();
+            this.ringFingerPaste = new System.Windows.Forms.Button();
+            this.middleFingerPaste = new System.Windows.Forms.Button();
+            this.indexFingerPaste = new System.Windows.Forms.Button();
+            this.thumbPaste = new System.Windows.Forms.Button();
+            this.backBtn = new System.Windows.Forms.Button();
+            this.downloadIndexFingerBtn = new System.Windows.Forms.Button();
+            this.downloadThumbBtn = new System.Windows.Forms.Button();
+            this.downloadMiddleFingerBtn = new System.Windows.Forms.Button();
+            this.downloadLittleFingerBtn = new System.Windows.Forms.Button();
+            this.downloadRingFingerBtn = new System.Windows.Forms.Button();
+            this.downloadAllFingersBtn = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+            ((System.ComponentModel.ISupportInitialize)(this.littleFingerPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ringFingerPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.middleFingerPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.indexFingerPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.thumbPictureBox)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
+            this.tableLayoutPanel9.SuspendLayout();
+            this.tableLayoutPanel11.SuspendLayout();
+            this.tableLayoutPanel10.SuspendLayout();
+            this.tableLayoutPanel13.SuspendLayout();
+            this.tableLayoutPanel12.SuspendLayout();
             this.SuspendLayout();
             // 
-            // LittleFinger
+            // littleFingerPictureBox
             // 
-            this.LittleFinger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.LittleFinger.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LittleFinger.Location = new System.Drawing.Point(135, 165);
-            this.LittleFinger.Name = "LittleFinger";
-            this.LittleFinger.Size = new System.Drawing.Size(105, 275);
-            this.LittleFinger.TabIndex = 0;
-            this.LittleFinger.TabStop = false;
-            this.LittleFinger.Click += new System.EventHandler(this.LittleFingerClick);
-            this.LittleFinger.MouseEnter += new System.EventHandler(this.Darken);
-            this.LittleFinger.MouseLeave += new System.EventHandler(this.Lighten);
+            this.littleFingerPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.littleFingerPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.littleFingerPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.littleFingerPictureBox.Location = new System.Drawing.Point(3, 77);
+            this.littleFingerPictureBox.Name = "littleFingerPictureBox";
+            this.littleFingerPictureBox.Size = new System.Drawing.Size(106, 365);
+            this.littleFingerPictureBox.TabIndex = 2;
+            this.littleFingerPictureBox.TabStop = false;
+            this.littleFingerPictureBox.Click += new System.EventHandler(this.LittleFingerClick);
             // 
-            // RingFinger
+            // ringFingerPictureBox
             // 
-            this.RingFinger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.RingFinger.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RingFinger.Location = new System.Drawing.Point(340, 165);
-            this.RingFinger.Name = "RingFinger";
-            this.RingFinger.Size = new System.Drawing.Size(105, 275);
-            this.RingFinger.TabIndex = 1;
-            this.RingFinger.TabStop = false;
-            this.RingFinger.Click += new System.EventHandler(this.RingFingerClick);
-            this.RingFinger.MouseEnter += new System.EventHandler(this.Darken);
-            this.RingFinger.MouseLeave += new System.EventHandler(this.Lighten);
+            this.ringFingerPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ringFingerPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ringFingerPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ringFingerPictureBox.Location = new System.Drawing.Point(3, 77);
+            this.ringFingerPictureBox.Name = "ringFingerPictureBox";
+            this.ringFingerPictureBox.Size = new System.Drawing.Size(106, 365);
+            this.ringFingerPictureBox.TabIndex = 1;
+            this.ringFingerPictureBox.TabStop = false;
+            this.ringFingerPictureBox.Click += new System.EventHandler(this.RingFingerClick);
+            this.ringFingerPictureBox.MouseEnter += new System.EventHandler(this.Darken);
+            this.ringFingerPictureBox.MouseLeave += new System.EventHandler(this.Lighten);
             // 
-            // MiddleFinger
+            // middleFingerPictureBox
             // 
-            this.MiddleFinger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.MiddleFinger.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MiddleFinger.Location = new System.Drawing.Point(545, 165);
-            this.MiddleFinger.Name = "MiddleFinger";
-            this.MiddleFinger.Size = new System.Drawing.Size(105, 275);
-            this.MiddleFinger.TabIndex = 2;
-            this.MiddleFinger.TabStop = false;
-            this.MiddleFinger.Click += new System.EventHandler(this.MiddleFingerClick);
-            this.MiddleFinger.MouseEnter += new System.EventHandler(this.Darken);
-            this.MiddleFinger.MouseLeave += new System.EventHandler(this.Lighten);
+            this.middleFingerPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.middleFingerPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.middleFingerPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.middleFingerPictureBox.Location = new System.Drawing.Point(3, 77);
+            this.middleFingerPictureBox.Name = "middleFingerPictureBox";
+            this.middleFingerPictureBox.Size = new System.Drawing.Size(106, 365);
+            this.middleFingerPictureBox.TabIndex = 2;
+            this.middleFingerPictureBox.TabStop = false;
+            this.middleFingerPictureBox.Click += new System.EventHandler(this.MiddleFingerClick);
+            this.middleFingerPictureBox.MouseEnter += new System.EventHandler(this.Darken);
+            this.middleFingerPictureBox.MouseLeave += new System.EventHandler(this.Lighten);
             // 
-            // IndexFinger
+            // indexFingerPictureBox
             // 
-            this.IndexFinger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.IndexFinger.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.IndexFinger.Location = new System.Drawing.Point(750, 165);
-            this.IndexFinger.Name = "IndexFinger";
-            this.IndexFinger.Size = new System.Drawing.Size(105, 275);
-            this.IndexFinger.TabIndex = 3;
-            this.IndexFinger.TabStop = false;
-            this.IndexFinger.Click += new System.EventHandler(this.IndexFingerClick);
-            this.IndexFinger.MouseEnter += new System.EventHandler(this.Darken);
-            this.IndexFinger.MouseLeave += new System.EventHandler(this.Lighten);
+            this.indexFingerPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.indexFingerPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.indexFingerPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.indexFingerPictureBox.Location = new System.Drawing.Point(3, 77);
+            this.indexFingerPictureBox.Name = "indexFingerPictureBox";
+            this.indexFingerPictureBox.Size = new System.Drawing.Size(106, 365);
+            this.indexFingerPictureBox.TabIndex = 3;
+            this.indexFingerPictureBox.TabStop = false;
+            this.indexFingerPictureBox.Click += new System.EventHandler(this.IndexFingerClick);
+            this.indexFingerPictureBox.MouseEnter += new System.EventHandler(this.Darken);
+            this.indexFingerPictureBox.MouseLeave += new System.EventHandler(this.Lighten);
             // 
-            // Thumb
+            // thumbPictureBox
             // 
-            this.Thumb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Thumb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Thumb.Location = new System.Drawing.Point(955, 165);
-            this.Thumb.Name = "Thumb";
-            this.Thumb.Size = new System.Drawing.Size(105, 275);
-            this.Thumb.TabIndex = 4;
-            this.Thumb.TabStop = false;
-            this.Thumb.Click += new System.EventHandler(this.ThumbClick);
-            this.Thumb.MouseEnter += new System.EventHandler(this.Darken);
-            this.Thumb.MouseLeave += new System.EventHandler(this.Lighten);
+            this.thumbPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.thumbPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.thumbPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.thumbPictureBox.Location = new System.Drawing.Point(3, 77);
+            this.thumbPictureBox.Name = "thumbPictureBox";
+            this.thumbPictureBox.Size = new System.Drawing.Size(106, 365);
+            this.thumbPictureBox.TabIndex = 4;
+            this.thumbPictureBox.TabStop = false;
+            this.thumbPictureBox.Click += new System.EventHandler(this.ThumbClick);
+            this.thumbPictureBox.MouseEnter += new System.EventHandler(this.Darken);
+            this.thumbPictureBox.MouseLeave += new System.EventHandler(this.Lighten);
             // 
             // label1
             // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Segoe Print", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(135, 129);
+            this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 33);
+            this.label1.Size = new System.Drawing.Size(106, 74);
             this.label1.TabIndex = 12;
-            this.label1.Text = "Mali prst";
+            this.label1.Text = "LITTLE FINGER";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Segoe Print", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(530, 129);
+            this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 33);
+            this.label2.Size = new System.Drawing.Size(105, 70);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Srednji prst";
+            this.label2.Text = "MIDDLE FINGER";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Segoe Print", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(319, 129);
+            this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 33);
+            this.label3.Size = new System.Drawing.Size(105, 70);
             this.label3.TabIndex = 14;
-            this.label3.Text = "Domali prst";
+            this.label3.Text = "RING FINGER";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Segoe Print", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(750, 129);
+            this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 33);
+            this.label4.Size = new System.Drawing.Size(105, 68);
             this.label4.TabIndex = 15;
-            this.label4.Text = "Kaziprst";
+            this.label4.Text = "INDEX FINGER";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Segoe Print", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(955, 129);
+            this.label5.Location = new System.Drawing.Point(3, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 33);
+            this.label5.Size = new System.Drawing.Size(105, 68);
             this.label5.TabIndex = 16;
-            this.label5.Text = "Palac";
+            this.label5.Text = "THUMB";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // MaliCopy
+            // littleFingerCopy
             // 
-            this.MaliCopy.BackColor = System.Drawing.Color.Plum;
-            this.MaliCopy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MaliCopy.BackgroundImage")));
-            this.MaliCopy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.MaliCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MaliCopy.Font = new System.Drawing.Font("Segoe Print", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.MaliCopy.Location = new System.Drawing.Point(135, 446);
-            this.MaliCopy.Margin = new System.Windows.Forms.Padding(0);
-            this.MaliCopy.Name = "MaliCopy";
-            this.MaliCopy.Padding = new System.Windows.Forms.Padding(5);
-            this.MaliCopy.Size = new System.Drawing.Size(44, 44);
-            this.MaliCopy.TabIndex = 17;
-            this.MaliCopy.UseVisualStyleBackColor = false;
-            this.MaliCopy.Click += new System.EventHandler(this.MaliCopy_Click);
+            this.littleFingerCopy.BackColor = System.Drawing.Color.Plum;
+            this.littleFingerCopy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("littleFingerCopy.BackgroundImage")));
+            this.littleFingerCopy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.littleFingerCopy.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.littleFingerCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.littleFingerCopy.Font = new System.Drawing.Font("Segoe Print", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.littleFingerCopy.Location = new System.Drawing.Point(0, 0);
+            this.littleFingerCopy.Margin = new System.Windows.Forms.Padding(0);
+            this.littleFingerCopy.Name = "littleFingerCopy";
+            this.littleFingerCopy.Padding = new System.Windows.Forms.Padding(5);
+            this.littleFingerCopy.Size = new System.Drawing.Size(53, 44);
+            this.littleFingerCopy.TabIndex = 17;
+            this.littleFingerCopy.UseVisualStyleBackColor = false;
+            this.littleFingerCopy.Click += new System.EventHandler(this.LittleFingerCopy);
             // 
-            // MaliPaste
+            // ringFingerCopy
             // 
-            this.MaliPaste.BackColor = System.Drawing.Color.Plum;
-            this.MaliPaste.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MaliPaste.BackgroundImage")));
-            this.MaliPaste.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.MaliPaste.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MaliPaste.Font = new System.Drawing.Font("Segoe Print", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.MaliPaste.Location = new System.Drawing.Point(196, 446);
-            this.MaliPaste.Margin = new System.Windows.Forms.Padding(0);
-            this.MaliPaste.Name = "MaliPaste";
-            this.MaliPaste.Padding = new System.Windows.Forms.Padding(5);
-            this.MaliPaste.Size = new System.Drawing.Size(44, 44);
-            this.MaliPaste.TabIndex = 18;
-            this.MaliPaste.UseVisualStyleBackColor = false;
-            this.MaliPaste.Click += new System.EventHandler(this.MaliPaste_Click);
+            this.ringFingerCopy.BackColor = System.Drawing.Color.Plum;
+            this.ringFingerCopy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ringFingerCopy.BackgroundImage")));
+            this.ringFingerCopy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ringFingerCopy.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ringFingerCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ringFingerCopy.Font = new System.Drawing.Font("Segoe Print", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.ringFingerCopy.Location = new System.Drawing.Point(0, 0);
+            this.ringFingerCopy.Margin = new System.Windows.Forms.Padding(0);
+            this.ringFingerCopy.Name = "ringFingerCopy";
+            this.ringFingerCopy.Padding = new System.Windows.Forms.Padding(5);
+            this.ringFingerCopy.Size = new System.Drawing.Size(52, 44);
+            this.ringFingerCopy.TabIndex = 19;
+            this.ringFingerCopy.UseVisualStyleBackColor = false;
+            this.ringFingerCopy.Click += new System.EventHandler(this.RingFingerCopy);
             // 
-            // DomaliCopy
+            // middleFingerCopy
             // 
-            this.DomaliCopy.BackColor = System.Drawing.Color.Plum;
-            this.DomaliCopy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DomaliCopy.BackgroundImage")));
-            this.DomaliCopy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DomaliCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DomaliCopy.Font = new System.Drawing.Font("Segoe Print", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.DomaliCopy.Location = new System.Drawing.Point(340, 446);
-            this.DomaliCopy.Margin = new System.Windows.Forms.Padding(0);
-            this.DomaliCopy.Name = "DomaliCopy";
-            this.DomaliCopy.Padding = new System.Windows.Forms.Padding(5);
-            this.DomaliCopy.Size = new System.Drawing.Size(44, 44);
-            this.DomaliCopy.TabIndex = 19;
-            this.DomaliCopy.UseVisualStyleBackColor = false;
-            this.DomaliCopy.Click += new System.EventHandler(this.DomaliCopy_Click);
+            this.middleFingerCopy.BackColor = System.Drawing.Color.Plum;
+            this.middleFingerCopy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("middleFingerCopy.BackgroundImage")));
+            this.middleFingerCopy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.middleFingerCopy.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.middleFingerCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.middleFingerCopy.Font = new System.Drawing.Font("Segoe Print", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.middleFingerCopy.Location = new System.Drawing.Point(0, 0);
+            this.middleFingerCopy.Margin = new System.Windows.Forms.Padding(0);
+            this.middleFingerCopy.Name = "middleFingerCopy";
+            this.middleFingerCopy.Padding = new System.Windows.Forms.Padding(5);
+            this.middleFingerCopy.Size = new System.Drawing.Size(53, 44);
+            this.middleFingerCopy.TabIndex = 21;
+            this.middleFingerCopy.UseVisualStyleBackColor = false;
+            this.middleFingerCopy.Click += new System.EventHandler(this.MiddleFingerCopy);
             // 
-            // DomaliPaste
+            // indexFingerCopy
             // 
-            this.DomaliPaste.BackColor = System.Drawing.Color.Plum;
-            this.DomaliPaste.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DomaliPaste.BackgroundImage")));
-            this.DomaliPaste.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DomaliPaste.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DomaliPaste.Font = new System.Drawing.Font("Segoe Print", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.DomaliPaste.Location = new System.Drawing.Point(401, 446);
-            this.DomaliPaste.Margin = new System.Windows.Forms.Padding(0);
-            this.DomaliPaste.Name = "DomaliPaste";
-            this.DomaliPaste.Padding = new System.Windows.Forms.Padding(5);
-            this.DomaliPaste.Size = new System.Drawing.Size(44, 44);
-            this.DomaliPaste.TabIndex = 20;
-            this.DomaliPaste.UseVisualStyleBackColor = false;
-            this.DomaliPaste.Click += new System.EventHandler(this.DomaliPaste_Click);
+            this.indexFingerCopy.BackColor = System.Drawing.Color.Plum;
+            this.indexFingerCopy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("indexFingerCopy.BackgroundImage")));
+            this.indexFingerCopy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.indexFingerCopy.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.indexFingerCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.indexFingerCopy.Font = new System.Drawing.Font("Segoe Print", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.indexFingerCopy.Location = new System.Drawing.Point(0, 0);
+            this.indexFingerCopy.Margin = new System.Windows.Forms.Padding(0);
+            this.indexFingerCopy.Name = "indexFingerCopy";
+            this.indexFingerCopy.Padding = new System.Windows.Forms.Padding(5);
+            this.indexFingerCopy.Size = new System.Drawing.Size(52, 44);
+            this.indexFingerCopy.TabIndex = 23;
+            this.indexFingerCopy.UseVisualStyleBackColor = false;
+            this.indexFingerCopy.Click += new System.EventHandler(this.IndexFingerCopy);
             // 
-            // SrednjiCopy
+            // thumbCopy
             // 
-            this.SrednjiCopy.BackColor = System.Drawing.Color.Plum;
-            this.SrednjiCopy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SrednjiCopy.BackgroundImage")));
-            this.SrednjiCopy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.SrednjiCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SrednjiCopy.Font = new System.Drawing.Font("Segoe Print", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.SrednjiCopy.Location = new System.Drawing.Point(545, 446);
-            this.SrednjiCopy.Margin = new System.Windows.Forms.Padding(0);
-            this.SrednjiCopy.Name = "SrednjiCopy";
-            this.SrednjiCopy.Padding = new System.Windows.Forms.Padding(5);
-            this.SrednjiCopy.Size = new System.Drawing.Size(44, 44);
-            this.SrednjiCopy.TabIndex = 21;
-            this.SrednjiCopy.UseVisualStyleBackColor = false;
-            this.SrednjiCopy.Click += new System.EventHandler(this.SrednjiCopy_Click);
+            this.thumbCopy.BackColor = System.Drawing.Color.Plum;
+            this.thumbCopy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("thumbCopy.BackgroundImage")));
+            this.thumbCopy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.thumbCopy.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.thumbCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.thumbCopy.Font = new System.Drawing.Font("Segoe Print", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.thumbCopy.Location = new System.Drawing.Point(0, 0);
+            this.thumbCopy.Margin = new System.Windows.Forms.Padding(0);
+            this.thumbCopy.Name = "thumbCopy";
+            this.thumbCopy.Padding = new System.Windows.Forms.Padding(5);
+            this.thumbCopy.Size = new System.Drawing.Size(52, 44);
+            this.thumbCopy.TabIndex = 25;
+            this.thumbCopy.UseVisualStyleBackColor = false;
+            this.thumbCopy.Click += new System.EventHandler(this.ThumbCopy);
             // 
-            // SrednjiPaste
+            // littleFingerPaste
             // 
-            this.SrednjiPaste.BackColor = System.Drawing.Color.Plum;
-            this.SrednjiPaste.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SrednjiPaste.BackgroundImage")));
-            this.SrednjiPaste.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.SrednjiPaste.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SrednjiPaste.Font = new System.Drawing.Font("Segoe Print", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.SrednjiPaste.Location = new System.Drawing.Point(606, 446);
-            this.SrednjiPaste.Margin = new System.Windows.Forms.Padding(0);
-            this.SrednjiPaste.Name = "SrednjiPaste";
-            this.SrednjiPaste.Padding = new System.Windows.Forms.Padding(5);
-            this.SrednjiPaste.Size = new System.Drawing.Size(44, 44);
-            this.SrednjiPaste.TabIndex = 22;
-            this.SrednjiPaste.UseVisualStyleBackColor = false;
-            this.SrednjiPaste.Click += new System.EventHandler(this.SrednjiPaste_Click);
+            this.littleFingerPaste.BackColor = System.Drawing.Color.Plum;
+            this.littleFingerPaste.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("littleFingerPaste.BackgroundImage")));
+            this.littleFingerPaste.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.littleFingerPaste.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.littleFingerPaste.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.littleFingerPaste.Font = new System.Drawing.Font("Segoe Print", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.littleFingerPaste.Location = new System.Drawing.Point(53, 0);
+            this.littleFingerPaste.Margin = new System.Windows.Forms.Padding(0);
+            this.littleFingerPaste.Name = "littleFingerPaste";
+            this.littleFingerPaste.Padding = new System.Windows.Forms.Padding(5);
+            this.littleFingerPaste.Size = new System.Drawing.Size(53, 44);
+            this.littleFingerPaste.TabIndex = 18;
+            this.littleFingerPaste.UseVisualStyleBackColor = false;
+            this.littleFingerPaste.Click += new System.EventHandler(this.LittleFingerPaste);
             // 
-            // KaziCopy
+            // ringFingerPaste
             // 
-            this.KaziCopy.BackColor = System.Drawing.Color.Plum;
-            this.KaziCopy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("KaziCopy.BackgroundImage")));
-            this.KaziCopy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.KaziCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.KaziCopy.Font = new System.Drawing.Font("Segoe Print", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.KaziCopy.Location = new System.Drawing.Point(750, 446);
-            this.KaziCopy.Margin = new System.Windows.Forms.Padding(0);
-            this.KaziCopy.Name = "KaziCopy";
-            this.KaziCopy.Padding = new System.Windows.Forms.Padding(5);
-            this.KaziCopy.Size = new System.Drawing.Size(44, 44);
-            this.KaziCopy.TabIndex = 23;
-            this.KaziCopy.UseVisualStyleBackColor = false;
-            this.KaziCopy.Click += new System.EventHandler(this.KaziCopy_Click);
+            this.ringFingerPaste.BackColor = System.Drawing.Color.Plum;
+            this.ringFingerPaste.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ringFingerPaste.BackgroundImage")));
+            this.ringFingerPaste.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ringFingerPaste.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ringFingerPaste.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ringFingerPaste.Font = new System.Drawing.Font("Segoe Print", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.ringFingerPaste.Location = new System.Drawing.Point(52, 0);
+            this.ringFingerPaste.Margin = new System.Windows.Forms.Padding(0);
+            this.ringFingerPaste.Name = "ringFingerPaste";
+            this.ringFingerPaste.Padding = new System.Windows.Forms.Padding(5);
+            this.ringFingerPaste.Size = new System.Drawing.Size(53, 44);
+            this.ringFingerPaste.TabIndex = 20;
+            this.ringFingerPaste.UseVisualStyleBackColor = false;
+            this.ringFingerPaste.Click += new System.EventHandler(this.RingFingerPaste);
             // 
-            // KaziPaste
+            // middleFingerPaste
             // 
-            this.KaziPaste.BackColor = System.Drawing.Color.Plum;
-            this.KaziPaste.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("KaziPaste.BackgroundImage")));
-            this.KaziPaste.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.KaziPaste.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.KaziPaste.Font = new System.Drawing.Font("Segoe Print", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.KaziPaste.Location = new System.Drawing.Point(811, 446);
-            this.KaziPaste.Margin = new System.Windows.Forms.Padding(0);
-            this.KaziPaste.Name = "KaziPaste";
-            this.KaziPaste.Padding = new System.Windows.Forms.Padding(5);
-            this.KaziPaste.Size = new System.Drawing.Size(44, 44);
-            this.KaziPaste.TabIndex = 24;
-            this.KaziPaste.UseVisualStyleBackColor = false;
-            this.KaziPaste.Click += new System.EventHandler(this.KaziPaste_Click);
+            this.middleFingerPaste.BackColor = System.Drawing.Color.Plum;
+            this.middleFingerPaste.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("middleFingerPaste.BackgroundImage")));
+            this.middleFingerPaste.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.middleFingerPaste.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.middleFingerPaste.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.middleFingerPaste.Font = new System.Drawing.Font("Segoe Print", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.middleFingerPaste.Location = new System.Drawing.Point(53, 0);
+            this.middleFingerPaste.Margin = new System.Windows.Forms.Padding(0);
+            this.middleFingerPaste.Name = "middleFingerPaste";
+            this.middleFingerPaste.Padding = new System.Windows.Forms.Padding(5);
+            this.middleFingerPaste.Size = new System.Drawing.Size(53, 44);
+            this.middleFingerPaste.TabIndex = 22;
+            this.middleFingerPaste.UseVisualStyleBackColor = false;
+            this.middleFingerPaste.Click += new System.EventHandler(this.MiddleFingerPaste);
             // 
-            // PalacCopy
+            // indexFingerPaste
             // 
-            this.PalacCopy.BackColor = System.Drawing.Color.Plum;
-            this.PalacCopy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PalacCopy.BackgroundImage")));
-            this.PalacCopy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PalacCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PalacCopy.Font = new System.Drawing.Font("Segoe Print", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.PalacCopy.Location = new System.Drawing.Point(955, 446);
-            this.PalacCopy.Margin = new System.Windows.Forms.Padding(0);
-            this.PalacCopy.Name = "PalacCopy";
-            this.PalacCopy.Padding = new System.Windows.Forms.Padding(5);
-            this.PalacCopy.Size = new System.Drawing.Size(44, 44);
-            this.PalacCopy.TabIndex = 25;
-            this.PalacCopy.UseVisualStyleBackColor = false;
-            this.PalacCopy.Click += new System.EventHandler(this.PalacCopy_Click);
+            this.indexFingerPaste.BackColor = System.Drawing.Color.Plum;
+            this.indexFingerPaste.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("indexFingerPaste.BackgroundImage")));
+            this.indexFingerPaste.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.indexFingerPaste.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.indexFingerPaste.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.indexFingerPaste.Font = new System.Drawing.Font("Segoe Print", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.indexFingerPaste.Location = new System.Drawing.Point(52, 0);
+            this.indexFingerPaste.Margin = new System.Windows.Forms.Padding(0);
+            this.indexFingerPaste.Name = "indexFingerPaste";
+            this.indexFingerPaste.Padding = new System.Windows.Forms.Padding(5);
+            this.indexFingerPaste.Size = new System.Drawing.Size(53, 44);
+            this.indexFingerPaste.TabIndex = 24;
+            this.indexFingerPaste.UseVisualStyleBackColor = false;
+            this.indexFingerPaste.Click += new System.EventHandler(this.IndexFingerPaste);
             // 
-            // PalacPaste
+            // thumbPaste
             // 
-            this.PalacPaste.BackColor = System.Drawing.Color.Plum;
-            this.PalacPaste.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PalacPaste.BackgroundImage")));
-            this.PalacPaste.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PalacPaste.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PalacPaste.Font = new System.Drawing.Font("Segoe Print", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.PalacPaste.Location = new System.Drawing.Point(1016, 446);
-            this.PalacPaste.Margin = new System.Windows.Forms.Padding(0);
-            this.PalacPaste.Name = "PalacPaste";
-            this.PalacPaste.Padding = new System.Windows.Forms.Padding(5);
-            this.PalacPaste.Size = new System.Drawing.Size(44, 44);
-            this.PalacPaste.TabIndex = 26;
-            this.PalacPaste.UseVisualStyleBackColor = false;
-            this.PalacPaste.Click += new System.EventHandler(this.PalacPaste_Click);
+            this.thumbPaste.BackColor = System.Drawing.Color.Plum;
+            this.thumbPaste.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("thumbPaste.BackgroundImage")));
+            this.thumbPaste.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.thumbPaste.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.thumbPaste.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.thumbPaste.Font = new System.Drawing.Font("Segoe Print", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.thumbPaste.Location = new System.Drawing.Point(52, 0);
+            this.thumbPaste.Margin = new System.Windows.Forms.Padding(0);
+            this.thumbPaste.Name = "thumbPaste";
+            this.thumbPaste.Padding = new System.Windows.Forms.Padding(5);
+            this.thumbPaste.Size = new System.Drawing.Size(53, 44);
+            this.thumbPaste.TabIndex = 26;
+            this.thumbPaste.UseVisualStyleBackColor = false;
+            this.thumbPaste.Click += new System.EventHandler(this.ThumbFingerPaste);
             // 
-            // label6
+            // backBtn
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe Print", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(390, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(405, 85);
-            this.label6.TabIndex = 27;
-            this.label6.Text = "Izaberite Nokat";
+            this.backBtn.BackColor = System.Drawing.Color.Plum;
+            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backBtn.Font = new System.Drawing.Font("Arial", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.backBtn.Location = new System.Drawing.Point(12, 12);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(50, 50);
+            this.backBtn.TabIndex = 28;
+            this.backBtn.Text = "<";
+            this.backBtn.UseVisualStyleBackColor = false;
+            this.backBtn.Click += new System.EventHandler(this.BackBtnClick);
             // 
-            // Nazad
+            // downloadIndexFingerBtn
             // 
-            this.Nazad.BackColor = System.Drawing.Color.Plum;
-            this.Nazad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Nazad.Font = new System.Drawing.Font("Arial", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.Nazad.Location = new System.Drawing.Point(12, 9);
-            this.Nazad.Name = "Nazad";
-            this.Nazad.Size = new System.Drawing.Size(50, 50);
-            this.Nazad.TabIndex = 28;
-            this.Nazad.Text = "<";
-            this.Nazad.UseVisualStyleBackColor = false;
-            this.Nazad.Click += new System.EventHandler(this.NazadClick);
+            this.downloadIndexFingerBtn.BackColor = System.Drawing.Color.Plum;
+            this.downloadIndexFingerBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("downloadIndexFingerBtn.BackgroundImage")));
+            this.downloadIndexFingerBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.downloadIndexFingerBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.downloadIndexFingerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.downloadIndexFingerBtn.Location = new System.Drawing.Point(564, 3);
+            this.downloadIndexFingerBtn.Name = "downloadIndexFingerBtn";
+            this.downloadIndexFingerBtn.Size = new System.Drawing.Size(181, 56);
+            this.downloadIndexFingerBtn.TabIndex = 6;
+            this.downloadIndexFingerBtn.UseVisualStyleBackColor = false;
+            this.downloadIndexFingerBtn.Click += new System.EventHandler(this.DownloadIndexFingerBtnClick);
+            // 
+            // downloadThumbBtn
+            // 
+            this.downloadThumbBtn.BackColor = System.Drawing.Color.Plum;
+            this.downloadThumbBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("downloadThumbBtn.BackgroundImage")));
+            this.downloadThumbBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.downloadThumbBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.downloadThumbBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.downloadThumbBtn.Location = new System.Drawing.Point(751, 3);
+            this.downloadThumbBtn.Name = "downloadThumbBtn";
+            this.downloadThumbBtn.Size = new System.Drawing.Size(185, 56);
+            this.downloadThumbBtn.TabIndex = 5;
+            this.downloadThumbBtn.UseVisualStyleBackColor = false;
+            this.downloadThumbBtn.Click += new System.EventHandler(this.DownloadThumbBtnClick);
+            // 
+            // downloadMiddleFingerBtn
+            // 
+            this.downloadMiddleFingerBtn.BackColor = System.Drawing.Color.Plum;
+            this.downloadMiddleFingerBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("downloadMiddleFingerBtn.BackgroundImage")));
+            this.downloadMiddleFingerBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.downloadMiddleFingerBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.downloadMiddleFingerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.downloadMiddleFingerBtn.Location = new System.Drawing.Point(377, 3);
+            this.downloadMiddleFingerBtn.Name = "downloadMiddleFingerBtn";
+            this.downloadMiddleFingerBtn.Size = new System.Drawing.Size(181, 56);
+            this.downloadMiddleFingerBtn.TabIndex = 4;
+            this.downloadMiddleFingerBtn.UseVisualStyleBackColor = false;
+            this.downloadMiddleFingerBtn.Click += new System.EventHandler(this.DownloadMiddleFingerBtnClick);
+            // 
+            // downloadLittleFingerBtn
+            // 
+            this.downloadLittleFingerBtn.BackColor = System.Drawing.Color.Plum;
+            this.downloadLittleFingerBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("downloadLittleFingerBtn.BackgroundImage")));
+            this.downloadLittleFingerBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.downloadLittleFingerBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.downloadLittleFingerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.downloadLittleFingerBtn.Location = new System.Drawing.Point(3, 3);
+            this.downloadLittleFingerBtn.Name = "downloadLittleFingerBtn";
+            this.downloadLittleFingerBtn.Size = new System.Drawing.Size(181, 56);
+            this.downloadLittleFingerBtn.TabIndex = 3;
+            this.downloadLittleFingerBtn.UseVisualStyleBackColor = false;
+            this.downloadLittleFingerBtn.Click += new System.EventHandler(this.DownloadLittleFingerBtnClick);
+            // 
+            // downloadRingFingerBtn
+            // 
+            this.downloadRingFingerBtn.BackColor = System.Drawing.Color.Plum;
+            this.downloadRingFingerBtn.BackgroundImage = global::Noktinator.Properties.Resources.download;
+            this.downloadRingFingerBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.downloadRingFingerBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.downloadRingFingerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.downloadRingFingerBtn.Location = new System.Drawing.Point(190, 3);
+            this.downloadRingFingerBtn.Name = "downloadRingFingerBtn";
+            this.downloadRingFingerBtn.Size = new System.Drawing.Size(181, 56);
+            this.downloadRingFingerBtn.TabIndex = 2;
+            this.downloadRingFingerBtn.UseVisualStyleBackColor = false;
+            this.downloadRingFingerBtn.Click += new System.EventHandler(this.DownloadRingFingerBtnClick);
+            // 
+            // downloadAllFingersBtn
+            // 
+            this.downloadAllFingersBtn.BackColor = System.Drawing.Color.Plum;
+            this.downloadAllFingersBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("downloadAllFingersBtn.BackgroundImage")));
+            this.downloadAllFingersBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.downloadAllFingersBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.downloadAllFingersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.downloadAllFingersBtn.Location = new System.Drawing.Point(3, 71);
+            this.downloadAllFingersBtn.Name = "downloadAllFingersBtn";
+            this.downloadAllFingersBtn.Size = new System.Drawing.Size(939, 62);
+            this.downloadAllFingersBtn.TabIndex = 1;
+            this.downloadAllFingersBtn.UseVisualStyleBackColor = false;
+            this.downloadAllFingersBtn.Click += new System.EventHandler(this.DownloadAllFingersBtnClick);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.downloadAllFingersBtn, 0, 1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(115, 513);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(945, 136);
+            this.tableLayoutPanel1.TabIndex = 29;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 5;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.Controls.Add(this.downloadIndexFingerBtn, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.downloadThumbBtn, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.downloadMiddleFingerBtn, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.downloadLittleFingerBtn, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.downloadRingFingerBtn, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(939, 62);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.middleFingerCopy, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.middleFingerPaste, 1, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 448);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(106, 44);
+            this.tableLayoutPanel3.TabIndex = 30;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.indexFingerPaste, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.indexFingerCopy, 0, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 448);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(105, 44);
+            this.tableLayoutPanel4.TabIndex = 31;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.thumbPaste, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.thumbCopy, 0, 0);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 448);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(105, 44);
+            this.tableLayoutPanel5.TabIndex = 32;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 2;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Controls.Add(this.ringFingerPaste, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.ringFingerCopy, 0, 0);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 448);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(105, 44);
+            this.tableLayoutPanel6.TabIndex = 33;
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 2;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Controls.Add(this.littleFingerPaste, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.littleFingerCopy, 0, 0);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 448);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 1;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(106, 44);
+            this.tableLayoutPanel7.TabIndex = 34;
+            // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.ColumnCount = 1;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel9.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel7, 0, 2);
+            this.tableLayoutPanel9.Controls.Add(this.littleFingerPictureBox, 0, 1);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(150, 12);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 3;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(112, 495);
+            this.tableLayoutPanel9.TabIndex = 0;
+            // 
+            // tableLayoutPanel11
+            // 
+            this.tableLayoutPanel11.ColumnCount = 1;
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel11.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel11.Controls.Add(this.middleFingerPictureBox, 0, 1);
+            this.tableLayoutPanel11.Controls.Add(this.tableLayoutPanel3, 0, 2);
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(532, 12);
+            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
+            this.tableLayoutPanel11.RowCount = 3;
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(112, 495);
+            this.tableLayoutPanel11.TabIndex = 36;
+            // 
+            // tableLayoutPanel10
+            // 
+            this.tableLayoutPanel10.ColumnCount = 1;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel10.Controls.Add(this.label3, 0, 0);
+            this.tableLayoutPanel10.Controls.Add(this.tableLayoutPanel6, 0, 2);
+            this.tableLayoutPanel10.Controls.Add(this.ringFingerPictureBox, 0, 1);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(345, 12);
+            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            this.tableLayoutPanel10.RowCount = 3;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(112, 495);
+            this.tableLayoutPanel10.TabIndex = 35;
+            // 
+            // tableLayoutPanel13
+            // 
+            this.tableLayoutPanel13.ColumnCount = 1;
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel13.Controls.Add(this.label4, 0, 0);
+            this.tableLayoutPanel13.Controls.Add(this.indexFingerPictureBox, 0, 1);
+            this.tableLayoutPanel13.Controls.Add(this.tableLayoutPanel4, 0, 2);
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(719, 12);
+            this.tableLayoutPanel13.Name = "tableLayoutPanel13";
+            this.tableLayoutPanel13.RowCount = 3;
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(112, 495);
+            this.tableLayoutPanel13.TabIndex = 37;
+            // 
+            // tableLayoutPanel12
+            // 
+            this.tableLayoutPanel12.ColumnCount = 1;
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel12.Controls.Add(this.label5, 0, 0);
+            this.tableLayoutPanel12.Controls.Add(this.thumbPictureBox, 0, 1);
+            this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel5, 0, 2);
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(911, 12);
+            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
+            this.tableLayoutPanel12.RowCount = 3;
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(112, 495);
+            this.tableLayoutPanel12.TabIndex = 38;
             // 
             // FingerPreview
             // 
@@ -363,28 +678,13 @@ namespace Noktinator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1184, 661);
-            this.Controls.Add(this.Nazad);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.PalacPaste);
-            this.Controls.Add(this.PalacCopy);
-            this.Controls.Add(this.KaziPaste);
-            this.Controls.Add(this.KaziCopy);
-            this.Controls.Add(this.SrednjiPaste);
-            this.Controls.Add(this.SrednjiCopy);
-            this.Controls.Add(this.DomaliPaste);
-            this.Controls.Add(this.DomaliCopy);
-            this.Controls.Add(this.MaliPaste);
-            this.Controls.Add(this.MaliCopy);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Thumb);
-            this.Controls.Add(this.IndexFinger);
-            this.Controls.Add(this.MiddleFinger);
-            this.Controls.Add(this.RingFinger);
-            this.Controls.Add(this.LittleFinger);
+            this.Controls.Add(this.tableLayoutPanel12);
+            this.Controls.Add(this.tableLayoutPanel13);
+            this.Controls.Add(this.tableLayoutPanel9);
+            this.Controls.Add(this.tableLayoutPanel11);
+            this.Controls.Add(this.tableLayoutPanel10);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.backBtn);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1200, 700);
@@ -392,39 +692,66 @@ namespace Noktinator
             this.Name = "FingerPreview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FingerPreview";
-            ((System.ComponentModel.ISupportInitialize)(this.LittleFinger)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RingFinger)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MiddleFinger)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IndexFinger)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Thumb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.littleFingerPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ringFingerPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.middleFingerPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.indexFingerPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.thumbPictureBox)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel7.ResumeLayout(false);
+            this.tableLayoutPanel9.ResumeLayout(false);
+            this.tableLayoutPanel11.ResumeLayout(false);
+            this.tableLayoutPanel10.ResumeLayout(false);
+            this.tableLayoutPanel13.ResumeLayout(false);
+            this.tableLayoutPanel12.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox LittleFinger;
-        private System.Windows.Forms.PictureBox RingFinger;
-        private System.Windows.Forms.PictureBox MiddleFinger;
-        private System.Windows.Forms.PictureBox IndexFinger;
-        private System.Windows.Forms.PictureBox Thumb;
+        public System.Windows.Forms.PictureBox ringFingerPictureBox;
+        public System.Windows.Forms.PictureBox middleFingerPictureBox;
+        public System.Windows.Forms.PictureBox indexFingerPictureBox;
+        public System.Windows.Forms.PictureBox thumbPictureBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button MaliCopy;
-        private System.Windows.Forms.Button MaliPaste;
-        private System.Windows.Forms.Button DomaliCopy;
-        private System.Windows.Forms.Button DomaliPaste;
-        private System.Windows.Forms.Button SrednjiCopy;
-        private System.Windows.Forms.Button SrednjiPaste;
-        private System.Windows.Forms.Button KaziCopy;
-        private System.Windows.Forms.Button KaziPaste;
-        private System.Windows.Forms.Button PalacCopy;
-        private System.Windows.Forms.Button PalacPaste;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button Nazad;
+        private System.Windows.Forms.Button littleFingerCopy;
+        private System.Windows.Forms.Button littleFingerPaste;
+        private System.Windows.Forms.Button ringFingerCopy;
+        private System.Windows.Forms.Button ringFingerPaste;
+        private System.Windows.Forms.Button middleFingerCopy;
+        private System.Windows.Forms.Button middleFingerPaste;
+        private System.Windows.Forms.Button indexFingerCopy;
+        private System.Windows.Forms.Button indexFingerPaste;
+        private System.Windows.Forms.Button thumbCopy;
+        private System.Windows.Forms.Button thumbPaste;
+        private System.Windows.Forms.Button backBtn;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Button downloadIndexFingerBtn;
+        private System.Windows.Forms.Button downloadThumbBtn;
+        private System.Windows.Forms.Button downloadMiddleFingerBtn;
+        private System.Windows.Forms.Button downloadLittleFingerBtn;
+        private System.Windows.Forms.Button downloadRingFingerBtn;
+        private System.Windows.Forms.Button downloadAllFingersBtn;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
+        public System.Windows.Forms.PictureBox littleFingerPictureBox;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
     }
 }

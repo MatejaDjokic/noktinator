@@ -1,7 +1,7 @@
 ﻿using System.Windows.Forms;
+using Noktinator.Util;
 using System.Drawing;
 using System;
-using Noktinator.Util;
 
 namespace Noktinator
 {
@@ -10,7 +10,7 @@ namespace Noktinator
 
         public static PictureBox ChosenField;
 
-        Image CopyPasteImage;
+        Image copyPasteImage = NailUtil.GetDefault();
 
         public FingerPreview()
         {
@@ -27,11 +27,11 @@ namespace Noktinator
             switch (e.KeyCode)
             {
                 case Keys.Escape: Navigator.GotoRetain<StartMenu, FingerPreview>(); break;
-                case Keys.D1: FingerChoiceClick(LittleFinger); break;
-                case Keys.D2: FingerChoiceClick(RingFinger); break;
-                case Keys.D3: FingerChoiceClick(MiddleFinger); break;
-                case Keys.D4: FingerChoiceClick(IndexFinger); break;
-                case Keys.D5: FingerChoiceClick(Thumb); break;
+                case Keys.D1: FingerChoiceClick(littleFingerPictureBox); break;
+                case Keys.D2: FingerChoiceClick(ringFingerPictureBox); break;
+                case Keys.D3: FingerChoiceClick(middleFingerPictureBox); break;
+                case Keys.D4: FingerChoiceClick(indexFingerPictureBox); break;
+                case Keys.D5: FingerChoiceClick(thumbPictureBox); break;
             }
         }
         private void FormClose(object sender, EventArgs e)
@@ -40,12 +40,19 @@ namespace Noktinator
         }
         private void FingerPreviewLoad(object sender, EventArgs e)
         {
-            Bitmap img = NailUtil.GetDefaultNail();
-            LittleFinger.Image = img;
-            RingFinger.Image = img;
-            MiddleFinger.Image = img;
-            IndexFinger.Image = img;
-            Thumb.Image = img;
+            Bitmap img = NailUtil.GetDefault();
+            littleFingerPictureBox.Image = img;
+            ringFingerPictureBox.Image = img;
+            middleFingerPictureBox.Image = img;
+            indexFingerPictureBox.Image = img;
+            thumbPictureBox.Image = img;
+
+            downloadLittleFingerBtn.BackgroundImage = Properties.Resources.download;
+            downloadRingFingerBtn.BackgroundImage = Properties.Resources.download;
+            downloadMiddleFingerBtn.BackgroundImage = Properties.Resources.download;
+            downloadIndexFingerBtn.BackgroundImage = Properties.Resources.download;
+            downloadThumbBtn.BackgroundImage = Properties.Resources.download;
+            downloadAllFingersBtn.BackgroundImage = Properties.Resources.download;
         }
 
         private void FingerChoiceClick(PictureBox field)
@@ -56,27 +63,27 @@ namespace Noktinator
 
         private void LittleFingerClick(object sender, EventArgs e)
         {
-            FingerChoiceClick(LittleFinger);
+            FingerChoiceClick(littleFingerPictureBox);
         }
 
         private void RingFingerClick(object sender, EventArgs e)
         {
-            FingerChoiceClick(RingFinger);
+            FingerChoiceClick(ringFingerPictureBox);
         }
 
         private void MiddleFingerClick(object sender, EventArgs e)
         {
-            FingerChoiceClick(MiddleFinger);
+            FingerChoiceClick(middleFingerPictureBox);
         }
 
         private void IndexFingerClick(object sender, EventArgs e)
         {
-            FingerChoiceClick(IndexFinger);
+            FingerChoiceClick(indexFingerPictureBox);
         }
 
         private void ThumbClick(object sender, EventArgs e)
         {
-            FingerChoiceClick(Thumb);
+            FingerChoiceClick(thumbPictureBox);
         }
 
         //shadeovanje pri hoverovanju misem
@@ -92,61 +99,82 @@ namespace Noktinator
             picBox.BackColor = Color.Transparent;
         }
 
-
-        //kopiranje slika
-        private void MaliCopy_Click(object sender, EventArgs e)
+        private void LittleFingerCopy(object sender, EventArgs e)
         {
-            CopyPasteImage = LittleFinger.Image;
+            copyPasteImage = littleFingerPictureBox.Image;
+        }
+        private void RingFingerCopy(object sender, EventArgs e)
+        {
+            copyPasteImage = ringFingerPictureBox.Image;
+        }
+        private void MiddleFingerCopy(object sender, EventArgs e)
+        {
+            copyPasteImage = middleFingerPictureBox.Image;
+        }
+        private void IndexFingerCopy(object sender, EventArgs e)
+        {
+            copyPasteImage = indexFingerPictureBox.Image;
+        }
+        private void ThumbCopy(object sender, EventArgs e)
+        {
+            copyPasteImage = thumbPictureBox.Image;
         }
 
-        private void DomaliCopy_Click(object sender, EventArgs e)
+        private void LittleFingerPaste(object sender, EventArgs e)
         {
-            CopyPasteImage = RingFinger.Image;
+            littleFingerPictureBox.Image = copyPasteImage;
+        }
+        private void RingFingerPaste(object sender, EventArgs e)
+        {
+            ringFingerPictureBox.Image = copyPasteImage;
+        }
+        private void MiddleFingerPaste(object sender, EventArgs e)
+        {
+            middleFingerPictureBox.Image = copyPasteImage;
+        }
+        private void IndexFingerPaste(object sender, EventArgs e)
+        {
+            indexFingerPictureBox.Image = copyPasteImage;
+        }
+        private void ThumbFingerPaste(object sender, EventArgs e)
+        {
+            thumbPictureBox.Image = copyPasteImage;
         }
 
-        private void SrednjiCopy_Click(object sender, EventArgs e)
-        {
-            CopyPasteImage = MiddleFinger.Image;
-        }
-
-        private void KaziCopy_Click(object sender, EventArgs e)
-        {
-            CopyPasteImage = IndexFinger.Image;
-        }
-
-        private void PalacCopy_Click(object sender, EventArgs e)
-        {
-            CopyPasteImage = Thumb.Image;
-        }
-
-        private void MaliPaste_Click(object sender, EventArgs e)
-        {
-            LittleFinger.Image = CopyPasteImage;
-        }
-
-        private void DomaliPaste_Click(object sender, EventArgs e)
-        {
-            RingFinger.Image = CopyPasteImage;
-        }
-
-        private void SrednjiPaste_Click(object sender, EventArgs e)
-        {
-            MiddleFinger.Image = CopyPasteImage;
-        }
-
-        private void KaziPaste_Click(object sender, EventArgs e)
-        {
-            IndexFinger.Image = CopyPasteImage;
-        }
-
-        private void PalacPaste_Click(object sender, EventArgs e)
-        {
-            Thumb.Image = CopyPasteImage;
-        }
-
-        private void NazadClick(object sender, EventArgs e)
+        private void BackBtnClick(object sender, EventArgs e)
         {
             Navigator.GotoRetain<StartMenu, FingerPreview>();
+        }
+
+        private void DownloadLittleFingerBtnClick(object sender, EventArgs e)
+        {
+            NailUtil.DownloadFinger("little_finger", littleFingerPictureBox.Image);
+        }
+        private void DownloadRingFingerBtnClick(object sender, EventArgs e)
+        {
+            NailUtil.DownloadFinger("ring_finger", ringFingerPictureBox.Image);
+        }
+        private void DownloadMiddleFingerBtnClick(object sender, EventArgs e)
+        {
+            NailUtil.DownloadFinger("middle_finger", middleFingerPictureBox.Image);
+        }
+        private void DownloadIndexFingerBtnClick(object sender, EventArgs e)
+        {
+            NailUtil.DownloadFinger("index_finger", indexFingerPictureBox.Image);
+        }
+        private void DownloadThumbBtnClick(object sender, EventArgs e)
+        {
+            NailUtil.DownloadFinger("thumb", thumbPictureBox.Image);
+        }
+        private void DownloadAllFingersBtnClick(object sender, EventArgs e)
+        {
+            NailUtil.DownloadAllFingers(
+                littleFingerPictureBox.Image,
+                ringFingerPictureBox.Image,
+                middleFingerPictureBox.Image,
+                indexFingerPictureBox.Image,
+                thumbPictureBox.Image
+            );
         }
     }
 }

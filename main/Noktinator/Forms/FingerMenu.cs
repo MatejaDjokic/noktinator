@@ -17,9 +17,8 @@ namespace Noktinator
             this.KeyPreview = true;
         }
 
-        public static Nail nail = NailUtil.GetDefaultNailData();
+        public static Nail nail = NailUtil.GetDefaultData();
 
-        //slika koja sluzi za kopiranje na FingerPreview
         public static Image copyImage;
 
         public static Bitmap fingerImage;
@@ -63,7 +62,7 @@ namespace Noktinator
             var res = NokatColorDialog.ShowDialog();
             if (res == DialogResult.OK)
             {
-                nail.nailColor = NokatColorDialog.Color;
+                nail.shapeColor = NokatColorDialog.Color;
 
                 // kreiranje nove instance bitmape za bojenje nokte
                 nailImage = NailUtil.ColorBitmap(new Bitmap(nail.nailShapeImage()), NokatColorDialog.Color);
@@ -105,7 +104,7 @@ namespace Noktinator
             nail.Update();
 
             //kad god se ponovo pojavi ova forma, prst i nokat ce imati poslednju sacuvanu boju
-            nailImage = NailUtil.ColorBitmap(new Bitmap(nail.nailShapeImage()), nail.nailColor);
+            nailImage = NailUtil.ColorBitmap(new Bitmap(nail.nailShapeImage()), nail.shapeColor);
             fingerImage = NailUtil.ColorBitmap(new Bitmap(nail.fingerShapeImage()), nail.skinColor);
             patternImage = NailUtil.ColorBitmap(new Bitmap(nail.patternImage()), nail.patternColor);
             MergeImages();
@@ -137,11 +136,11 @@ namespace Noktinator
 
         void ResetDesignClick()
         {
-            DialogResult result = MessageBox.Show("Are you sure?", "Reset Design", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show("Are you sure you want to reset the design?", "Reset Design", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
-                nail = NailUtil.GetDefaultNailData();
-                fingerView.BackgroundImage = NailUtil.GetDefaultNail();
+                nail = NailUtil.GetDefaultData();
+                fingerView.BackgroundImage = NailUtil.GetDefault();
             }
         }
 
