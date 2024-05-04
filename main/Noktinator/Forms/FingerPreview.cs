@@ -148,19 +148,19 @@ namespace Noktinator
 
         private void DownloadLittleFingerBtnClick(object sender, EventArgs e)
         {
-            NailUtil.DownloadFinger("little_finger", littleFingerPictureBox.Image);
+            NailUtil.DownloadFinger("little", littleFingerPictureBox.Image);
         }
         private void DownloadRingFingerBtnClick(object sender, EventArgs e)
         {
-            NailUtil.DownloadFinger("ring_finger", ringFingerPictureBox.Image);
+            NailUtil.DownloadFinger("ring", ringFingerPictureBox.Image);
         }
         private void DownloadMiddleFingerBtnClick(object sender, EventArgs e)
         {
-            NailUtil.DownloadFinger("middle_finger", middleFingerPictureBox.Image);
+            NailUtil.DownloadFinger("middle", middleFingerPictureBox.Image);
         }
         private void DownloadIndexFingerBtnClick(object sender, EventArgs e)
         {
-            NailUtil.DownloadFinger("index_finger", indexFingerPictureBox.Image);
+            NailUtil.DownloadFinger("index", indexFingerPictureBox.Image);
         }
         private void DownloadThumbBtnClick(object sender, EventArgs e)
         {
@@ -176,5 +176,7 @@ namespace Noktinator
                 thumbPictureBox.Image
             );
         }
+
+        private void OpenDowloadsFolderBtnClick(object sender, EventArgs e) => NailUtil.OpenDownloadsFolder();
     }
 }
