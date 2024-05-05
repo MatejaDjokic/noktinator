@@ -456,5 +456,35 @@
   <ItemGroup>
     <None Include="Resources\hands.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\french_tip_almond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\french_tip_ballerina.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\french_tip_lipstick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\french_tip_mountain_peak.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\french_tip_oval.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\french_tip_rounded.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\french_tip_short.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\french_tip_squoval.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\french_tip_stiletto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\french_tip_wide.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

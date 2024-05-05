@@ -382,4 +382,34 @@
   <data name="hands" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hands.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="french_tip_almond" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\french_tip_almond.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="french_tip_ballerina" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\french_tip_ballerina.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="french_tip_lipstick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\french_tip_lipstick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="french_tip_mountain_peak" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\french_tip_mountain_peak.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="french_tip_oval" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\french_tip_oval.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="french_tip_rounded" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\french_tip_rounded.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="french_tip_short" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\french_tip_short.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="french_tip_squoval" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\french_tip_squoval.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="french_tip_stiletto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\french_tip_stiletto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="french_tip_wide" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\french_tip_wide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

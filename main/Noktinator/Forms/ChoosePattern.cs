@@ -96,5 +96,10 @@ namespace Noktinator
         {
             ChoiceClick(NailPattern.Snake);
         }
+
+        private void FrenchTip_Click(object sender, EventArgs e)
+        {
+            ChoiceClick(NailPattern.FrenchTip);
+        }
     }
 }

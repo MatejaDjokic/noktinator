@@ -12,6 +12,7 @@
         Triangles,
         Yinyang,
         Butterfly,
-        Snake
+        Snake,
+        FrenchTip
     }
 }

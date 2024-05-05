@@ -40,6 +40,7 @@ namespace Noktinator
             this.YinYang = new System.Windows.Forms.PictureBox();
             this.Butterfly = new System.Windows.Forms.PictureBox();
             this.Snake = new System.Windows.Forms.PictureBox();
+            this.FrenchTip = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.FireStyle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LeafStyle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StarsStyle)).BeginInit();
@@ -50,6 +51,7 @@ namespace Noktinator
             ((System.ComponentModel.ISupportInitialize)(this.YinYang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Butterfly)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Snake)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FrenchTip)).BeginInit();
             this.SuspendLayout();
             // 
             // FireStyle
@@ -192,12 +194,25 @@ namespace Noktinator
             this.Snake.MouseEnter += new System.EventHandler(this.Darken);
             this.Snake.MouseLeave += new System.EventHandler(this.Lighten);
             // 
+            // FrenchTip
+            // 
+            this.FrenchTip.BackgroundImage = global::Noktinator.Properties.Resources.SnakeStyle;
+            this.FrenchTip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.FrenchTip.Location = new System.Drawing.Point(1391, 15);
+            this.FrenchTip.Margin = new System.Windows.Forms.Padding(4);
+            this.FrenchTip.Name = "FrenchTip";
+            this.FrenchTip.Size = new System.Drawing.Size(127, 234);
+            this.FrenchTip.TabIndex = 10;
+            this.FrenchTip.TabStop = false;
+            this.FrenchTip.Click += new System.EventHandler(this.FrenchTip_Click);
+            // 
             // ChoosePattern
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1576, 804);
+            this.Controls.Add(this.FrenchTip);
             this.Controls.Add(this.Snake);
             this.Controls.Add(this.Butterfly);
             this.Controls.Add(this.YinYang);
@@ -225,6 +240,7 @@ namespace Noktinator
             ((System.ComponentModel.ISupportInitialize)(this.YinYang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Butterfly)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Snake)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FrenchTip)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -241,5 +257,6 @@ namespace Noktinator
         private System.Windows.Forms.PictureBox YinYang;
         private System.Windows.Forms.PictureBox Butterfly;
         private System.Windows.Forms.PictureBox Snake;
+        private System.Windows.Forms.PictureBox FrenchTip;
     }
 }

@@ -510,6 +510,43 @@ namespace Noktinator
                     }
                     break;
 
+                case NailPattern.FrenchTip:
+                    switch (shape)
+                    {
+                        case NailShape.Almond:
+                            _patternImage = Properties.Resources.french_tip_almond;
+                            break;
+                        case NailShape.Ballerina:
+                            _patternImage = Properties.Resources.french_tip_ballerina;
+                            break;
+                        case NailShape.Lipstick:
+                            _patternImage = Properties.Resources.french_tip_lipstick;
+                            break;
+                        case NailShape.MountainPeak:
+                            _patternImage = Properties.Resources.french_tip_mountain_peak;
+                            break;
+                        case NailShape.Oval:
+                            _patternImage = Properties.Resources.french_tip_oval;
+                            break;
+                        case NailShape.Rounded:
+                            _patternImage = Properties.Resources.french_tip_rounded;
+                            break;
+                        case NailShape.Short:
+                            _patternImage = Properties.Resources.french_tip_short;
+                            break;
+                        case NailShape.Squoval:
+                            _patternImage = Properties.Resources.french_tip_squoval;
+                            break;
+                        case NailShape.Stiletto:
+                            _patternImage = Properties.Resources.french_tip_stiletto;
+                            break;
+                        case NailShape.Wide:
+                            _patternImage = Properties.Resources.french_tip_wide;
+                            break;
+                    }
+                    break;
+
+
 
             }
         }
