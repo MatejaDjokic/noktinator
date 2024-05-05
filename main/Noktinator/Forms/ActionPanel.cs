@@ -78,5 +78,10 @@ namespace Noktinator.Forms
         {
             new SetFingerFromGallery(nail.GetImage()).ShowDialog();
         }
+
+        private void downloadNailImageBtn_Click(object sender, EventArgs e)
+        {
+            NailUtil.DownloadNailImage(nail);
+        }
     }
 }
