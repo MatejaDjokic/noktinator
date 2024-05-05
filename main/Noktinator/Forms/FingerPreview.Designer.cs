@@ -95,7 +95,7 @@ namespace Noktinator
             this.littleFingerPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.littleFingerPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.littleFingerPictureBox.Location = new System.Drawing.Point(4, 82);
-            this.littleFingerPictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.littleFingerPictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.littleFingerPictureBox.Name = "littleFingerPictureBox";
             this.littleFingerPictureBox.Size = new System.Drawing.Size(141, 385);
             this.littleFingerPictureBox.TabIndex = 2;
@@ -110,7 +110,7 @@ namespace Noktinator
             this.ringFingerPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ringFingerPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ringFingerPictureBox.Location = new System.Drawing.Point(4, 82);
-            this.ringFingerPictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ringFingerPictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.ringFingerPictureBox.Name = "ringFingerPictureBox";
             this.ringFingerPictureBox.Size = new System.Drawing.Size(141, 385);
             this.ringFingerPictureBox.TabIndex = 1;
@@ -125,7 +125,7 @@ namespace Noktinator
             this.middleFingerPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.middleFingerPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.middleFingerPictureBox.Location = new System.Drawing.Point(4, 82);
-            this.middleFingerPictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.middleFingerPictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.middleFingerPictureBox.Name = "middleFingerPictureBox";
             this.middleFingerPictureBox.Size = new System.Drawing.Size(141, 385);
             this.middleFingerPictureBox.TabIndex = 2;
@@ -140,7 +140,7 @@ namespace Noktinator
             this.indexFingerPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.indexFingerPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.indexFingerPictureBox.Location = new System.Drawing.Point(4, 82);
-            this.indexFingerPictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.indexFingerPictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.indexFingerPictureBox.Name = "indexFingerPictureBox";
             this.indexFingerPictureBox.Size = new System.Drawing.Size(141, 385);
             this.indexFingerPictureBox.TabIndex = 3;
@@ -155,7 +155,7 @@ namespace Noktinator
             this.thumbPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.thumbPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.thumbPictureBox.Location = new System.Drawing.Point(4, 82);
-            this.thumbPictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.thumbPictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.thumbPictureBox.Name = "thumbPictureBox";
             this.thumbPictureBox.Size = new System.Drawing.Size(141, 385);
             this.thumbPictureBox.TabIndex = 4;
@@ -396,7 +396,7 @@ namespace Noktinator
             this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backBtn.Font = new System.Drawing.Font("Arial", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.backBtn.Location = new System.Drawing.Point(16, 15);
-            this.backBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.backBtn.Margin = new System.Windows.Forms.Padding(4);
             this.backBtn.Name = "backBtn";
             this.backBtn.Size = new System.Drawing.Size(67, 62);
             this.backBtn.TabIndex = 28;
@@ -412,7 +412,7 @@ namespace Noktinator
             this.downloadIndexFingerBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.downloadIndexFingerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.downloadIndexFingerBtn.Location = new System.Drawing.Point(754, 4);
-            this.downloadIndexFingerBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.downloadIndexFingerBtn.Margin = new System.Windows.Forms.Padding(4);
             this.downloadIndexFingerBtn.Name = "downloadIndexFingerBtn";
             this.downloadIndexFingerBtn.Size = new System.Drawing.Size(242, 67);
             this.downloadIndexFingerBtn.TabIndex = 6;
@@ -427,7 +427,7 @@ namespace Noktinator
             this.downloadThumbBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.downloadThumbBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.downloadThumbBtn.Location = new System.Drawing.Point(1004, 4);
-            this.downloadThumbBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.downloadThumbBtn.Margin = new System.Windows.Forms.Padding(4);
             this.downloadThumbBtn.Name = "downloadThumbBtn";
             this.downloadThumbBtn.Size = new System.Drawing.Size(244, 67);
             this.downloadThumbBtn.TabIndex = 5;
@@ -442,7 +442,7 @@ namespace Noktinator
             this.downloadMiddleFingerBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.downloadMiddleFingerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.downloadMiddleFingerBtn.Location = new System.Drawing.Point(504, 4);
-            this.downloadMiddleFingerBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.downloadMiddleFingerBtn.Margin = new System.Windows.Forms.Padding(4);
             this.downloadMiddleFingerBtn.Name = "downloadMiddleFingerBtn";
             this.downloadMiddleFingerBtn.Size = new System.Drawing.Size(242, 67);
             this.downloadMiddleFingerBtn.TabIndex = 4;
@@ -457,7 +457,7 @@ namespace Noktinator
             this.downloadLittleFingerBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.downloadLittleFingerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.downloadLittleFingerBtn.Location = new System.Drawing.Point(4, 4);
-            this.downloadLittleFingerBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.downloadLittleFingerBtn.Margin = new System.Windows.Forms.Padding(4);
             this.downloadLittleFingerBtn.Name = "downloadLittleFingerBtn";
             this.downloadLittleFingerBtn.Size = new System.Drawing.Size(242, 67);
             this.downloadLittleFingerBtn.TabIndex = 3;
@@ -472,7 +472,7 @@ namespace Noktinator
             this.downloadRingFingerBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.downloadRingFingerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.downloadRingFingerBtn.Location = new System.Drawing.Point(254, 4);
-            this.downloadRingFingerBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.downloadRingFingerBtn.Margin = new System.Windows.Forms.Padding(4);
             this.downloadRingFingerBtn.Name = "downloadRingFingerBtn";
             this.downloadRingFingerBtn.Size = new System.Drawing.Size(242, 67);
             this.downloadRingFingerBtn.TabIndex = 2;
@@ -487,7 +487,7 @@ namespace Noktinator
             this.downloadAllFingersBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.downloadAllFingersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.downloadAllFingersBtn.Location = new System.Drawing.Point(4, 87);
-            this.downloadAllFingersBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.downloadAllFingersBtn.Margin = new System.Windows.Forms.Padding(4);
             this.downloadAllFingersBtn.Name = "downloadAllFingersBtn";
             this.downloadAllFingersBtn.Size = new System.Drawing.Size(1252, 76);
             this.downloadAllFingersBtn.TabIndex = 1;
@@ -502,7 +502,7 @@ namespace Noktinator
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.downloadAllFingersBtn, 0, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(153, 631);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -526,7 +526,7 @@ namespace Noktinator
             this.tableLayoutPanel2.Controls.Add(this.downloadRingFingerBtn, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -542,11 +542,11 @@ namespace Noktinator
             this.tableLayoutPanel3.Controls.Add(this.middleFingerPaste, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 475);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(141, 45);
             this.tableLayoutPanel3.TabIndex = 30;
             // 
@@ -558,11 +558,11 @@ namespace Noktinator
             this.tableLayoutPanel4.Controls.Add(this.indexFingerPaste, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.indexFingerCopy, 0, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(4, 475);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(140, 45);
             this.tableLayoutPanel4.TabIndex = 31;
             // 
@@ -574,11 +574,11 @@ namespace Noktinator
             this.tableLayoutPanel5.Controls.Add(this.thumbPaste, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.thumbCopy, 0, 0);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(4, 475);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(140, 45);
             this.tableLayoutPanel5.TabIndex = 32;
             // 
@@ -590,11 +590,11 @@ namespace Noktinator
             this.tableLayoutPanel6.Controls.Add(this.ringFingerPaste, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.ringFingerCopy, 0, 0);
             this.tableLayoutPanel6.Location = new System.Drawing.Point(4, 475);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(140, 45);
             this.tableLayoutPanel6.TabIndex = 33;
             // 
@@ -607,11 +607,11 @@ namespace Noktinator
             this.tableLayoutPanel7.Controls.Add(this.littleFingerCopy, 0, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(4, 475);
-            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel7.Size = new System.Drawing.Size(141, 45);
             this.tableLayoutPanel7.TabIndex = 34;
             // 
@@ -623,7 +623,7 @@ namespace Noktinator
             this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel7, 0, 2);
             this.tableLayoutPanel9.Controls.Add(this.littleFingerPictureBox, 0, 1);
             this.tableLayoutPanel9.Location = new System.Drawing.Point(201, 15);
-            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 3;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
@@ -640,7 +640,7 @@ namespace Noktinator
             this.tableLayoutPanel11.Controls.Add(this.middleFingerPictureBox, 0, 1);
             this.tableLayoutPanel11.Controls.Add(this.tableLayoutPanel3, 0, 2);
             this.tableLayoutPanel11.Location = new System.Drawing.Point(711, 15);
-            this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 3;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
@@ -658,7 +658,7 @@ namespace Noktinator
             this.tableLayoutPanel10.Controls.Add(this.tableLayoutPanel6, 0, 2);
             this.tableLayoutPanel10.Controls.Add(this.ringFingerPictureBox, 0, 1);
             this.tableLayoutPanel10.Location = new System.Drawing.Point(461, 15);
-            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 3;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
@@ -676,7 +676,7 @@ namespace Noktinator
             this.tableLayoutPanel13.Controls.Add(this.indexFingerPictureBox, 0, 1);
             this.tableLayoutPanel13.Controls.Add(this.tableLayoutPanel4, 0, 2);
             this.tableLayoutPanel13.Location = new System.Drawing.Point(960, 15);
-            this.tableLayoutPanel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel13.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
             this.tableLayoutPanel13.RowCount = 3;
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
@@ -694,7 +694,7 @@ namespace Noktinator
             this.tableLayoutPanel12.Controls.Add(this.thumbPictureBox, 0, 1);
             this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel5, 0, 2);
             this.tableLayoutPanel12.Location = new System.Drawing.Point(1216, 15);
-            this.tableLayoutPanel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel12.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
             this.tableLayoutPanel12.RowCount = 3;
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
@@ -712,7 +712,7 @@ namespace Noktinator
             this.openDowloadsFolderBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openDowloadsFolderBtn.Font = new System.Drawing.Font("Arial", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.openDowloadsFolderBtn.Location = new System.Drawing.Point(16, 734);
-            this.openDowloadsFolderBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.openDowloadsFolderBtn.Margin = new System.Windows.Forms.Padding(4);
             this.openDowloadsFolderBtn.Name = "openDowloadsFolderBtn";
             this.openDowloadsFolderBtn.Size = new System.Drawing.Size(67, 62);
             this.openDowloadsFolderBtn.TabIndex = 39;
@@ -734,13 +734,13 @@ namespace Noktinator
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.backBtn);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1594, 851);
             this.MinimumSize = new System.Drawing.Size(1594, 851);
             this.Name = "FingerPreview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FingerPreview";
+            this.Text = "Nail Preview";
             ((System.ComponentModel.ISupportInitialize)(this.littleFingerPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ringFingerPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.middleFingerPictureBox)).EndInit();

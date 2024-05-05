@@ -463,9 +463,6 @@
     <None Include="Resources\french_tip_ballerina.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\french_tip_lipstick.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\french_tip_mountain_peak.png" />
   </ItemGroup>
   <ItemGroup>
@@ -485,6 +482,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\french_tip_wide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\french_tip_lipstick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FrenchTipStyle.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

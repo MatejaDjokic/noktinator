@@ -52,6 +52,7 @@ namespace Noktinator.Forms
         void DeleteNail()
         {
             NailGallery nailGallery = Navigator.Get<NailGallery>();
+
             DialogResult result = MessageBox.Show(
                 $"Are you sure you want to delete \"Nail {this.idx + 1}\"?",
                 $"Delete \"Nail {this.idx + 1}\"",
@@ -60,12 +61,24 @@ namespace Noktinator.Forms
             );
             if (result == DialogResult.Yes)
             {
-                nailGallery.nailButtons.RemoveAt(this.idx);
-                List<Nail> nails = JsonUtil.LoadNails();
-                nails.RemoveAt(this.idx);
-                JsonUtil.SaveNails(nails);
-                this.Close();
-                nailGallery.RefreshNails();
+
+                try
+                {
+                    nailGallery.nailButtons.RemoveAt(this.idx);
+                    List<Nail> nails = JsonUtil.LoadNails();
+                    nails.RemoveAt(this.idx);
+                    JsonUtil.SaveNails(nails);
+                    this.Close();
+                    nailGallery.RefreshNails();
+                }
+                catch (Exception)
+                {
+                    if (idx > nailGallery.nailButtons.Count)
+                    {
+                        MessageBox.Show("aaaa");
+                    }
+                }
+               
             }
         }
         void DeleteNailBtnClick(object sender, EventArgs e) => DeleteNail();

@@ -196,7 +196,7 @@ namespace Noktinator
             // 
             // FrenchTip
             // 
-            this.FrenchTip.BackgroundImage = global::Noktinator.Properties.Resources.SnakeStyle;
+            this.FrenchTip.BackgroundImage = global::Noktinator.Properties.Resources.FrenchTipStyle;
             this.FrenchTip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.FrenchTip.Location = new System.Drawing.Point(1391, 15);
             this.FrenchTip.Margin = new System.Windows.Forms.Padding(4);
@@ -205,6 +205,8 @@ namespace Noktinator
             this.FrenchTip.TabIndex = 10;
             this.FrenchTip.TabStop = false;
             this.FrenchTip.Click += new System.EventHandler(this.FrenchTip_Click);
+            this.FrenchTip.MouseEnter += new System.EventHandler(this.Darken);
+            this.FrenchTip.MouseLeave += new System.EventHandler(this.Lighten);
             // 
             // ChoosePattern
             // 
@@ -229,7 +231,7 @@ namespace Noktinator
             this.MinimumSize = new System.Drawing.Size(1594, 851);
             this.Name = "ChoosePattern";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ChoosePattern";
+            this.Text = "Patterns";
             ((System.ComponentModel.ISupportInitialize)(this.FireStyle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LeafStyle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StarsStyle)).EndInit();

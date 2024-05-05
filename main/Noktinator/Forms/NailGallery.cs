@@ -21,6 +21,9 @@ namespace Noktinator
 
         public List<Button> nailButtons = new List<Button>();
 
+        public int pressedButtonIndex = -1;
+
+
 
         public NailGallery()
         {
@@ -70,7 +73,7 @@ namespace Noktinator
 
         private void DisplayItems()
         {
-            nailButtons.Clear();
+            //nailButtons.Clear();
 
             this.modifier = nails.Count % this.nailsPerPage == 0 ? -1 : 0;
 
@@ -85,6 +88,10 @@ namespace Noktinator
             else
                 this.itemInPageLabel.Text = $"{startIndex + 1} - {endIndex}";
 
+           
+
+
+
             for (int i = startIndex; i < endIndex; i++)
             {
                 Nail nail = this.nails[i];
@@ -93,6 +100,7 @@ namespace Noktinator
                 button.BackgroundImage = nail.GetImage();
                 button.BackgroundImageLayout = ImageLayout.Zoom;
                 button.FlatStyle = FlatStyle.Flat;
+
                 button.Click += (object sender, EventArgs e) =>
                 {
                     DialogResult result = new ActionPanel(nail, nails.IndexOf(nail)).ShowDialog();
