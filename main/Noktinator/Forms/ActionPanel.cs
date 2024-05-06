@@ -26,10 +26,11 @@ namespace Noktinator.Forms
                 case Keys.Escape: this.Close(); break;
                 case Keys.Delete: DeleteNail(); break;
                 case Keys.D: NailUtil.DownloadNailImage(nail); break;
-                case Keys.S: new SetFingerFromGallery(nail.GetImage()).ShowDialog(); break;
                 case Keys.O: NailUtil.OpenDownloadsFolder(); break;
             }
         }
+        // WHEN THE FORM IS LOADED THE CORRECT DATA
+        // IS ASSIGNED TO CORRECT OBJECTS
         private void ActionPanelLoad(object sender, EventArgs e)
         {
             this.Text = $"Nail {this.idx + 1}";
@@ -49,6 +50,11 @@ namespace Noktinator.Forms
             skinInfoBtn.BackColor = nail.skinColor;
         }
 
+        // A MESSAGEBOX ASK IF YOU ARE SURE
+        // IF YES IS PRESSED THE NAIL AND IT'S BUTTON
+        // WILL BE REMOVED FROM THEIR LISTS
+        // THE ACTION PANEL IS GOING TO BE CLOSED
+        // AND THE NAILS GALLERY NAILS REFRESHED
         void DeleteNail()
         {
             NailGallery nailGallery = Navigator.Get<NailGallery>();
@@ -61,40 +67,21 @@ namespace Noktinator.Forms
             );
             if (result == DialogResult.Yes)
             {
-
-                try
-                {
-                    nailGallery.nailButtons.RemoveAt(this.idx);
-                    List<Nail> nails = JsonUtil.LoadNails();
-                    nails.RemoveAt(this.idx);
-                    JsonUtil.SaveNails(nails);
-                    this.Close();
-                    nailGallery.RefreshNails();
-                }
-                catch (Exception)
-                {
-                    if (idx > nailGallery.nailButtons.Count)
-                    {
-                        MessageBox.Show("aaaa");
-                    }
-                }
-               
+                nailGallery.nailButtons.RemoveAt(this.idx);
+                List<Nail> nails = JsonUtil.LoadNails();
+                nails.RemoveAt(this.idx);
+                JsonUtil.SaveNails(nails);
+                this.Close();
+                nailGallery.RefreshNails();
             }
         }
+        // THE METHOD ABOVE IS CALLED WHEN THE DELETE NAIL BTN IS PRESSED
         void DeleteNailBtnClick(object sender, EventArgs e) => DeleteNail();
 
+        // WHEN PRESSED THE THE NAIL IMAGE IS DOWNLOADED
         private void DownloadNailImageBtnClick(object sender, EventArgs e) => NailUtil.DownloadNailImage(nail);
 
+        // WHEN PRESSED THE OPEN DOWNLOADS FOLDER IS OPENED
         private void OpenDownloadsFolderClick(object sender, EventArgs e) => NailUtil.OpenDownloadsFolder();
-
-        private void SetNailFromGalleryClick(object sender, EventArgs e)
-        {
-            new SetFingerFromGallery(nail.GetImage()).ShowDialog();
-        }
-
-        private void downloadNailImageBtn_Click(object sender, EventArgs e)
-        {
-            NailUtil.DownloadNailImage(nail);
-        }
     }
 }

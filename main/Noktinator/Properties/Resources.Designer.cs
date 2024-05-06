@@ -103,6 +103,16 @@ namespace Noktinator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap back_arrow {
+            get {
+                object obj = ResourceManager.GetObject("back_arrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ballerina {
             get {
                 object obj = ResourceManager.GetObject("ballerina", resourceCulture);
@@ -216,6 +226,16 @@ namespace Noktinator.Properties {
         internal static System.Drawing.Bitmap download_light_blue {
             get {
                 object obj = ResourceManager.GetObject("download_light_blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap empty_pattern {
+            get {
+                object obj = ResourceManager.GetObject("empty_pattern", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

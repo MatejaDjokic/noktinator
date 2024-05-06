@@ -49,7 +49,7 @@ namespace Noktinator
             this.Dizajniraj.TabIndex = 0;
             this.Dizajniraj.Text = "Designer";
             this.Dizajniraj.UseVisualStyleBackColor = false;
-            this.Dizajniraj.Click += new System.EventHandler(this.DizajnirajClick);
+            this.Dizajniraj.Click += new System.EventHandler(this.DesignBtnClick);
             // 
             // button2
             // 
@@ -62,7 +62,7 @@ namespace Noktinator
             this.button2.TabIndex = 2;
             this.button2.Text = "Exit";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.IzadjiClick);
+            this.button2.Click += new System.EventHandler(this.ExitBtnClick);
             // 
             // label1
             // 
@@ -95,7 +95,7 @@ namespace Noktinator
             this.galleryButton.TabIndex = 1;
             this.galleryButton.Text = "Gallery";
             this.galleryButton.UseVisualStyleBackColor = false;
-            this.galleryButton.Click += new System.EventHandler(this.GalleryButtonClick);
+            this.galleryButton.Click += new System.EventHandler(this.GalleryBtnClick);
             // 
             // StartMenu
             // 

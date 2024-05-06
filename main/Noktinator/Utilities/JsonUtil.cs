@@ -18,6 +18,7 @@ namespace Noktinator
         /// <returns></returns>
         public static List<Nail> LoadNails()
         {
+            // DESERIALIZING THE NAILS OBJECT WITH THE NEWTONSOFT.JSON LIBRARY
             string json = File.ReadAllText(path);
             return JsonConvert.DeserializeObject<List<Nail>>(json);
         }
@@ -28,12 +29,13 @@ namespace Noktinator
         /// <param name="nails"></param>
         public static void SaveNails(List<Nail> nails)
         {
+            // SERIALIZING THE NAILS OBJECT WITH THE NEWTONSOFT.JSON LIBRARY
             string json = JsonConvert.SerializeObject(nails, Formatting.Indented);
             File.WriteAllText(path, json);
         }
 
         /// <summary>
-        /// Opens the local storage json file nails.josn inside notepad
+        /// Opens the local storage json file nails.json inside notepad
         /// </summary>
         public static void OpenNailsJson()
         {

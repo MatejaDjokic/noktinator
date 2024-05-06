@@ -16,7 +16,7 @@ namespace Noktinator
             Navigator.Init(
                 new NailGallery(),
                 new FingerPreview(),
-                new FingerMenu(),
+                new Designer(),
                 new ChooseShape(),
                 new ChoosePattern(),
                 new SkinChoice()

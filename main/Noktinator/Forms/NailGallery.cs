@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Forms;
+using Noktinator.Forms;
 using Noktinator.Util;
 using System;
-using Noktinator.Forms;
-using System.Drawing;
 
 namespace Noktinator
 {
@@ -16,14 +15,10 @@ namespace Noktinator
 
         private int nailsPerPage;
         private int modifier;
-
         private int currentPageIndex = 0;
 
         public List<Button> nailButtons = new List<Button>();
-
         public int pressedButtonIndex = -1;
-
-
 
         public NailGallery()
         {
@@ -32,9 +27,8 @@ namespace Noktinator
             this.nails = new List<Nail>();
             this.nailsPerPage = this.rows * this.cols;
 
-            this.KeyDown += MyKeyDown;
+            this.KeyDown += NailGalleryKeyDown;
             this.KeyPreview = true;
-            this.FormClosing += FormClose;
             CenterToScreen();
         }
         private void NailGalleryLoad(object sender, EventArgs e)
@@ -43,44 +37,45 @@ namespace Noktinator
             DisplayItems();
         }
 
-        private void FormClose(object sender, EventArgs e)
+        // WHAT TO DO WHEN A KEY IS PRESSED
+        private void NailGalleryKeyDown(object sender, KeyEventArgs e)
         {
-            Application.Exit();
+            switch (e.KeyCode)
+            {
+                case Keys.Escape: Navigator.GotoRetain<StartMenu, NailGallery>(); break;
+                case Keys.R: RefreshNails(); break;
+                case Keys.O: JsonUtil.OpenNailsJson(); break;
+                case Keys.Down: this.FirstPage(); break;
+                case Keys.Left: this.PreviousPage(); break;
+                case Keys.Right: this.NextPage(); break;
+                case Keys.Up: this.LastPage(); break;
+            }
         }
 
-        private void MyKeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Escape)
-                Navigator.GotoRetain<StartMenu, NailGallery>();
-            else if (e.KeyCode == Keys.R)
-                RefreshNails();
-            else if (e.KeyCode == Keys.O)
-                JsonUtil.OpenNailsJson();
-            else if (e.KeyCode == Keys.Down)
-                this.FirstPage();
-            else if (e.KeyCode == Keys.Left)
-                this.PreviousPage();
-            else if (e.KeyCode == Keys.Right)
-                this.NextPage();
-            else if (e.KeyCode == Keys.Up)
-                this.LastPage();
-        }
+        // READ THE NAILS FROM THE nails.json FILE AND UPDATES THEM
         private void InitializeNails()
         {
             nails = JsonUtil.LoadNails();
             nails.ForEach(n => n.Update());
         }
 
+        // DISPLAYS THE CERTAIN AMOUNT OF NAILS THAT IS PREDEFINED 
         private void DisplayItems()
         {
             //nailButtons.Clear();
 
+            // UPDATE THE MODIFIER THAT DETERMINES IF TO DRAW THE LAST PAGE
             this.modifier = nails.Count % this.nailsPerPage == 0 ? -1 : 0;
 
+            // CLEAR ALL CURRENTYL VISIBLE NAILS
             this.grid.Controls.Clear();
 
+            // DETERMINE THE START AND END INDECIES FOR THE NEW SET OF NAILS
             int startIndex = currentPageIndex * this.nailsPerPage;
             int endIndex = Math.Min(startIndex + this.nailsPerPage, nails.Count);
+
+            // UPDATE THE TEXT THAT SHOWS WHAT NAILS ARE SHOWN ON THE SCREEN
+            // IF THERE ARE NONE OR IF THERE IS ONLY ONE SHOW THE ACCORDING TEXT
             if (nails.Count == 0)
                 this.itemInPageLabel.Text = "No Nails";
             else if (nails.Count == 1)
@@ -88,10 +83,9 @@ namespace Noktinator
             else
                 this.itemInPageLabel.Text = $"{startIndex + 1} - {endIndex}";
 
-           
-
-
-
+            // ITERATE FROM THE START TO END INDICE
+            // TO GET THE NEW SET OF NAILS
+            // CREATE THE BUTTONS THAT SHOW THEM
             for (int i = startIndex; i < endIndex; i++)
             {
                 Nail nail = this.nails[i];
@@ -101,12 +95,7 @@ namespace Noktinator
                 button.BackgroundImageLayout = ImageLayout.Zoom;
                 button.FlatStyle = FlatStyle.Flat;
 
-                button.Click += (object sender, EventArgs e) =>
-                {
-                    DialogResult result = new ActionPanel(nail, nails.IndexOf(nail)).ShowDialog();
-                    if (result == DialogResult.OK)
-                        RefreshNails();
-                };
+                button.Click += (object sender, EventArgs e) => new ActionPanel(nail, nails.IndexOf(nail)).ShowDialog();
 
                 nailButtons.Add(button);
                 nailButtons[i % nailButtons.Count].Name = i.ToString();
@@ -115,19 +104,22 @@ namespace Noktinator
                 grid.Controls.Add(button);
             }
 
+            // CLEAR THE STYLES FOR THE GRID THAT HOLD THE NAILS
             grid.RowStyles.Clear();
             grid.ColumnStyles.Clear();
 
+            // SET THE ROW AND COLUMN COUNTS
             grid.RowCount = this.rows;
             grid.ColumnCount = this.cols;
 
+            // SET THE APPROPRIATE STYLES FOR THE ROWS AND COLUMNS
             for (int i = 0; i < this.rows; i++)
                 grid.RowStyles.Add(new RowStyle(SizeType.Percent, 100f / this.rows));
-
             for (int i = 0; i < this.cols; i++)
                 grid.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100f / this.cols));
         }
 
+        // IF POSSIBLE GO TO THE FIRST PAGE
         private void FirstPage()
         {
             if (currentPageIndex != 0)
@@ -136,6 +128,7 @@ namespace Noktinator
                 DisplayItems();
             }
         }
+        // IF POSSIBLE GO TO THE PREVIOUS PAGE
         private void PreviousPage()
         {
             if (currentPageIndex > 0)
@@ -144,22 +137,31 @@ namespace Noktinator
                 DisplayItems();
             }
         }
+        // IF POSSIBLE GO TO THE NEXT PAGE
         private void NextPage()
         {
-            if (currentPageIndex < (nails.Count / this.nailsPerPage) + modifier)
+            int maxIndex = (nails.Count / this.nailsPerPage) + modifier;
+            if (currentPageIndex < maxIndex)
             {
                 currentPageIndex++;
                 DisplayItems();
             }
         }
+        // IF POSSIBLE GO TO THE LAST PAGE
         private void LastPage()
         {
-            if (currentPageIndex != nails.Count / this.nailsPerPage + modifier)
+            int maxIndex = (nails.Count / this.nailsPerPage) + modifier;
+            if (currentPageIndex != maxIndex)
             {
-                currentPageIndex = nails.Count / this.nailsPerPage + modifier;
+                currentPageIndex = maxIndex;
                 DisplayItems();
             }
         }
+
+        // REFRESH THE NAILS LIST BY RELOADING THEM 
+        // FROM THE nails.json FILE AND UPDATING THEM
+        // AS WELL AS RETURNING THE PAGE NUMBER TO START
+        // AND DISPLAYING THEM
         public void RefreshNails()
         {
             nails = JsonUtil.LoadNails();
@@ -168,22 +170,20 @@ namespace Noktinator
             DisplayItems();
         }
 
+        // WHEN THE BACK BTN IS PRESSED
         private void BackBtnClick(object sender, EventArgs e)
         {
             Navigator.GotoRetain<StartMenu, NailGallery>();
         }
 
+        // WHEN THE BUTTONS ARE PRESSED THE APPROPRIATE METHODS ARE CALLED
         private void FullLeftClick(object sender, EventArgs e) => FirstPage();
         private void LeftClick(object sender, EventArgs e) => PreviousPage();
         private void RightClick(object sender, EventArgs e) => NextPage();
         private void FullRightClick(object sender, EventArgs e) => LastPage();
-
         private void RefreshBtnClick(object sender, EventArgs e) => RefreshNails();
+
+        // OPEN THE nails.json FILE THAT HOLDS THE NAILS 
         private void OpenJsonClick(object sender, EventArgs e) => JsonUtil.OpenNailsJson();
-
-        private void NailGallery_EnabledChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

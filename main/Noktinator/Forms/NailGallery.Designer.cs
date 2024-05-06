@@ -158,13 +158,14 @@ namespace Noktinator
             // backBtn
             // 
             this.backBtn.BackColor = System.Drawing.Color.Plum;
+            this.backBtn.BackgroundImage = global::Noktinator.Properties.Resources.back_arrow;
+            this.backBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backBtn.Font = new System.Drawing.Font("Arial", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.backBtn.Location = new System.Drawing.Point(12, 12);
             this.backBtn.Name = "backBtn";
             this.backBtn.Size = new System.Drawing.Size(50, 50);
             this.backBtn.TabIndex = 8;
-            this.backBtn.Text = "<";
             this.backBtn.UseVisualStyleBackColor = false;
             this.backBtn.Click += new System.EventHandler(this.BackBtnClick);
             // 
@@ -213,7 +214,6 @@ namespace Noktinator
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nail Gallery";
             this.Load += new System.EventHandler(this.NailGalleryLoad);
-            this.EnabledChanged += new System.EventHandler(this.NailGallery_EnabledChanged);
             this.pagination.ResumeLayout(false);
             this.pagination.PerformLayout();
             this.ResumeLayout(false);

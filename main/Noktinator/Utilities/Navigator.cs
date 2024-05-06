@@ -22,9 +22,7 @@ namespace Noktinator
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <typeparam name="U"></typeparam>
-        public static void GotoRetain<T, U>()
-                where T : Form
-                where U : Form
+        public static void GotoRetain<T, U>() where T : Form where U : Form
         {
             U oldForm = Get<U>();
             OpenWithSizeAndLocation<T>(oldForm.Size, oldForm.Location);
@@ -61,8 +59,7 @@ namespace Noktinator
         /// Gets the form of type T and "closes" it (the form is actually hiden with the .Hide() method)
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        public static void Close<T>()
-              where T : Form
+        public static void Close<T>() where T : Form
         {
             T form = Get<T>();
             if (form is null) throw new Exception("The form was never opened!");

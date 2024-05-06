@@ -1,7 +1,7 @@
 ﻿using System.Windows.Forms;
-using System.Drawing;
-using System;
 using Noktinator.Util;
+using System;
+using System.CodeDom;
 
 namespace Noktinator
 {
@@ -13,15 +13,12 @@ namespace Noktinator
             this.KeyDown += ChooseShapeKeyDown;
         }
 
-        public void ChoiceClick(NailShape shapeEnum)
-        {
-            FingerMenu.nail.shape = shapeEnum; //noktu u glavnom editoru za atribut shape daje odredjeni oblik
-            Navigator.GotoRetain<FingerMenu, ChooseShape>();
-        }
+        // WHAT TO DO WHEN A KEY IS PRESSED
         private void ChooseShapeKeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
             {
+                case Keys.Escape: Navigator.GotoRetain<Designer, ChooseShape>(); break;
                 case Keys.D1: ChoiceClick(NailShape.Almond); break;
                 case Keys.D2: ChoiceClick(NailShape.Ballerina); break;
                 case Keys.D3: ChoiceClick(NailShape.Lipstick); break;
@@ -35,67 +32,63 @@ namespace Noktinator
             }
         }
 
-        private void Almond_Click(object sender, EventArgs e)
+        // SET NAIL SHAPE FROM THE CLICKED NAIL BTN
+        public void ChoiceClick(NailShape shapeEnum)
+        {
+            Designer.nail.shape = shapeEnum; //noktu u glavnom editoru za atribut shape daje odredjeni oblik
+            Navigator.GotoRetain<Designer, ChooseShape>();
+        }
+
+        // BY USING THE METHOD ABOVE THE CORRESPONDING NAIL SHAPE IS SET
+        private void AlmondBtnClick(object sender, EventArgs e)
         {
             ChoiceClick(NailShape.Almond);
         }
-
-        private void Ballerina_Click(object sender, EventArgs e)
+        private void BallerinaBtnClick(object sender, EventArgs e)
         {
             ChoiceClick(NailShape.Ballerina);
         }
-
-        private void Lipstick_Click(object sender, EventArgs e)
+        private void LipstickBtnClick(object sender, EventArgs e)
         {
             ChoiceClick(NailShape.Lipstick);
         }
-
-        private void Mountain_peak_Click(object sender, EventArgs e)
+        private void MountainPeakBtnClick(object sender, EventArgs e)
         {
             ChoiceClick(NailShape.MountainPeak);
         }
-
-        private void Oval_Click(object sender, EventArgs e)
+        private void OvalBtnClick(object sender, EventArgs e)
         {
             ChoiceClick(NailShape.Oval);
         }
-
-        private void Rounded_Click(object sender, EventArgs e)
+        private void RoundedBtnClick(object sender, EventArgs e)
         {
             ChoiceClick(NailShape.Rounded);
         }
-
-        private void Short_Click(object sender, EventArgs e)
+        private void ShortBtnClick(object sender, EventArgs e)
         {
             ChoiceClick(NailShape.Short);
         }
-
-        private void Squoval_Click(object sender, EventArgs e)
+        private void SquovalBtnClick(object sender, EventArgs e)
         {
             ChoiceClick(NailShape.Squoval);
         }
-
-        private void Stiletto_Click(object sender, EventArgs e)
+        private void StilettoBtnClick(object sender, EventArgs e)
         {
             ChoiceClick(NailShape.Stiletto);
         }
-
-        private void Wide_Click(object sender, EventArgs e)
+        private void WideBtnClick(object sender, EventArgs e)
         {
             ChoiceClick(NailShape.Wide);
         }
 
+        // METHODS TO MAKE THE HOVER EFFECT WHEN HOVERING OVER A PICTURE BOX 
+        private void Darken(object sender, EventArgs e) => NailUtil.Darken((PictureBox)sender);
+        private void Lighten(object sender, EventArgs e) => NailUtil.Lighten((PictureBox)sender);
 
-        private void Darken(object sender, EventArgs e)
+        // RUNS WHEN THE BACK BTN IS PRESSED
+        private void BackBtnClick(object sender, EventArgs e)
         {
-            PictureBox senderPic = (PictureBox)sender;
-            senderPic.BackColor = Color.Plum;
-        }
-
-        private void Lighten(object sender, EventArgs e)
-        {
-            PictureBox senderPic = (PictureBox)sender;
-            senderPic.BackColor = Color.Transparent;
+            Navigator.GotoRetain<Designer, ChooseShape>();
         }
     }
 }

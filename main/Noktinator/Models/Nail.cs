@@ -81,11 +81,16 @@ namespace Noktinator
             return _patternImage;
         }
 
+        // UPDATE THE PATTER & SHAPE IMAGES 
+        // BY CALLING THEIR RESPECTIVE METHODS
         public void Update()
         {
             ChangePattern();
             ChangeShape();
         }
+
+        // SET THE SHAPE AND FINGER IMAGES
+        // BY CHECKING THE NAIL SHAPE ENUM
         public void ChangeShape()
         {
             switch (_nailShape)
@@ -141,6 +146,9 @@ namespace Noktinator
                     break;
             }
         }
+
+        // SET THE PATTERN IMAGE BY CHECKING
+        // THE PATTER ENUM AND THE SHAPE ENUM
         public void ChangePattern()
         {
             switch (pattern)
@@ -551,6 +559,7 @@ namespace Noktinator
             }
         }
 
+        // RETURNS THE FULLY COLORED AND MERGED IMAGE OF THE NAIL
         public Image GetImage()
         {
             Bitmap coloredNail = NailUtil.ColorBitmap((Bitmap)_nailShapeImage, _nailColor);

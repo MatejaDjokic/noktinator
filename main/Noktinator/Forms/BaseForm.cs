@@ -1,6 +1,5 @@
 ﻿using System.Windows.Forms;
 using System;
-using System.Drawing;
 
 namespace Noktinator.Util
 {
@@ -10,8 +9,8 @@ namespace Noktinator.Util
         {
             InitializeComponent();
             this.FormClosed += BaseFormClose;
-            this.KeyPreview = true;
             this.KeyDown += BaseFormKeyDown;
+            this.KeyPreview = true;
         }
         void BaseFormClose(object sender, EventArgs e)
         {

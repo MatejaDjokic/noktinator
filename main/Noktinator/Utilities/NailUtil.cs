@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net.Http.Headers;
 
 namespace Noktinator
 {
@@ -95,6 +96,7 @@ namespace Noktinator
 
         /// <summary>
         /// Shows a SaveFileDialog with which the user chooses a place to save the img image
+        /// <br></br> The default name for the image is nail_{shape}_with_{pattern}_pattern
         /// </summary>
         /// <param name="img"></param>
         public static void DownloadNailImage(Nail nail)
@@ -103,42 +105,22 @@ namespace Noktinator
             dialog.Filter = "Images|*.png;*.jpg;*.jpeg";
 
             ImageFormat format = ImageFormat.Png;
+
             string strFormat = format.ToString().ToLower();
             string shape = nail.shape.ToString().ToLower();
             string pattern = nail.pattern.ToString().ToLower();
 
-            string fileName = $"nail_{shape}_shape_with_{pattern}_pattern";
-
-            string downloadFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads";
-            string[] files = Directory.GetFiles(downloadFolderPath);
-
-            string[] onlyLocalFilepath = files.Select(x => x.Replace($"{Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)}\\Downloads\\", "")).ToArray();
-            string[] thatStartWithNail = onlyLocalFilepath.Where(x => x.StartsWith("nail_")).ToArray();
-            string[] withoutExtension = thatStartWithNail.Select(x => x.Replace(".png", "")).ToArray();
-            string text = string.Join("\n", withoutExtension);
-
-            int idx = 1;
-            string newFileName = $"{fileName}_{idx}";
-            if (withoutExtension.Contains(fileName))
-            {
-                DialogResult result = MessageBox.Show(
-                    "Are you sure you want to download the nail again?",
-                    "Save Nail Image Copy",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Warning
-                );
-                if (result == DialogResult.Yes)
-                    while (withoutExtension.Contains(newFileName))
-                    {
-                        newFileName = $"{fileName}_{idx}";
-                        idx++;
-                    }
-            }
-            dialog.FileName = newFileName;
+            dialog.FileName = $"{shape}_shape_with_{pattern}_pattern.{strFormat}";
             if (dialog.ShowDialog() == DialogResult.OK)
                 nail.GetImage().Save(dialog.FileName, format);
         }
 
+        /// <summary>
+        /// Shows a SaveFileDialog with which the user chooses a place to save the img image
+        /// <br></br> The default name for the image in fingerName
+        /// </summary>
+        /// <param name="fingerName"></param>
+        /// <param name="img"></param>
         public static void DownloadFinger(string fingerName, Image img)
         {
             SaveFileDialog dialog = new SaveFileDialog();
@@ -151,6 +133,15 @@ namespace Noktinator
                 img.Save(dialog.FileName, format);
         }
 
+        /// <summary>
+        /// Shows a SaveFileDialog with which the user chooses a place to save
+        /// the image that is created from the merge of the five finger images
+        /// </summary>
+        /// <param name="finger1"></param>
+        /// <param name="finger2"></param>
+        /// <param name="finger3"></param>
+        /// <param name="finger4"></param>
+        /// <param name="finger5"></param>
         public static void DownloadAllFingers(
             Image finger1,
             Image finger2,
@@ -158,30 +149,14 @@ namespace Noktinator
             Image finger4,
             Image finger5)
         {
-            int spacing = 20; // 20 px spacing between fingers
-            int finger_width = new int[]
-            {
-                finger1.Width,
-                finger2.Width,
-                finger3.Width,
-                finger4.Width,
-                finger5.Width,
-            }.Sum() / 5;
+            int spacing = 20;
+            int finger_width = 100;
             int width = 5 * finger_width + 6 * spacing;
-
-            int height = new int[]
-            {
-                finger1.Height,
-                finger2.Height,
-                finger3.Height,
-                finger4.Height,
-                finger5.Height,
-            }.Sum() / 5 + 2 * spacing;
+            int height = 330 + 2 * spacing;
 
             Bitmap bmp = new Bitmap(width, height);
 
             Image[] fingers = new Image[] { finger1, finger2, finger3, finger4, finger5 };
-
             using (Graphics g = Graphics.FromImage(bmp))
                 for (int i = 0; i < fingers.Length; i++)
                     g.DrawImage(fingers[i], (i + 1) * spacing + i * finger_width, spacing);
@@ -214,10 +189,25 @@ namespace Noktinator
         {
             double luminance = (0.299 * color.R + 0.587 * color.G + 0.114 * color.B) / 255;
             double threshold = 0.5;
-            if (luminance > threshold)
-                return Color.Black;
-            else
-                return Color.White;
+            return luminance > threshold ? Color.Black : Color.White;
+        }
+
+        /// <summary>
+        /// Sets the background color of the pictureBox to Color.Plum
+        /// </summary>
+        /// <param name="pictureBox"></param>
+        public static void Darken(PictureBox pictureBox)
+        {
+            pictureBox.BackColor = Color.Plum;
+        }
+
+        /// <summary>
+        /// Sets the background color of the pictureBox to Color.Transparent
+        /// </summary>
+        /// <param name="pictureBox"></param>
+        public static void Lighten(PictureBox pictureBox)
+        {
+            pictureBox.BackColor = Color.Transparent;
         }
     }
 }

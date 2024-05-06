@@ -8,7 +8,7 @@ namespace Noktinator
     public partial class FingerPreview : BaseForm
     {
 
-        public static PictureBox ChosenField;
+        public static PictureBox chosenField;
 
         Image copyPasteImage = NailUtil.GetDefault();
 
@@ -16,17 +16,17 @@ namespace Noktinator
         {
             InitializeComponent();
 
-            this.FormClosing += FormClose;
             this.Load += FingerPreviewLoad;
-            this.KeyDown += MyKeyDown;
+            this.KeyDown += FingerPreviewKeyDown;
             this.KeyPreview = true;
         }
 
-        private void MyKeyDown(object sender, KeyEventArgs e)
+        private void FingerPreviewKeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
             {
                 case Keys.Escape: Navigator.GotoRetain<StartMenu, FingerPreview>(); break;
+                case Keys.O: NailUtil.OpenDownloadsFolder(); break;
                 case Keys.D1: FingerChoiceClick(littleFingerPictureBox); break;
                 case Keys.D2: FingerChoiceClick(ringFingerPictureBox); break;
                 case Keys.D3: FingerChoiceClick(middleFingerPictureBox); break;
@@ -34,10 +34,8 @@ namespace Noktinator
                 case Keys.D5: FingerChoiceClick(thumbPictureBox); break;
             }
         }
-        private void FormClose(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+
+        // LOAD THE DEFAULT NAIL IMAGES AND LOAD THE ICONS FOR THE DOWNLOAD BUTTONS
         private void FingerPreviewLoad(object sender, EventArgs e)
         {
             Bitmap img = NailUtil.GetDefault();
@@ -55,50 +53,40 @@ namespace Noktinator
             downloadAllFingersBtn.BackgroundImage = Properties.Resources.download;
         }
 
+        // METHOD TO SELECT A FINGER PICTURE BOX WHICH WILL BE EDITED IN THE DESIGNER
         private void FingerChoiceClick(PictureBox field)
         {
-            ChosenField = field;
-            Navigator.GotoRetain<FingerMenu, FingerPreview>();
+            chosenField = field;
+            Navigator.GotoRetain<Designer, FingerPreview>();
         }
 
+        // METHODS THAT CALL THE UPPER METHOD TO SELECT ONE OF THE FIVE FINGERS
         private void LittleFingerClick(object sender, EventArgs e)
         {
             FingerChoiceClick(littleFingerPictureBox);
         }
-
         private void RingFingerClick(object sender, EventArgs e)
         {
             FingerChoiceClick(ringFingerPictureBox);
         }
-
         private void MiddleFingerClick(object sender, EventArgs e)
         {
             FingerChoiceClick(middleFingerPictureBox);
         }
-
         private void IndexFingerClick(object sender, EventArgs e)
         {
             FingerChoiceClick(indexFingerPictureBox);
         }
-
         private void ThumbClick(object sender, EventArgs e)
         {
             FingerChoiceClick(thumbPictureBox);
         }
 
-        //shadeovanje pri hoverovanju misem
-        private void Darken(object sender, EventArgs e)
-        {
-            PictureBox picBox = (PictureBox)sender;
-            picBox.BackColor = Color.Plum;
-        }
+        // METHODS TO MAKE THE HOVER EFFECT WHEN HOVERING OVER A PICTURE BOX 
+        private void Darken(object sender, EventArgs e) => NailUtil.Darken((PictureBox)sender);
+        private void Lighten(object sender, EventArgs e) => NailUtil.Lighten((PictureBox)sender);
 
-        private void Lighten(object sender, EventArgs e)
-        {
-            PictureBox picBox = (PictureBox)sender;
-            picBox.BackColor = Color.Transparent;
-        }
-
+        // COPY THE IMAGE OF A FINGER INTO THE COPY IMAGE BUFFER
         private void LittleFingerCopy(object sender, EventArgs e)
         {
             copyPasteImage = littleFingerPictureBox.Image;
@@ -120,6 +108,7 @@ namespace Noktinator
             copyPasteImage = thumbPictureBox.Image;
         }
 
+        // PASTE THE IMAGE FROM THE COPY IMAGE BUFFER TO THE CORRESPONDING PICTURE BOX
         private void LittleFingerPaste(object sender, EventArgs e)
         {
             littleFingerPictureBox.Image = copyPasteImage;
@@ -141,11 +130,13 @@ namespace Noktinator
             thumbPictureBox.Image = copyPasteImage;
         }
 
+        // WHEN THE BACK BTN IS PRESSED
         private void BackBtnClick(object sender, EventArgs e)
         {
             Navigator.GotoRetain<StartMenu, FingerPreview>();
         }
 
+        // CORRESPONDING FINGER IMAGE IS DOWNLOADED WHEN PRESSED
         private void DownloadLittleFingerBtnClick(object sender, EventArgs e)
         {
             NailUtil.DownloadFinger("little", littleFingerPictureBox.Image);
@@ -166,6 +157,8 @@ namespace Noktinator
         {
             NailUtil.DownloadFinger("thumb", thumbPictureBox.Image);
         }
+
+        // WHEN PRESSED AN IMAGE OF ALL FINGERS IS DOWNLOADED
         private void DownloadAllFingersBtnClick(object sender, EventArgs e)
         {
             NailUtil.DownloadAllFingers(
@@ -177,6 +170,7 @@ namespace Noktinator
             );
         }
 
+        // WHEN THE OPEN DOWNLOAD FOLDER BTN IS PRESSED
         private void OpenDowloadsFolderBtnClick(object sender, EventArgs e) => NailUtil.OpenDownloadsFolder();
     }
 }

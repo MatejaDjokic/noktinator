@@ -50,9 +50,6 @@ D:\Programiranje\projects\noktinator\main\Noktinator\bin\Debug\Noktinator.exe.co
 D:\Programiranje\projects\noktinator\main\Noktinator\bin\Debug\Noktinator.exe
 D:\Programiranje\projects\noktinator\main\Noktinator\bin\Debug\Noktinator.pdb
 D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.csproj.AssemblyReference.cache
-D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.ChoosePattern.resources
-D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.ChooseShape.resources
-D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.FingerMenu.resources
 D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.FingerPreview.resources
 D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.SkinChoice.resources
 D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.StartMenu.resources
@@ -97,6 +94,8 @@ C:\Users\Joka\Documents\GitHub\noktinator\main\Noktinator\obj\Debug\Noktinator.c
 C:\Users\Joka\Documents\GitHub\noktinator\main\Noktinator\obj\Debug\Noktinator.exe
 C:\Users\Joka\Documents\GitHub\noktinator\main\Noktinator\obj\Debug\Noktinator.pdb
 D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.Forms.ActionPanel.resources
-D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.Forms.SetFingerFromGallery.resources
 C:\Users\Joka\Documents\GitHub\noktinator\main\Noktinator\obj\Debug\Noktinator.Forms.ActionPanel.resources
 C:\Users\Joka\Documents\GitHub\noktinator\main\Noktinator\obj\Debug\Noktinator.Forms.SetFingerFromGallery.resources
+D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.Designer.resources
+D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.ChoosePattern.resources
+D:\Programiranje\projects\noktinator\main\Noktinator\obj\Debug\Noktinator.ChooseShape.resources

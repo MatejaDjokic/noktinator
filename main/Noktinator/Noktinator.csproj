@@ -67,11 +67,11 @@
     <Compile Include="Forms\ActionPanel.Designer.cs">
       <DependentUpon>ActionPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FingerMenu.cs">
+    <Compile Include="Forms\Designer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FingerMenu.Designer.cs">
-      <DependentUpon>FingerMenu.cs</DependentUpon>
+    <Compile Include="Forms\Designer.Designer.cs">
+      <DependentUpon>Designer.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FingerPreview.cs">
       <SubType>Form</SubType>
@@ -84,12 +84,6 @@
     </Compile>
     <Compile Include="Forms\BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\SetFingerFromGallery.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\SetFingerFromGallery.Designer.cs">
-      <DependentUpon>SetFingerFromGallery.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities\JsonUtil.cs" />
     <Compile Include="Models\Nail.cs" />
@@ -126,17 +120,14 @@
     <EmbeddedResource Include="Forms\ActionPanel.resx">
       <DependentUpon>ActionPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FingerMenu.resx">
-      <DependentUpon>FingerMenu.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Designer.resx">
+      <DependentUpon>Designer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FingerPreview.resx">
       <DependentUpon>FingerPreview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\NailGallery.resx">
       <DependentUpon>NailGallery.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SetFingerFromGallery.resx">
-      <DependentUpon>SetFingerFromGallery.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SkinChoice.resx">
       <DependentUpon>SkinChoice.cs</DependentUpon>
@@ -488,6 +479,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\FrenchTipStyle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empty_pattern.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empty_pattern.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-arrow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

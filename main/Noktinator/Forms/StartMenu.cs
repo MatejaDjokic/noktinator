@@ -13,6 +13,7 @@ namespace Noktinator
             this.KeyDown += StartMenuKeyDown;
         }
 
+        // WHAT DO DO WHEN A KEY IS PRESSED
         private void StartMenuKeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
@@ -26,19 +27,22 @@ namespace Noktinator
             }
         }
 
-        private void DizajnirajClick(object sender, EventArgs e)
+        // WHEN THE DESIGN BTN IS CLICKED
+        private void DesignBtnClick(object sender, EventArgs e)
         {
             Navigator.GotoRetain<FingerPreview, StartMenu>();
         }
-
-        private void IzadjiClick(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void GalleryButtonClick(object sender, EventArgs e)
+        
+        // WHEN THE GALLERY BTN IS CLICKED
+        private void GalleryBtnClick(object sender, EventArgs e)
         {
             Navigator.GotoRetain<NailGallery, StartMenu>();
+        }
+
+        // WHEN THE EXIT BTN IS CLICKED
+        private void ExitBtnClick(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
